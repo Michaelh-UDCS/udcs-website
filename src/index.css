@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-charcoal-950 text-cream font-sans antialiased selection:bg-gold/30 selection:text-gold;
+  }
+}
