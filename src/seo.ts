@@ -1,7 +1,7 @@
 export const routeMeta: Record<string, { title: string; description: string; canonical: string }> = {
   '/': {
     title: 'Business Setup & Self-Hosted Websites in Lake Jackson, TX | Universal Dynamic',
-    description: 'Turnkey 50-state business setup, SAM.gov registrations, and self-hosted websites on Google Cloud serving Lake Jackson, Brazoria County, and the greater Houston area. Zero monthly agency fees.',
+    description: 'Turnkey 50-state business setup, SAM.gov registrations, and self-hosted websites on Google Cloud serving Lake Jackson, Angleton, Freeport, Pearland, Brazoria County, and Greater Houston. Zero monthly agency fees.',
     canonical: 'https://universal-dynamic.com/',
   },
   '/about': {
