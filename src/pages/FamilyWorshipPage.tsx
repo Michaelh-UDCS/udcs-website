@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Head } from 'vite-react-ssg';
 import { routeMeta } from '../seo';
 
 export const FamilyWorshipPage: React.FC = () => {
@@ -12,14 +12,17 @@ export const FamilyWorshipPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#0B1120] text-[#f8fafc] font-sans selection:bg-[#D4AF37]/30 selection:text-[#D4AF37] relative flex flex-col pt-32 pb-24">
       {meta && (
-        <Helmet>
-          <title>{meta.title}</title>
-          <meta name="description" content={meta.description} />
-          <link rel="canonical" href={meta.canonical} />
-          <meta property="og:url" content={meta.canonical} />
-          <meta property="og:title" content={meta.title} />
-          <meta property="og:description" content={meta.description} />
-        </Helmet>
+      <Head>
+        <title>{meta.title}</title>
+        <meta name="description" content={meta.description} />
+        <link rel="canonical" href={meta.canonical} />
+        <meta property="og:url" content={meta.canonical} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:description" content={meta.description} />
+        <meta name="twitter:url" content={meta.canonical} />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.description} />
+      </Head>
       )}
       {/* Background with radial gradient for texture feel */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1a2235]/80 via-[#0B1120] to-[#0B1120] pointer-events-none z-0"></div>

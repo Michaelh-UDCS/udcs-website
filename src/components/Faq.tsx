@@ -64,6 +64,7 @@ export const Faq: React.FC = () => {
               <button
                 className="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none"
                 onClick={() => toggleOpen(index)}
+                aria-expanded={openIndex === index}
               >
                 <span className="font-display font-medium text-lg text-cream pr-8">
                   {faq.question}

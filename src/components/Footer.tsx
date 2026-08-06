@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Linkedin, Twitter, Facebook, Youtube } from 'lucide-react';
 
 export const Footer: React.FC = () => {
@@ -59,10 +60,12 @@ export const Footer: React.FC = () => {
               </a>
             </div>
 
-            {/* Legal / Policy Links */}
+            {/* Company / Legal Links */}
             <div className="flex flex-wrap gap-x-8 gap-y-4 text-[10px] font-bold uppercase tracking-[0.2em] text-cream/50 font-sans">
-              <a href="#" className="hover:text-gold transition-all duration-300 hover:translate-x-1 inline-block">Privacy Policy</a>
-              <a href="#" className="hover:text-gold transition-all duration-300 hover:translate-x-1 inline-block">Terms of Service</a>
+              <Link to="/about" className="hover:text-gold transition-all duration-300 hover:translate-x-1 inline-block">About</Link>
+              <Link to="/contact" className="hover:text-gold transition-all duration-300 hover:translate-x-1 inline-block">Contact</Link>
+              <Link to="/privacy-policy" className="hover:text-gold transition-all duration-300 hover:translate-x-1 inline-block">Privacy Policy</Link>
+              <Link to="/terms-of-service" className="hover:text-gold transition-all duration-300 hover:translate-x-1 inline-block">Terms of Service</Link>
               <a href="#" className="hover:text-gold transition-all duration-300 hover:translate-x-1 inline-block">Client Portal</a>
             </div>
           </div>

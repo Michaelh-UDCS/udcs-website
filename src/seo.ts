@@ -1,17 +1,17 @@
 export const routeMeta: Record<string, { title: string; description: string; canonical: string }> = {
   '/': {
-    title: 'Universal Dynamic | Turnkey Business Setup, Self-Hosted Websites & SAM.gov',
-    description: 'Turnkey 50-state business setup, Texas SOS filings, SAM.gov registrations, and high-speed self-hosted websites on Google Cloud with zero monthly agency fees.',
+    title: 'Business Setup & Self-Hosted Websites in Lake Jackson, TX | Universal Dynamic',
+    description: 'Turnkey 50-state business setup, SAM.gov registrations, and self-hosted websites on Google Cloud serving Lake Jackson, Brazoria County, and the greater Houston area. Zero monthly agency fees.',
     canonical: 'https://universal-dynamic.com/',
   },
   '/about': {
-    title: 'About Universal Dynamic | Expert Business Setup & Cloud Web Consulting',
-    description: 'Meet the team behind Universal Dynamic Consulting Services LLC — Texas-based experts in business formation, SAM.gov registration, and Firebase web architecture.',
+    title: 'About Universal Dynamic | Consulting Services in Brazoria County, TX',
+    description: 'Michael Huerta founded Universal Dynamic Consulting Services LLC in Lake Jackson, TX — 24+ years of operations leadership paired with modern web development. Turnkey business setup and self-hosted websites.',
     canonical: 'https://universal-dynamic.com/about',
   },
   '/contact': {
-    title: 'Contact Universal Dynamic | Get a Free Consultation',
-    description: 'Reach out to Universal Dynamic for a free consultation on business setup, SAM.gov registration, or a self-hosted website on Google Cloud.',
+    title: 'Contact Universal Dynamic | Lake Jackson, TX | Free Consultation',
+    description: 'Contact Universal Dynamic in Lake Jackson, TX for a free consultation on business setup, SAM.gov registration, or a self-hosted website on Google Cloud. Serving Brazoria County and Houston metro.',
     canonical: 'https://universal-dynamic.com/contact',
   },
   '/privacy-policy': {
@@ -28,5 +28,10 @@ export const routeMeta: Record<string, { title: string; description: string; can
     title: 'Family Worship Assistant | Universal Dynamic',
     description: 'Family Worship that\'s Meaningful & Fun. Plan evenings that draw your family closer to Jehovah and keep everyone engaged.',
     canonical: 'https://universal-dynamic.com/family-worship-assistant',
+  },
+  '/services/lake-jackson-tx': {
+    title: 'Business Setup & Local SEO Web Design in Lake Jackson, TX | 77566',
+    description: 'Local business setup, SAM.gov registration, and custom self-hosted web design exclusively for businesses in Lake Jackson, TX and the 77566 surrounding area.',
+    canonical: 'https://universal-dynamic.com/services/lake-jackson-tx',
   }
 };

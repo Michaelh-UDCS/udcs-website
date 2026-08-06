@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Head } from 'vite-react-ssg';
 import { routeMeta } from '../seo';
 import { Hero } from '../components/Hero';
 import { Comparison } from '../components/Comparison';
@@ -13,14 +13,17 @@ export const HomePage: React.FC = () => {
     return (
         <main>
             {meta && (
-                <Helmet>
-                    <title>{meta.title}</title>
-                    <meta name="description" content={meta.description} />
-                    <link rel="canonical" href={meta.canonical} />
-                    <meta property="og:url" content={meta.canonical} />
-                    <meta property="og:title" content={meta.title} />
-                    <meta property="og:description" content={meta.description} />
-                </Helmet>
+              <Head>
+        <title>{meta.title}</title>
+        <meta name="description" content={meta.description} />
+        <link rel="canonical" href={meta.canonical} />
+        <meta property="og:url" content={meta.canonical} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:description" content={meta.description} />
+        <meta name="twitter:url" content={meta.canonical} />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.description} />
+      </Head>
             )}
             <Hero />
             <Comparison />

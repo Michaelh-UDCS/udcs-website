@@ -4,6 +4,11 @@ import { Outlet } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { HomePage } from './pages/HomePage';
 import { FamilyWorshipPage } from './pages/FamilyWorshipPage';
+import { AboutPage } from './pages/AboutPage';
+import { ContactPage } from './pages/ContactPage';
+import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
+import { TermsOfServicePage } from './pages/TermsOfServicePage';
+import { LakeJacksonPage } from './pages/LakeJacksonPage';
 import { Footer } from './components/Footer';
 
 const Layout = () => (
@@ -26,6 +31,26 @@ export const routes: RouteRecord[] = [
       {
         path: 'family-worship-assistant',
         element: <FamilyWorshipPage />,
+      },
+      {
+        path: 'about',
+        element: <AboutPage />,
+      },
+      {
+        path: 'contact',
+        element: <ContactPage />,
+      },
+      {
+        path: 'privacy-policy',
+        element: <PrivacyPolicyPage />,
+      },
+      {
+        path: 'terms-of-service',
+        element: <TermsOfServicePage />,
+      },
+      {
+        path: 'services/lake-jackson-tx',
+        element: <LakeJacksonPage />,
       }
     ]
   }

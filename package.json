@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite-react-ssg build",
     "preview": "vite preview",
-    "deploy": "vite-react-ssg build && firebase deploy --only hosting",
+    "deploy": "vite-react-ssg build && firebase deploy --only hosting && node scripts/post-deploy-indexnow.mjs",
     "deploy:clean": "npx rimraf dist && vite-react-ssg build && firebase deploy --only hosting"
   },
   "dependencies": {

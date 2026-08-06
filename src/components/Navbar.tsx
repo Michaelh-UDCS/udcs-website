@@ -17,10 +17,11 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
+    { name: 'About', href: '/about' },
     { name: 'Ownership', href: '/#comparison' },
     { name: 'Services', href: '/#solutions' },
     { name: 'Case Study', href: '/#case-study' },
-    { name: 'Contact', href: '/#contact' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   const isHomePage = location.pathname === '/';
@@ -58,7 +59,7 @@ export const Navbar: React.FC = () => {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/contact"
             className="px-5 py-2 bg-navy hover:bg-navy/80 text-cream border border-gold/30 rounded-none text-xs uppercase tracking-wider transition-all hover:border-gold hover:shadow-[0_0_15px_rgba(197,165,114,0.15)] font-sans"
           >
             Get Started
@@ -69,6 +70,8 @@ export const Navbar: React.FC = () => {
         <button
           className="lg:hidden text-cream p-2 focus:outline-none"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={isMobileMenuOpen}
         >
           {isMobileMenuOpen ? <X strokeWidth={1.5} className="w-6 h-6" /> : <Menu strokeWidth={1.5} className="w-6 h-6" />}
         </button>
