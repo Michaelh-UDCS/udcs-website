@@ -1,7 +1,7 @@
 export const routeMeta: Record<string, { title: string; description: string; canonical: string }> = {
   '/': {
-    title: 'Business Setup & Self-Hosted Websites in Lake Jackson, TX | Universal Dynamic',
-    description: 'Turnkey 50-state business setup, SAM.gov registrations, and self-hosted websites on Google Cloud serving Lake Jackson, Angleton, Freeport, Pearland, Brazoria County, and Greater Houston. Zero monthly agency fees.',
+    title: '100% Owned Cloud Websites & Business Setup in Lake Jackson, TX | 77566',
+    description: 'High-speed Google Cloud websites with $0 monthly agency fees, turnkey Texas business setup, SAM.gov registration, and local SEO in Lake Jackson (77566), Angleton, Freeport, and Greater Houston.',
     canonical: 'https://universal-dynamic.com/',
   },
   '/about': {

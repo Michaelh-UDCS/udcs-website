@@ -4,6 +4,7 @@ import { routeMeta } from '../seo';
 import { Hero } from '../components/Hero';
 import { Comparison } from '../components/Comparison';
 import { Solutions } from '../components/Solutions';
+import { ConciergeHandoff } from '../components/ConciergeHandoff';
 import { CaseStudy } from '../components/CaseStudy';
 import { Contact } from '../components/Contact';
 import { Faq } from '../components/Faq';
@@ -28,6 +29,7 @@ export const HomePage: React.FC = () => {
             <Hero />
             <Comparison />
             <Solutions />
+            <ConciergeHandoff />
             <CaseStudy />
             <Faq />
             <Contact />

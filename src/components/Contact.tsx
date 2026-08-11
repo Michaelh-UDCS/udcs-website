@@ -129,7 +129,7 @@ export const Contact: React.FC = () => {
                     onChange={handleChange}
                     className="w-full bg-charcoal-950/50 border-b border-gold/20 text-cream p-3 focus:outline-none focus:border-gold transition-colors text-sm font-light appearance-none"
                   >
-                    <option value="New Business Setup & Texas State Filings">New Business Setup & State Filings (50 States)</option>
+                    <option value="New Business Setup & Texas State Filings">New Business Setup & Texas State Filings</option>
                     <option value="Website Redesign & Self-Hosting (Google Cloud)">Website Redesign & Self-Hosting (Google Cloud)</option>
                     <option value="SAM.gov Registration & Government Readiness">SAM.gov Registration & Government Readiness</option>
                     <option value="Fast Website Launch & Google Workspace">Fast Website Launch & Google Workspace</option>

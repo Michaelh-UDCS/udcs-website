@@ -14,6 +14,15 @@ export const Footer: React.FC = () => {
               Universal Dynamic
               <span className="block text-[10px] text-gold mt-2 tracking-[0.4em] font-sans">Consulting Services LLC</span>
             </h4>
+            
+            {/* NAP (Name, Address, Phone) for Google Business Profile & Apple Business Connect */}
+            <address className="not-italic text-cream/50 text-xs font-light mt-4 space-y-1 font-sans">
+              <p className="text-cream/80 font-medium">Lake Jackson, TX 77566</p>
+              <p>Direct: <a href="tel:+19794176489" className="text-gold hover:underline">(979) 417-6489</a></p>
+              <p>Email: <a href="mailto:michael@universal-dynamic.com" className="hover:text-cream transition-colors">michael@universal-dynamic.com</a></p>
+              <p className="text-[11px] text-cream/40 pt-1">Serving Brazoria County & Greater Houston</p>
+            </address>
+
             <p className="text-cream/30 text-[10px] mt-6 font-sans uppercase tracking-[0.2em]">
               © {new Date().getFullYear()} // Established for Excellence
             </p>

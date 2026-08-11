@@ -26,14 +26,14 @@ export const Solutions: React.FC = () => {
             <div className="w-14 h-14 bg-navy rounded-sm flex items-center justify-center mb-8 border border-gold/20 group-hover:border-gold/50 transition-all">
               <Cloud className="w-7 h-7 text-gold" strokeWidth={1} />
             </div>
-            <h4 className="text-2xl font-bold text-cream mb-4 font-display">Get Official, Bank-Ready & Certified</h4>
+            <h4 className="text-2xl font-bold text-cream mb-4 font-display">Texas SOS & Entity Filings</h4>
             <p className="text-cream/60 leading-relaxed mb-6 font-light text-sm">
-              We navigate bureaucratic red tape across all 50 states so you can focus on building your business.
+              We navigate Texas Secretary of State filings and administrative setup so your business is legally compliant from Day 1.
             </p>
             <ul className="space-y-3 text-cream/80 text-sm">
               <li className="flex items-start gap-3">
                 <ShieldCheck className="w-5 h-5 text-gold shrink-0" strokeWidth={1} />
-                <span className="font-light">Texas & 50-State Secretary of State filings & IRS EIN registration</span>
+                <span className="font-light">Texas Secretary of State entity filings & IRS EIN registration</span>
               </li>
               <li className="flex items-start gap-3">
                 <ShieldCheck className="w-5 h-5 text-gold shrink-0" strokeWidth={1} />
@@ -105,7 +105,7 @@ export const Solutions: React.FC = () => {
               </li>
               <li className="flex items-start gap-3">
                 <ShieldCheck className="w-5 h-5 text-gold shrink-0" strokeWidth={1} />
-                <span className="font-light">Migrate off costly WordPress/Wix platforms to true 100% Google account ownership</span>
+                <span className="font-light">Migrate from third-party subscription platforms and traditional CMS hosting to true 100% Google account ownership</span>
               </li>
               <li className="flex items-start gap-3">
                 <ShieldCheck className="w-5 h-5 text-gold shrink-0" strokeWidth={1} />

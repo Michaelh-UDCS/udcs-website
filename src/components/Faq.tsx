@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const faqs = [
   {
     question: "Can I hire UDCS if I ONLY need a website redesign or self-hosted website?",
-    answer: "Absolutely. You do not need to purchase government filings to work with us. If you already have a business and want to migrate off costly platforms like WordPress, Wix, or Squarespace to your own self-hosted Google Cloud setup, we handle the entire redesign and handover."
+    answer: "Absolutely. You do not need to purchase government filings to work with us. If you already have a business and want to migrate from third-party subscription platforms or traditional CMS hosting to your own self-hosted Google Cloud setup, we handle the entire redesign and handover."
   },
   {
     question: "Do I really own my website and domain with zero monthly agency fees?",
@@ -25,8 +25,8 @@ const faqs = [
     answer: "No. Unlike platforms like WordPress that require constant plugin updates to prevent hacks, our cloud setups use modern serverless hosting. Google automatically handles background security and server updates, meaning zero maintenance for you."
   },
   {
-    question: "Do you only work with Texas businesses, or do you serve clients nationwide?",
-    answer: "While Texas is our home state, we provide 50-state business filing assistance, nationwide SAM.gov/federal registration onboarding, and global website deployment."
+    question: "Do you only work with Texas businesses, or do you serve clients outside of Lake Jackson?",
+    answer: "We specialize exclusively in Texas businesses, with primary focus on Lake Jackson (77566), Angleton, Freeport, Clute, Richwood, Pearland, and Greater Houston. We provide Texas Secretary of State entity filings, IRS EIN registrations, SAM.gov federal contracting onboarding, and high-speed Google Cloud self-hosted websites."
   },
   {
     question: "Can you help me set up SAM.gov to bid on government contracts?",

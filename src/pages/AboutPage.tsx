@@ -125,7 +125,7 @@ export const AboutPage: React.FC = () => {
               <p className="text-cream/75 text-lg font-light leading-relaxed">
                 I help local entrepreneurs launch and scale with a rare combination: 24+ years
                 of hands-on operations, compliance, and budget leadership, paired with modern
-                web development skills. Through Universal Dynamic, I handle Texas/50-state
+                web development skills. Through Universal Dynamic, I handle Texas Secretary of State
                 business setup and SAM.gov federal contracting readiness, then build
                 high-speed, self-hosted websites on Google Cloud — fully owned by the client,
                 with zero monthly agency fees.

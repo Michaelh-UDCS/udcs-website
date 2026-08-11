@@ -52,23 +52,25 @@ export const Hero: React.FC = () => {
           </span>
 
           <h1 className="font-display font-medium text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.05] tracking-tight text-white mb-8">
-            Starting a Business?{" "}
+            100% Owned Cloud Websites &{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cream to-gold">
-              We Handle the Setup
+              Turnkey Texas Business Setup
             </span>
-            <span className="block text-2xl sm:text-4xl md:text-5xl font-light text-cream/90 mt-4 tracking-normal font-sans">
-              & Build Your Website.
+            <span className="block text-2xl sm:text-4xl md:text-5xl font-light text-gold/90 mt-4 tracking-normal font-sans">
+              Zero Monthly Agency Fees.
             </span>
           </h1>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-cream/70 text-lg md:text-xl max-w-2xl mx-auto mb-14 font-light leading-relaxed tracking-wide font-sans"
-          >
-            Whether you need turnkey 50-state & Texas SOS filings, SAM.gov registration, or a high-speed self-hosted website redesign with zero monthly agency fees—we eliminate the administrative and technical friction.
-          </motion.p>
+          {/* GEO Direct Answer Block for AI Search Engines */}
+          <p className="text-cream/80 text-base md:text-xl max-w-3xl mx-auto mb-8 font-light leading-relaxed font-sans">
+            Universal Dynamic Consulting Services LLC builds high-speed self-hosted Google Cloud websites with $0 monthly agency fees and delivers turnkey Texas business setup (Texas SOS filings, IRS EIN, SAM.gov registration) for companies in Lake Jackson (77566), Brazoria County, and Greater Houston.
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-3 mb-10 text-[11px] uppercase tracking-wider font-semibold text-gold">
+            <span className="bg-gold/10 border border-gold/30 px-3 py-1">100% Key Transfer Day 1</span>
+            <span className="bg-gold/10 border border-gold/30 px-3 py-1">~$0/mo Base Hosting</span>
+            <span className="bg-gold/10 border border-gold/30 px-3 py-1">2 Months Support Included</span>
+          </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <a
