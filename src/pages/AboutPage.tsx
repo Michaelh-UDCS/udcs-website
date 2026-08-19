@@ -43,6 +43,7 @@ export const AboutPage: React.FC = () => {
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
+        {meta.robots && <meta name="robots" content={meta.robots} />}
         <link rel="canonical" href={meta.canonical} />
         <meta property="og:url" content={meta.canonical} />
         <meta property="og:title" content={meta.title} />

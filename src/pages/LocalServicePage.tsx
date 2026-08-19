@@ -14,6 +14,7 @@ export interface LocalServiceProps {
     title: string;
     description: string;
     canonical: string;
+    robots?: string;
   };
   schema: any;
   heroHeadline: React.ReactNode;
@@ -80,6 +81,7 @@ export const LocalServicePage: React.FC<LocalServiceProps> = (props) => {
       <Head>
         <title>{props.meta.title}</title>
         <meta name="description" content={props.meta.description} />
+        {props.meta.robots && <meta name="robots" content={props.meta.robots} />}
         <link rel="canonical" href={props.meta.canonical} />
         <meta property="og:url" content={props.meta.canonical} />
         <meta property="og:title" content={props.meta.title} />
