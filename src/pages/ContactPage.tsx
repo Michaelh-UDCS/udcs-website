@@ -1,6 +1,5 @@
 import React from 'react';
 import { Head } from 'vite-react-ssg';
-import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { Contact } from '../components/Contact';
 import { routeMeta } from '../seo';
@@ -70,12 +69,7 @@ export const ContactPage: React.FC = () => {
       <div className="container mx-auto px-6 md:px-12 max-w-5xl">
 
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <span className="inline-block py-1.5 px-6 border border-gold/30 bg-navy/30 backdrop-blur-sm text-gold text-[10px] font-bold tracking-[0.3em] uppercase mb-6">
             Get in Touch
           </span>
@@ -86,21 +80,16 @@ export const ContactPage: React.FC = () => {
             Free consultations available for business setup, SAM.gov registration,
             and self-hosted website projects.
           </p>
-        </motion.div>
+        </div>
 
         {/* Contact Info Cards */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-          className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16"
-        >
+        <div className="reveal-on-scroll grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16">
           {contactInfo.map((item) => (
             <div
               key={item.label}
               className="border border-gold/10 bg-navy/20 backdrop-blur-sm p-6 text-center"
             >
-              <item.icon className="w-6 h-6 text-gold mx-auto mb-3" strokeWidth={1} />
+              <item.icon className="w-6 h-6 text-gold mx-auto mb-3" strokeWidth={1} aria-hidden="true" />
               <p className="text-gold text-[10px] font-bold uppercase tracking-widest mb-2">
                 {item.label}
               </p>
@@ -117,7 +106,7 @@ export const ContactPage: React.FC = () => {
               <p className="text-cream/40 text-xs font-light">{item.note}</p>
             </div>
           ))}
-        </motion.div>
+        </div>
 
       </div>
 
@@ -126,3 +115,4 @@ export const ContactPage: React.FC = () => {
     </main>
   );
 };
+

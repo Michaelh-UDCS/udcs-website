@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Section } from './ui/Section';
 import { Send } from 'lucide-react';
-import { motion } from 'framer-motion';
 import { contactContent } from '../content/contact';
 
 export const Contact: React.FC = () => {
@@ -53,12 +52,7 @@ export const Contact: React.FC = () => {
   return (
     <Section id={sectionId}>
       <div className="max-w-3xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h2 className="text-gold font-bold tracking-widest uppercase text-sm mb-4">{badge}</h2>
           <h3 className="text-4xl md:text-6xl font-display font-medium text-cream mb-6">
             {heading}
@@ -66,16 +60,12 @@ export const Contact: React.FC = () => {
           <p className="text-cream/60 text-lg leading-relaxed font-light">
             {subhead}
           </p>
-        </motion.div>
+        </div>
 
         {/* Contact Form */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="bg-navy/20 border border-gold/10 p-8 md:p-12 relative overflow-hidden backdrop-blur-sm"
-        >
+        <div className="bg-navy/20 border border-gold/10 p-8 md:p-12 relative overflow-hidden backdrop-blur-sm">
           <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-gold/50 to-transparent"></div>
+
 
           {status === 'success' ? (
             <div className="text-center py-10">
@@ -171,7 +161,7 @@ export const Contact: React.FC = () => {
               </button>
             </form>
           )}
-        </motion.div>
+        </div>
       </div>
     </Section>
   );

@@ -6,3 +6,46 @@
     @apply bg-charcoal-950 text-cream font-sans antialiased selection:bg-gold/30 selection:text-gold;
   }
 }
+
+/* Hero & Background Dynamic Glow (CSS Custom Properties) */
+.hero-glow-layer {
+  background: radial-gradient(
+    800px circle at var(--glow-x, 50%) var(--glow-y, 40%),
+    rgba(197, 165, 114, 0.08),
+    transparent 80%
+  );
+}
+
+/* Subtle Chevron Scroll Indicator */
+@keyframes bounce-subtle {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 10px);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .animate-bounce-subtle {
+    animation: bounce-subtle 2s infinite ease-in-out;
+  }
+}
+
+/* Permanent Animation Rules:
+   - Animate ONLY transform and opacity.
+   - Default state = visible in static HTML (never opacity: 0 in SSR / JS off).
+   - Scoped strictly to html.js-reveal .reveal-on-scroll inside prefers-reduced-motion: no-preference.
+*/
+@media (prefers-reduced-motion: no-preference) {
+  html.js-reveal .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  html.js-reveal .reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

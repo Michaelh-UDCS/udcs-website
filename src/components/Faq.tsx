@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Section } from './ui/Section';
 import { ChevronDown } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { faqContent } from '../content/faq';
 
 export const Faq: React.FC = () => {
@@ -41,20 +40,11 @@ export const Faq: React.FC = () => {
                 />
               </button>
               
-              <AnimatePresence>
-                {openIndex === index && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: 'easeInOut' }}
-                  >
-                    <div className="px-6 pb-5 pt-0 text-cream/70 font-light leading-relaxed border-t border-gold/10 mt-2">
-                      {faq.answer}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              {openIndex === index && (
+                <div className="px-6 pb-5 pt-0 text-cream/70 font-light leading-relaxed border-t border-gold/10 mt-2 transition-all duration-300">
+                  {faq.answer}
+                </div>
+              )}
             </div>
           ))}
         </div>

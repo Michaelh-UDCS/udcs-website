@@ -1,7 +1,6 @@
 import React from 'react';
 import { Head } from 'vite-react-ssg';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { routeMeta } from '../seo';
 import { aboutContent } from '../content/about';
@@ -57,12 +56,7 @@ export const AboutPage: React.FC = () => {
       <div className="container mx-auto px-6 md:px-12 max-w-5xl">
 
         {/* Hero */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="text-center mb-20"
-        >
+        <div className="text-center mb-20">
           <span className="inline-block py-1.5 px-6 border border-gold/30 bg-navy/30 backdrop-blur-sm text-gold text-[10px] font-bold tracking-[0.3em] uppercase mb-6">
             {badge}
           </span>
@@ -72,15 +66,10 @@ export const AboutPage: React.FC = () => {
           <p className="text-cream/60 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
             {subhead}
           </p>
-        </motion.div>
+        </div>
 
         {/* Mission */}
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-20 border border-gold/10 bg-navy/20 backdrop-blur-sm p-8 md:p-12 relative overflow-hidden"
-        >
+        <section className="reveal-on-scroll mb-20 border border-gold/10 bg-navy/20 backdrop-blur-sm p-8 md:p-12 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-gold/50 to-transparent" />
           <h2 className="text-gold font-bold tracking-widest uppercase text-sm mb-4">
             {missionBadge}
@@ -88,15 +77,10 @@ export const AboutPage: React.FC = () => {
           <p className="text-cream/80 text-lg md:text-xl font-light leading-relaxed max-w-3xl">
             {missionBody}
           </p>
-        </motion.section>
+        </section>
 
         {/* Founder */}
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
+        <section className="reveal-on-scroll mb-20">
           <h2 className="text-gold font-bold tracking-widest uppercase text-sm mb-8">
             {founderBadge}
           </h2>
@@ -118,7 +102,7 @@ export const AboutPage: React.FC = () => {
               </p>
             </div>
           </article>
-        </motion.section>
+        </section>
 
         {/* Values */}
         <section className="mb-20">
@@ -127,29 +111,21 @@ export const AboutPage: React.FC = () => {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {values.map((v, i) => (
-              <motion.div
+              <div
                 key={v.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="border border-gold/10 bg-navy/20 p-6 group hover:border-gold/30 transition-colors duration-300"
+                className="reveal-on-scroll border border-gold/10 bg-navy/20 p-6 group hover:border-gold/30 transition-colors duration-300"
+                style={{ transitionDelay: `${i * 0.1}s` }}
               >
-                <v.icon className="w-6 h-6 text-gold mb-4" strokeWidth={1} />
+                <v.icon className="w-6 h-6 text-gold mb-4" strokeWidth={1} aria-hidden="true" />
                 <h3 className="font-display font-bold text-lg text-cream mb-2">{v.title}</h3>
                 <p className="text-cream/60 text-sm font-light leading-relaxed">{v.body}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </section>
 
         {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
+        <div className="reveal-on-scroll text-center">
           <p className="text-cream/60 mb-6 font-light">
             {ctaLead}
           </p>
@@ -159,13 +135,14 @@ export const AboutPage: React.FC = () => {
           >
             <span className="relative z-10 flex items-center gap-3">
               {ctaText}
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.5} />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.5} aria-hidden="true" />
             </span>
             <div className="absolute inset-0 bg-gold transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out" />
           </Link>
-        </motion.div>
+        </div>
 
       </div>
     </main>
   );
 };
+
