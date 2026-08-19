@@ -38,6 +38,9 @@ export default defineConfig(({ mode, isSsrBuild }) => {
     },
     ssgOptions: {
       formatting: 'none',
+      beastiesOptions: {
+        preload: 'media',
+      },
       onPageRendered(route, html) {
         const manifestPath = path.resolve(__dirname, 'dist/.vite/manifest.json');
         let revealFile = 'assets/reveal.js';

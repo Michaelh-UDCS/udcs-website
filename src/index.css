@@ -1,5 +1,7 @@
 @import "tailwindcss";
+@import "./fonts.css";
 @config "../tailwind.config.js";
+
 
 @layer base {
   body {

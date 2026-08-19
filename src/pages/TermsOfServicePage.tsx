@@ -30,10 +30,10 @@ export const TermsOfServicePage: React.FC = () => {
             <h1 className="font-display font-medium text-4xl sm:text-5xl text-white mb-4">
               Terms of Service
             </h1>
-            <p className="text-cream/40 text-sm font-light">Last updated: August 2026</p>
+            <p className="text-cream/70 text-sm font-light">Last updated: August 2026</p>
           </header>
 
-          <div className="space-y-10 text-cream/75 font-light leading-relaxed">
+          <div className="space-y-10 text-cream/85 font-light leading-relaxed">
 
             <section>
               <h2 className="font-display font-bold text-xl text-cream mb-3">1. Acceptance of Terms</h2>
@@ -112,7 +112,7 @@ export const TermsOfServicePage: React.FC = () => {
                 For questions about these terms, contact us at:{' '}
                 <a
                   href="mailto:michael@universal-dynamic.com"
-                  className="text-gold hover:text-gold/80 transition-colors"
+                  className="text-gold underline hover:text-gold/80 transition-colors focus-visible:ring-1 focus-visible:ring-gold focus-visible:outline-none"
                 >
                   michael@universal-dynamic.com
                 </a>
@@ -124,7 +124,7 @@ export const TermsOfServicePage: React.FC = () => {
           <div className="mt-12 pt-8 border-t border-gold/10">
             <Link
               to="/"
-              className="text-gold hover:text-gold/80 transition-colors text-xs uppercase tracking-widest font-bold"
+              className="text-gold underline hover:text-gold/80 transition-colors text-xs uppercase tracking-widest font-bold focus-visible:ring-1 focus-visible:ring-gold focus-visible:outline-none"
             >
               ← Back to Home
             </Link>

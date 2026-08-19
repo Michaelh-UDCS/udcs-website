@@ -41,8 +41,8 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        display: ['"Cormorant Garamond"', 'serif'],
+        sans: ['Inter', 'Inter-Fallback', 'sans-serif'],
+        display: ['"Cormorant Garamond"', 'CormorantGaramond-Fallback', 'serif'],
       },
       backgroundImage: {
         'metal-gradient': 'linear-gradient(135deg, #1f2937 0%, #0a0a0a 100%)',

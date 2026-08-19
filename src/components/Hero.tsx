@@ -23,8 +23,8 @@ export const Hero: React.FC = () => {
         className="hero-glow-layer pointer-events-none absolute inset-0 z-0 opacity-40 mix-blend-screen"
       />
 
-      {/* Background Texture (Carbon Fiber) */}
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03] mix-blend-overlay pointer-events-none"></div>
+      {/* Background Texture (Carbon Fiber - Local) */}
+      <div className="absolute inset-0 bg-[url('/assets/carbon-fibre.png')] opacity-[0.03] mix-blend-overlay pointer-events-none"></div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10 text-center flex flex-col items-center">
         <div className="mb-6 max-w-4xl">
