@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, Hexagon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
+import { navigationContent } from '../content/navigation';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,14 +17,7 @@ export const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: 'About', href: '/about' },
-    { name: 'Ownership', href: '/#comparison' },
-    { name: 'Services', href: '/#solutions' },
-    { name: 'Case Study', href: '/#case-study' },
-    { name: 'Contact', href: '/contact' },
-  ];
-
+  const { brandName, brandTagline, navLinks, ctaButtonText, ctaButtonHref } = navigationContent;
   const isHomePage = location.pathname === '/';
 
   return (
@@ -41,8 +35,8 @@ export const Navbar: React.FC = () => {
             <div className="absolute inset-0 bg-gold/10 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
           </div>
           <div className="flex flex-col">
-            <span className="font-display font-bold text-base sm:text-lg tracking-wider leading-none text-cream whitespace-nowrap">UNIVERSAL DYNAMIC</span>
-            <span className="font-display font-medium text-[0.5rem] sm:text-[0.55rem] tracking-[0.2em] leading-none text-gold whitespace-nowrap hidden xs:block">CONSULTING SERVICES LLC</span>
+            <span className="font-display font-bold text-base sm:text-lg tracking-wider leading-none text-cream whitespace-nowrap">{brandName}</span>
+            <span className="font-display font-medium text-[0.5rem] sm:text-[0.55rem] tracking-[0.2em] leading-none text-gold whitespace-nowrap hidden xs:block">{brandTagline}</span>
           </div>
         </Link>
 
@@ -59,10 +53,10 @@ export const Navbar: React.FC = () => {
             </a>
           ))}
           <a
-            href="/contact"
+            href={ctaButtonHref}
             className="px-5 py-2 bg-navy hover:bg-navy/80 text-cream border border-gold/30 rounded-none text-xs uppercase tracking-wider transition-all hover:border-gold hover:shadow-[0_0_15px_rgba(197,165,114,0.15)] font-sans"
           >
-            Get Started
+            {ctaButtonText}
           </a>
         </nav>
 

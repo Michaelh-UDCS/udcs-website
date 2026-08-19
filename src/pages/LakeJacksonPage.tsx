@@ -1,9 +1,11 @@
 import React from 'react';
 import { LocalServicePage } from './LocalServicePage';
 import { routeMeta } from '../seo';
+import { lakeJacksonPageContent } from '../content/localService';
 
 export const LakeJacksonPage: React.FC = () => {
   const meta = routeMeta['/services/lake-jackson-tx'];
+  const { heroHeadlineMain, heroHeadlineHighlight, heroSubheadline, heroBody } = lakeJacksonPageContent;
 
   const localSchema = {
     "@context": "https://schema.org",
@@ -55,11 +57,11 @@ export const LakeJacksonPage: React.FC = () => {
       schema={localSchema}
       heroHeadline={
         <>
-          Starting a Business in <span className="text-transparent bg-clip-text bg-gradient-to-r from-cream to-gold">Lake Jackson?</span>
+          {heroHeadlineMain} <span className="text-transparent bg-clip-text bg-gradient-to-r from-cream to-gold">{heroHeadlineHighlight}</span>
         </>
       }
-      heroSubheadline="We handle the setup & build your website."
-      heroBody="Local to the 77566 area. Whether you need turnkey Texas SOS filings, SAM.gov registration, or a high-speed self-hosted website to dominate local search—we eliminate the friction for Brazoria County businesses."
+      heroSubheadline={heroSubheadline}
+      heroBody={heroBody}
     />
   );
 };

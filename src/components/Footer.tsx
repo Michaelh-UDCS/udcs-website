@@ -1,8 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Linkedin, Twitter, Facebook, Youtube } from 'lucide-react';
+import { footerContent } from '../content/footer';
 
 export const Footer: React.FC = () => {
+  const {
+    brandName,
+    brandTagline,
+    addressLines,
+    phoneDisplay,
+    phoneHref,
+    email,
+    emailHref,
+    serviceAreaNote,
+    copyrightText,
+    socialLinks,
+    legalLinks,
+  } = footerContent;
+
   return (
     // Added backdrop-blur and a softer border color for a premium feel
     <footer className="bg-[#050505] backdrop-blur-xl py-16 border-t border-gold/10">
@@ -11,20 +26,22 @@ export const Footer: React.FC = () => {
           <div className="text-left">
             {/* tracking-[0.2em] gives the brand more authority and "breathing room" */}
             <h4 className="font-display font-medium text-xl text-cream tracking-[0.25em] uppercase">
-              Universal Dynamic
-              <span className="block text-[10px] text-gold mt-2 tracking-[0.4em] font-sans">Consulting Services LLC</span>
+              {brandName}
+              <span className="block text-[10px] text-gold mt-2 tracking-[0.4em] font-sans">{brandTagline}</span>
             </h4>
             
             {/* NAP (Name, Address, Phone) for Google Business Profile & Apple Business Connect */}
             <address className="not-italic text-cream/50 text-xs font-light mt-4 space-y-1 font-sans">
-              <p className="text-cream/80 font-medium">Lake Jackson, TX 77566</p>
-              <p>Direct: <a href="tel:+19794176489" className="text-gold hover:underline">(979) 417-6489</a></p>
-              <p>Email: <a href="mailto:michael@universal-dynamic.com" className="hover:text-cream transition-colors">michael@universal-dynamic.com</a></p>
-              <p className="text-[11px] text-cream/40 pt-1">Serving Brazoria County & Greater Houston</p>
+              {addressLines.map((line, idx) => (
+                <p key={idx} className="text-cream/80 font-medium">{line}</p>
+              ))}
+              <p>Direct: <a href={phoneHref} className="text-gold hover:underline">{phoneDisplay}</a></p>
+              <p>Email: <a href={emailHref} className="hover:text-cream transition-colors">{email}</a></p>
+              <p className="text-[11px] text-cream/40 pt-1">{serviceAreaNote}</p>
             </address>
 
             <p className="text-cream/30 text-[10px] mt-6 font-sans uppercase tracking-[0.2em]">
-              © {new Date().getFullYear()} // Established for Excellence
+              © {new Date().getFullYear()} // {copyrightText}
             </p>
           </div>
 
@@ -32,7 +49,7 @@ export const Footer: React.FC = () => {
             {/* Social Media Links */}
             <div className="flex items-center gap-5 text-cream/60">
               <a 
-                href="https://www.linkedin.com/company/universal-dynamic" 
+                href={socialLinks.linkedin} 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 aria-label="LinkedIn"
@@ -41,7 +58,7 @@ export const Footer: React.FC = () => {
                 <Linkedin size={18} />
               </a>
               <a 
-                href="https://x.com/UniversalDynLLC" 
+                href={socialLinks.twitter} 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 aria-label="X / Twitter"
@@ -50,7 +67,7 @@ export const Footer: React.FC = () => {
                 <Twitter size={18} />
               </a>
               <a 
-                href="https://www.facebook.com/UniversalDynamicLLC" 
+                href={socialLinks.facebook} 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 aria-label="Facebook"
@@ -59,7 +76,7 @@ export const Footer: React.FC = () => {
                 <Facebook size={18} />
               </a>
               <a 
-                href="https://www.youtube.com/@UniversalDynamic" 
+                href={socialLinks.youtube} 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 aria-label="YouTube"
@@ -71,11 +88,25 @@ export const Footer: React.FC = () => {
 
             {/* Company / Legal Links */}
             <div className="flex flex-wrap gap-x-8 gap-y-4 text-[10px] font-bold uppercase tracking-[0.2em] text-cream/50 font-sans">
-              <Link to="/about" className="hover:text-gold transition-all duration-300 hover:translate-x-1 inline-block">About</Link>
-              <Link to="/contact" className="hover:text-gold transition-all duration-300 hover:translate-x-1 inline-block">Contact</Link>
-              <Link to="/privacy-policy" className="hover:text-gold transition-all duration-300 hover:translate-x-1 inline-block">Privacy Policy</Link>
-              <Link to="/terms-of-service" className="hover:text-gold transition-all duration-300 hover:translate-x-1 inline-block">Terms of Service</Link>
-              <a href="#" className="hover:text-gold transition-all duration-300 hover:translate-x-1 inline-block">Client Portal</a>
+              {legalLinks.map((link, idx) =>
+                link.isExternal ? (
+                  <a
+                    key={idx}
+                    href={link.href}
+                    className="hover:text-gold transition-all duration-300 hover:translate-x-1 inline-block"
+                  >
+                    {link.name}
+                  </a>
+                ) : (
+                  <Link
+                    key={idx}
+                    to={link.href}
+                    className="hover:text-gold transition-all duration-300 hover:translate-x-1 inline-block"
+                  >
+                    {link.name}
+                  </Link>
+                )
+              )}
             </div>
           </div>
         </div>

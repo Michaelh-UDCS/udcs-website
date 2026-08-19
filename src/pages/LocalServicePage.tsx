@@ -5,6 +5,7 @@ import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Comparison } from '../components/Comparison';
 import { Solutions } from '../components/Solutions';
 import { Contact } from '../components/Contact';
+import { localServiceContent } from '../content/localService';
 
 export interface LocalServiceProps {
   city: string;
@@ -22,6 +23,7 @@ export interface LocalServiceProps {
 }
 
 const LocalHero: React.FC<{ props: LocalServiceProps }> = ({ props }) => {
+  const { heroTagline, ctaButtonText } = localServiceContent;
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const springConfig = { damping: 25, stiffness: 150 };
@@ -54,7 +56,7 @@ const LocalHero: React.FC<{ props: LocalServiceProps }> = ({ props }) => {
           className="mb-6 max-w-4xl"
         >
           <span className="inline-block py-1.5 px-6 border border-gold/30 rounded-none bg-navy/30 backdrop-blur-sm text-gold-muted text-[10px] sm:text-xs font-bold tracking-[0.3em] uppercase mb-8">
-            Universal Dynamic Consulting Services | {props.city}, {props.state}
+            {heroTagline} | {props.city}, {props.state}
           </span>
 
           <h1 className="font-display font-medium text-4xl sm:text-6xl md:text-7xl leading-[1.05] tracking-tight text-white mb-8">
@@ -79,7 +81,7 @@ const LocalHero: React.FC<{ props: LocalServiceProps }> = ({ props }) => {
               className="group relative px-10 py-4 bg-transparent border border-gold text-gold font-bold tracking-[0.2em] uppercase text-xs overflow-hidden transition-all duration-500 hover:text-charcoal-950"
             >
               <span className="relative z-10 flex items-center gap-3">
-                Get Started Today <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.5} />
+                {ctaButtonText} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.5} />
               </span>
               <div className="absolute inset-0 bg-gold transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
             </a>
@@ -98,6 +100,8 @@ const LocalHero: React.FC<{ props: LocalServiceProps }> = ({ props }) => {
 };
 
 export const LocalServicePage: React.FC<LocalServiceProps> = (props) => {
+  const { mapHeadingPrefix, mapBodyTemplate } = localServiceContent;
+
   return (
     <main>
       <Head>
@@ -124,10 +128,9 @@ export const LocalServicePage: React.FC<LocalServiceProps> = (props) => {
       <section className="bg-charcoal-900 py-24 relative overflow-hidden border-t border-navy">
         <div className="container mx-auto px-6 md:px-12 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-display text-white mb-6">Proudly Serving {props.city}, {props.state}</h2>
+            <h2 className="text-3xl md:text-5xl font-display text-white mb-6">{mapHeadingPrefix} {props.city}, {props.state}</h2>
             <p className="text-cream/70 text-lg md:text-xl font-light font-sans max-w-2xl mx-auto">
-              We are a local business dedicated to helping entrepreneurs in {props.county} launch their businesses and dominate local search. 
-              Contact us today for a free consultation.
+              {mapBodyTemplate.replace('{county}', props.county)}
             </p>
           </div>
           <div className="w-full h-96 rounded-none border border-gold/30 overflow-hidden shadow-2xl">

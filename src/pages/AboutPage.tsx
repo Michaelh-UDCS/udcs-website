@@ -2,8 +2,9 @@ import React from 'react';
 import { Head } from 'vite-react-ssg';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ShieldCheck, ArrowRight, Star, Zap, Lock } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { routeMeta } from '../seo';
+import { aboutContent } from '../content/about';
 
 const personSchema = {
   '@context': 'https://schema.org',
@@ -19,31 +20,24 @@ const personSchema = {
   sameAs: ['https://www.linkedin.com/company/universal-dynamic'],
 };
 
-const values = [
-  {
-    icon: Lock,
-    title: '100% Client Ownership',
-    body: 'Every site we build is handed directly to your Google account on Day 1. No lock-in, no proprietary platform, no ongoing agency dependency.',
-  },
-  {
-    icon: Star,
-    title: '24+ Years of Operations Leadership',
-    body: 'Deep expertise in compliance, budget management, and business operations — not just code. We understand what it actually takes to run a business.',
-  },
-  {
-    icon: Zap,
-    title: 'Google Cloud Infrastructure',
-    body: 'Sites built on Firebase run on the same infrastructure as Google Search. Fast by default, secure by design, and virtually $0/month for standard traffic.',
-  },
-  {
-    icon: ShieldCheck,
-    title: 'Zero Monthly Agency Fees',
-    body: 'Unlike traditional agencies, we charge for the work — not a permanent seat at your table. Your hosting costs go to Google, not us.',
-  },
-];
-
 export const AboutPage: React.FC = () => {
   const meta = routeMeta['/about'];
+  const {
+    badge,
+    heading,
+    subhead,
+    missionBadge,
+    missionBody,
+    founderBadge,
+    founderName,
+    founderTitle,
+    founderBio,
+    valuesBadge,
+    values,
+    ctaLead,
+    ctaText,
+    ctaHref,
+  } = aboutContent;
 
   return (
     <main className="min-h-screen bg-charcoal-950 text-cream pt-32 pb-24">
@@ -70,14 +64,13 @@ export const AboutPage: React.FC = () => {
           className="text-center mb-20"
         >
           <span className="inline-block py-1.5 px-6 border border-gold/30 bg-navy/30 backdrop-blur-sm text-gold text-[10px] font-bold tracking-[0.3em] uppercase mb-6">
-            Our Story
+            {badge}
           </span>
           <h1 className="font-display font-medium text-4xl sm:text-5xl md:text-6xl leading-tight tracking-tight text-white mb-6">
-            About Universal Dynamic
+            {heading}
           </h1>
           <p className="text-cream/60 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
-            A Lake Jackson, TX consulting firm built on decades of real-world
-            operations experience and modern web engineering.
+            {subhead}
           </p>
         </motion.div>
 
@@ -90,12 +83,10 @@ export const AboutPage: React.FC = () => {
         >
           <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-gold/50 to-transparent" />
           <h2 className="text-gold font-bold tracking-widest uppercase text-sm mb-4">
-            Our Mission
+            {missionBadge}
           </h2>
           <p className="text-cream/80 text-lg md:text-xl font-light leading-relaxed max-w-3xl">
-            Universal Dynamic exists to close the gap between where a small business
-            starts and where it needs to be — legally registered, federally compliant,
-            and online with a fast, modern presence that belongs entirely to the owner.
+            {missionBody}
           </p>
         </motion.section>
 
@@ -107,7 +98,7 @@ export const AboutPage: React.FC = () => {
           className="mb-20"
         >
           <h2 className="text-gold font-bold tracking-widest uppercase text-sm mb-8">
-            Meet the Founder
+            {founderBadge}
           </h2>
           <article className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
             <div className="md:col-span-2 flex justify-center md:justify-start">
@@ -117,18 +108,13 @@ export const AboutPage: React.FC = () => {
             </div>
             <div className="md:col-span-10">
               <h3 className="font-display font-bold text-2xl text-cream mb-1">
-                Michael Huerta
+                {founderName}
               </h3>
               <p className="text-gold text-xs font-bold uppercase tracking-widest mb-6">
-                CEO & Founder — Lake Jackson, TX
+                {founderTitle}
               </p>
               <p className="text-cream/75 text-lg font-light leading-relaxed">
-                I help local entrepreneurs launch and scale with a rare combination: 24+ years
-                of hands-on operations, compliance, and budget leadership, paired with modern
-                web development skills. Through Universal Dynamic, I handle Texas Secretary of State
-                business setup and SAM.gov federal contracting readiness, then build
-                high-speed, self-hosted websites on Google Cloud — fully owned by the client,
-                with zero monthly agency fees.
+                {founderBio}
               </p>
             </div>
           </article>
@@ -137,7 +123,7 @@ export const AboutPage: React.FC = () => {
         {/* Values */}
         <section className="mb-20">
           <h2 className="text-gold font-bold tracking-widest uppercase text-sm mb-8">
-            Why Choose Universal Dynamic
+            {valuesBadge}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {values.map((v, i) => (
@@ -165,14 +151,14 @@ export const AboutPage: React.FC = () => {
           className="text-center"
         >
           <p className="text-cream/60 mb-6 font-light">
-            Ready to start? Let's talk about your business.
+            {ctaLead}
           </p>
           <Link
-            to="/contact"
+            to={ctaHref}
             className="group inline-flex items-center gap-3 px-10 py-4 bg-transparent border border-gold text-gold font-bold tracking-[0.2em] uppercase text-xs overflow-hidden transition-all duration-500 hover:text-charcoal-950 relative"
           >
             <span className="relative z-10 flex items-center gap-3">
-              Get a Free Consultation
+              {ctaText}
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.5} />
             </span>
             <div className="absolute inset-0 bg-gold transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out" />

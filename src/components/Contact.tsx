@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import { Section } from './ui/Section';
 import { Send } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { contactContent } from '../content/contact';
 
 export const Contact: React.FC = () => {
+  const { sectionId, badge, heading, subhead, inquiryOptions } = contactContent;
+
   const [formState, setFormState] = useState({
     name: '',
     email: '',
-    type: 'New Business Setup & Texas State Filings',
-    message: ''
+    type: inquiryOptions[0],
+    message: '',
   });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
@@ -21,19 +24,19 @@ export const Contact: React.FC = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json'
+          Accept: 'application/json',
         },
         body: JSON.stringify({
           ...formState,
           _subject: `New Inquiry: ${formState.type} from ${formState.name}`,
           _captcha: 'false',
-          _template: 'table'
-        })
+          _template: 'table',
+        }),
       });
 
       if (response.ok) {
         setStatus('success');
-        setFormState({ name: '', email: '', type: 'New Business Setup & Texas State Filings', message: '' });
+        setFormState({ name: '', email: '', type: inquiryOptions[0], message: '' });
       } else {
         setStatus('error');
       }
@@ -48,7 +51,7 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <Section id="contact">
+    <Section id={sectionId}>
       <div className="max-w-3xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -56,13 +59,12 @@ export const Contact: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-gold font-bold tracking-widest uppercase text-sm mb-4">Get in Touch</h2>
+          <h2 className="text-gold font-bold tracking-widest uppercase text-sm mb-4">{badge}</h2>
           <h3 className="text-4xl md:text-6xl font-display font-medium text-cream mb-6">
-            Schedule Your Consultation
+            {heading}
           </h3>
           <p className="text-cream/60 text-lg leading-relaxed font-light">
-            Ready to launch your business, register for government contracts, or build a fast self-hosted website?
-            Submit a request below for a confidential consultation.
+            {subhead}
           </p>
         </motion.div>
 
@@ -129,11 +131,9 @@ export const Contact: React.FC = () => {
                     onChange={handleChange}
                     className="w-full bg-charcoal-950/50 border-b border-gold/20 text-cream p-3 focus:outline-none focus:border-gold transition-colors text-sm font-light appearance-none"
                   >
-                    <option value="New Business Setup & Texas State Filings">New Business Setup & Texas State Filings</option>
-                    <option value="Website Redesign & Self-Hosting (Google Cloud)">Website Redesign & Self-Hosting (Google Cloud)</option>
-                    <option value="SAM.gov Registration & Government Readiness">SAM.gov Registration & Government Readiness</option>
-                    <option value="Fast Website Launch & Google Workspace">Fast Website Launch & Google Workspace</option>
-                    <option value="General Inquiry">General Inquiry</option>
+                    {inquiryOptions.map((opt, idx) => (
+                      <option key={idx} value={opt}>{opt}</option>
+                    ))}
                   </select>
                   <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gold">
                     <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
