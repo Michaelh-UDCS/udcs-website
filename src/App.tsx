@@ -10,6 +10,7 @@ import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { TermsOfServicePage } from './pages/TermsOfServicePage';
 import { LakeJacksonPage } from './pages/LakeJacksonPage';
 import { ThankYouPage } from './pages/ThankYouPage';
+import { NotFoundPage } from './pages/NotFoundPage';
 import { Footer } from './components/Footer';
 
 const Layout = () => (
@@ -56,6 +57,14 @@ export const routes: RouteRecord[] = [
       {
         path: 'thank-you',
         element: <ThankYouPage />,
+      },
+      {
+        path: '404',
+        element: <NotFoundPage />,
+      },
+      {
+        path: '*',
+        element: <NotFoundPage />,
       }
     ]
   }

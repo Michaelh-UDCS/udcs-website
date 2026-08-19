@@ -55,7 +55,13 @@ export const ConciergeHandoff: React.FC = () => {
 
         <div className="text-center bg-gold/5 border border-gold/20 p-6 md:p-8">
           <p className="text-cream/90 text-sm md:text-base font-light">
-            <strong className="text-gold font-semibold">{footerNotePrefix}</strong>{footerNoteBody}
+            <strong className="text-gold font-semibold">{footerNotePrefix}</strong>{footerNoteBody}{' '}
+            <span className="block sm:inline mt-2 sm:mt-0">
+              Serving local businesses in{' '}
+              <a href="/services/lake-jackson-tx" className="text-gold underline hover:text-gold/80 font-medium">
+                Lake Jackson (77566) &amp; Brazoria County
+              </a>.
+            </span>
           </p>
         </div>
       </div>

@@ -53,5 +53,12 @@ export const routeMeta: Record<string, RouteMeta> = {
     description: 'Thank you for reaching out to Universal Dynamic. We have received your inquiry and will review your project details.',
     canonical: 'https://universal-dynamic.com/thank-you',
     robots: 'noindex, nofollow',
+  },
+  '/404': {
+    title: '404 - Page Not Found | Universal Dynamic Consulting Services LLC',
+    description: 'The page you are looking for does not exist on this server.',
+    canonical: 'https://universal-dynamic.com/404',
+    robots: 'noindex, nofollow',
   }
 };
+

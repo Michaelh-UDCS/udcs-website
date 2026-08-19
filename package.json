@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite-react-ssg build && node scripts/check-faq.mjs",
+    "build": "vite-react-ssg build && node scripts/generate-sitemap.mjs && node scripts/check-faq.mjs",
     "preview": "vite preview",
     "deploy": "npm run build && firebase deploy --only hosting && node scripts/post-deploy-indexnow.mjs",
     "deploy:clean": "npx rimraf dist && npm run build && firebase deploy --only hosting"
