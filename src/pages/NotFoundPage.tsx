@@ -18,7 +18,6 @@ export const NotFoundPage: React.FC = () => {
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
         <meta name="robots" content="noindex, nofollow" />
-        <link rel="canonical" href={meta.canonical} />
       </Head>
 
       <div className="max-w-xl mx-auto text-center relative z-10">

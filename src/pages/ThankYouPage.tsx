@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Head } from 'vite-react-ssg';
 import { CheckCircle2, ArrowLeft, Phone, Mail } from 'lucide-react';
 import { routeMeta } from '../seo';
@@ -12,10 +12,6 @@ export const ThankYouPage: React.FC = () => {
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
         {meta.robots && <meta name="robots" content={meta.robots} />}
-        <link rel="canonical" href={meta.canonical} />
-        <meta property="og:url" content={meta.canonical} />
-        <meta property="og:title" content={meta.title} />
-        <meta property="og:description" content={meta.description} />
       </Head>
 
       <div className="container mx-auto px-6 md:px-12 max-w-2xl text-center">

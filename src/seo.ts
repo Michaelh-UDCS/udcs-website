@@ -8,19 +8,19 @@ export interface RouteMeta {
 export const routeMeta: Record<string, RouteMeta> = {
   '/': {
     title: '100% Owned Cloud Websites & Business Setup in Lake Jackson, TX | 77566',
-    description: 'High-speed Google Cloud websites with $0 monthly agency fees, turnkey Texas business setup, SAM.gov registration, and local SEO in Lake Jackson (77566), Angleton, Freeport, and Greater Houston.',
+    description: 'Google Cloud websites with $0 monthly fees, Texas business setup, SAM.gov registration, and local SEO in Lake Jackson, Angleton, and Freeport.',
     canonical: 'https://universal-dynamic.com/',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
   },
   '/about': {
     title: 'About Universal Dynamic | Consulting Services in Brazoria County, TX',
-    description: 'Michael Huerta founded Universal Dynamic Consulting Services LLC in Lake Jackson, TX — 24+ years of operations leadership paired with modern web development. Turnkey business setup and self-hosted websites.',
+    description: 'Michael Huerta founded UDCS in Lake Jackson, TX — 24+ years of operations leadership, modern web development, and turnkey business setup.',
     canonical: 'https://universal-dynamic.com/about',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
   },
   '/contact': {
     title: 'Contact Universal Dynamic | Lake Jackson, TX | Free Consultation',
-    description: 'Contact Universal Dynamic in Lake Jackson, TX for a free consultation on business setup, SAM.gov registration, or a self-hosted website on Google Cloud. Serving Brazoria County and Houston metro.',
+    description: 'Free consultation on business setup, SAM.gov registration, or a self-hosted website on Google Cloud. Serving Lake Jackson, Brazoria County, and Houston.',
     canonical: 'https://universal-dynamic.com/contact',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
   },

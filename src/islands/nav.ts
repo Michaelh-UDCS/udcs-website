@@ -7,10 +7,19 @@ if (typeof window !== 'undefined') {
     const toggle = document.getElementById('nav-toggle') as HTMLInputElement | null;
     if (!toggle) return;
 
+    const label = document.querySelector('label[for="nav-toggle"]') as HTMLElement | null;
+
+    // Sync aria-expanded state with checkbox
+    const syncAria = () => {
+      label?.setAttribute('aria-expanded', String(toggle.checked));
+    };
+    syncAria();
+    toggle.addEventListener('change', syncAria);
+
     document.addEventListener('keydown', (e: KeyboardEvent) => {
       if (e.key === 'Escape' && toggle.checked) {
         toggle.checked = false;
-        const label = document.querySelector('label[for="nav-toggle"]') as HTMLElement | null;
+        syncAria();
         label?.focus();
       }
     });
@@ -19,6 +28,7 @@ if (typeof window !== 'undefined') {
     mobileNav?.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => {
         toggle.checked = false;
+        syncAria();
       });
     });
   };

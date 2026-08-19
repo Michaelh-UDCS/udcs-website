@@ -54,6 +54,7 @@ export const Navbar: React.FC = () => {
           tabIndex={0}
           role="button"
           aria-label="Toggle navigation menu"
+          aria-expanded="false"
           className="lg:hidden text-cream p-2 cursor-pointer select-none rounded-sm block focus-visible:ring-1 focus-visible:ring-gold focus:outline-none peer-focus-visible:ring-1 peer-focus-visible:ring-gold"
           onKeyDown={(e) => {
             if (e.key === 'Enter' || e.key === ' ') {
