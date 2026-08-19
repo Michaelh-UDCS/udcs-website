@@ -70,7 +70,7 @@ export const AboutPage: React.FC = () => {
         </div>
 
         {/* Mission */}
-        <section className="reveal-on-scroll mb-20 border border-gold/10 bg-navy/20 backdrop-blur-sm p-8 md:p-12 relative overflow-hidden">
+        <section className="mb-20 border border-gold/10 bg-navy/20 backdrop-blur-sm p-8 md:p-12 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-gold/50 to-transparent" />
           <h2 className="text-gold font-bold tracking-widest uppercase text-sm mb-4">
             {missionBadge}
@@ -81,7 +81,7 @@ export const AboutPage: React.FC = () => {
         </section>
 
         {/* Founder */}
-        <section className="reveal-on-scroll mb-20">
+        <section className="mb-20">
           <h2 className="text-gold font-bold tracking-widest uppercase text-sm mb-8">
             {founderBadge}
           </h2>

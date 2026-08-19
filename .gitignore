@@ -29,3 +29,11 @@ dist-ssr
 *.exe
 *.pdf
 
+# Build and audit artifacts
+stats.html
+stats-client.json
+phase1-dist-diff.txt
+lighthouse-*.json
+*.report.json
+
+

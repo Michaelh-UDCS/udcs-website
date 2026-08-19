@@ -47,5 +47,11 @@ export const routeMeta: Record<string, RouteMeta> = {
     description: 'Local business setup, SAM.gov registration, and custom self-hosted web design exclusively for businesses in Lake Jackson, TX and the 77566 surrounding area.',
     canonical: 'https://universal-dynamic.com/services/lake-jackson-tx',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+  },
+  '/thank-you': {
+    title: 'Inquiry Received | Universal Dynamic Consulting Services LLC',
+    description: 'Thank you for reaching out to Universal Dynamic. We have received your inquiry and will review your project details.',
+    canonical: 'https://universal-dynamic.com/thank-you',
+    robots: 'noindex, nofollow',
   }
 };

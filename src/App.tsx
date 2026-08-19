@@ -9,6 +9,7 @@ import { ContactPage } from './pages/ContactPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { TermsOfServicePage } from './pages/TermsOfServicePage';
 import { LakeJacksonPage } from './pages/LakeJacksonPage';
+import { ThankYouPage } from './pages/ThankYouPage';
 import { Footer } from './components/Footer';
 
 const Layout = () => (
@@ -51,6 +52,10 @@ export const routes: RouteRecord[] = [
       {
         path: 'services/lake-jackson-tx',
         element: <LakeJacksonPage />,
+      },
+      {
+        path: 'thank-you',
+        element: <ThankYouPage />,
       }
     ]
   }

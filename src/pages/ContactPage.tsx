@@ -84,7 +84,7 @@ export const ContactPage: React.FC = () => {
         </div>
 
         {/* Contact Info Cards */}
-        <div className="reveal-on-scroll grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16">
           {contactInfo.map((item) => (
             <div
               key={item.label}

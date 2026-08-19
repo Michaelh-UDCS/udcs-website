@@ -49,3 +49,11 @@
     transform: translateY(0);
   }
 }
+
+/* Mobile Nav Toggle Icon States */
+#nav-toggle:checked ~ div label .nav-icon-menu {
+  display: none;
+}
+#nav-toggle:checked ~ div label .nav-icon-close {
+  display: block;
+}

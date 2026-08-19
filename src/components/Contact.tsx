@@ -1,53 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Section } from './ui/Section';
 import { Send } from 'lucide-react';
 import { contactContent } from '../content/contact';
 
 export const Contact: React.FC = () => {
   const { sectionId, badge, heading, subhead, inquiryOptions } = contactContent;
-
-  const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    type: inquiryOptions[0],
-    message: '',
-  });
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus('submitting');
-
-    try {
-      const response = await fetch('https://formsubmit.co/ajax/michael@universal-dynamic.com', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: JSON.stringify({
-          ...formState,
-          _subject: `New Inquiry: ${formState.type} from ${formState.name}`,
-          _captcha: 'false',
-          _template: 'table',
-        }),
-      });
-
-      if (response.ok) {
-        setStatus('success');
-        setFormState({ name: '', email: '', type: inquiryOptions[0], message: '' });
-      } else {
-        setStatus('error');
-      }
-    } catch (error) {
-      console.error('Submission error:', error);
-      setStatus('error');
-    }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    setFormState({ ...formState, [e.target.name]: e.target.value });
-  };
 
   return (
     <Section id={sectionId}>
@@ -66,63 +23,77 @@ export const Contact: React.FC = () => {
         <div className="bg-navy/20 border border-gold/10 p-8 md:p-12 relative overflow-hidden backdrop-blur-sm">
           <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-gold/50 to-transparent"></div>
 
+          <form
+            method="POST"
+            action="https://formsubmit.co/michael@universal-dynamic.com"
+            className="space-y-8"
+          >
+            {/* FormSubmit Configuration */}
+            <input type="hidden" name="_next" value="https://universal-dynamic.com/thank-you" />
+            <input type="hidden" name="_subject" value="New Universal Dynamic Client Inquiry" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            {/* Anti-spam Honeypot */}
+            <input type="text" name="_honey" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
 
-          {status === 'success' ? (
-            <div className="text-center py-10">
-              <div className="w-16 h-16 bg-gold/5 border border-gold/20 rounded-none flex items-center justify-center mx-auto mb-6">
-                <Send className="w-8 h-8 text-gold" strokeWidth={1} />
-              </div>
-              <h4 className="text-3xl font-display font-bold text-cream mb-4">Inquiry Received</h4>
-              <p className="text-cream/60 mb-8 font-light">Thank you for getting in touch. A representative will contact you shortly.</p>
-              <button
-                onClick={() => setStatus('idle')}
-                className="text-gold border border-gold/20 px-6 py-2 uppercase tracking-widest text-xs hover:bg-gold hover:text-charcoal-950 transition-colors"
-              >
-                Send Another Message
-              </button>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <label htmlFor="name" className="block text-[10px] font-bold uppercase tracking-[0.2em] text-gold mb-3">Full Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formState.name}
-                    onChange={handleChange}
-                    className="w-full bg-charcoal-950/50 border-b border-gold/20 text-cream p-3 focus:outline-none focus:border-gold transition-colors text-sm font-light"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-[10px] font-bold uppercase tracking-[0.2em] text-gold mb-3">Email Address</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formState.email}
-                    onChange={handleChange}
-                    className="w-full bg-charcoal-950/50 border-b border-gold/20 text-cream p-3 focus:outline-none focus:border-gold transition-colors text-sm font-light"
-                    required
-                  />
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <label htmlFor="name" className="block text-[10px] font-bold uppercase tracking-[0.2em] text-gold mb-3">
+                  Full Name <span className="text-gold/60">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="e.g. Sarah Jenkins"
+                  className="w-full bg-charcoal-950/50 border-b border-gold/20 text-cream p-3 focus:outline-none focus:border-gold transition-colors text-sm font-light placeholder:text-cream/20"
+                />
               </div>
 
               <div>
-                <label htmlFor="type" className="block text-[10px] font-bold uppercase tracking-[0.2em] text-gold mb-3">Inquiry Type</label>
+                <label htmlFor="email" className="block text-[10px] font-bold uppercase tracking-[0.2em] text-gold mb-3">
+                  Email Address <span className="text-gold/60">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="e.g. sarah@example.com"
+                  className="w-full bg-charcoal-950/50 border-b border-gold/20 text-cream p-3 focus:outline-none focus:border-gold transition-colors text-sm font-light placeholder:text-cream/20"
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <label htmlFor="phone" className="block text-[10px] font-bold uppercase tracking-[0.2em] text-gold mb-3">
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="e.g. (979) 555-0123"
+                  className="w-full bg-charcoal-950/50 border-b border-gold/20 text-cream p-3 focus:outline-none focus:border-gold transition-colors text-sm font-light placeholder:text-cream/20"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="type" className="block text-[10px] font-bold uppercase tracking-[0.2em] text-gold mb-3">
+                  Primary Need <span className="text-gold/60">*</span>
+                </label>
                 <div className="relative">
                   <select
                     id="type"
                     name="type"
-                    value={formState.type}
-                    onChange={handleChange}
+                    required
+                    defaultValue={inquiryOptions[0]}
                     className="w-full bg-charcoal-950/50 border-b border-gold/20 text-cream p-3 focus:outline-none focus:border-gold transition-colors text-sm font-light appearance-none"
                   >
                     {inquiryOptions.map((opt, idx) => (
-                      <option key={idx} value={opt}>{opt}</option>
+                      <option key={idx} value={opt} className="bg-charcoal-950 text-cream">{opt}</option>
                     ))}
                   </select>
                   <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gold">
@@ -130,37 +101,88 @@ export const Contact: React.FC = () => {
                   </div>
                 </div>
               </div>
+            </div>
 
-              <div>
-                <label htmlFor="message" className="block text-[10px] font-bold uppercase tracking-[0.2em] text-gold mb-3">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formState.message}
-                  onChange={handleChange}
-                  rows={4}
-                  className="w-full bg-charcoal-950/50 border-b border-gold/20 text-cream p-3 focus:outline-none focus:border-gold transition-colors text-sm font-light resize-none"
-                  required
-                ></textarea>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="md:col-span-1">
+                <label htmlFor="currentUrl" className="block text-[10px] font-bold uppercase tracking-[0.2em] text-gold mb-3">
+                  Current Website URL
+                </label>
+                <input
+                  type="text"
+                  id="currentUrl"
+                  name="currentUrl"
+                  placeholder="e.g. mybusiness.com (or None)"
+                  className="w-full bg-charcoal-950/50 border-b border-gold/20 text-cream p-3 focus:outline-none focus:border-gold transition-colors text-sm font-light placeholder:text-cream/20"
+                />
               </div>
 
-              {status === 'error' && (
-                <p className="text-red-500 text-sm font-light">There was an error sending your message. Please try again.</p>
-              )}
+              <div className="md:col-span-1">
+                <label htmlFor="currentPlatform" className="block text-[10px] font-bold uppercase tracking-[0.2em] text-gold mb-3">
+                  Current Platform
+                </label>
+                <div className="relative">
+                  <select
+                    id="currentPlatform"
+                    name="currentPlatform"
+                    defaultValue="Squarespace / Wix / GoDaddy"
+                    className="w-full bg-charcoal-950/50 border-b border-gold/20 text-cream p-3 focus:outline-none focus:border-gold transition-colors text-sm font-light appearance-none"
+                  >
+                    <option value="Squarespace / Wix / GoDaddy" className="bg-charcoal-950 text-cream">Squarespace / Wix / GoDaddy</option>
+                    <option value="WordPress / WooCommerce" className="bg-charcoal-950 text-cream">WordPress / WooCommerce</option>
+                    <option value="Shopify" className="bg-charcoal-950 text-cream">Shopify</option>
+                    <option value="Custom / Other Host" className="bg-charcoal-950 text-cream">Custom / Other Host</option>
+                    <option value="No Website Yet" className="bg-charcoal-950 text-cream">No Website Yet (New Business)</option>
+                  </select>
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gold">
+                    <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+                  </div>
+                </div>
+              </div>
 
-              <button
-                type="submit"
-                disabled={status === 'submitting'}
-                className="w-full bg-transparent border border-gold text-gold hover:bg-gold hover:text-charcoal-950 disabled:bg-charcoal-950/50 disabled:border-gold/20 disabled:text-gold/50 font-bold uppercase tracking-[0.2em] py-4 transition-all duration-300 flex items-center justify-center gap-3 text-xs group"
-              >
-                {status === 'submitting' ? 'Submitting Inquiry...' : (
-                  <>
-                    Send Message <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.5} />
-                  </>
-                )}
-              </button>
-            </form>
-          )}
+              <div className="md:col-span-1">
+                <label htmlFor="takesPaymentsOnline" className="block text-[10px] font-bold uppercase tracking-[0.2em] text-gold mb-3">
+                  Online Payments?
+                </label>
+                <div className="relative">
+                  <select
+                    id="takesPaymentsOnline"
+                    name="takesPaymentsOnline"
+                    defaultValue="No / Invoicing Only"
+                    className="w-full bg-charcoal-950/50 border-b border-gold/20 text-cream p-3 focus:outline-none focus:border-gold transition-colors text-sm font-light appearance-none"
+                  >
+                    <option value="No / Invoicing Only" className="bg-charcoal-950 text-cream">No / Invoicing Only</option>
+                    <option value="Yes (Credit Card / E-commerce)" className="bg-charcoal-950 text-cream">Yes (Credit Card / E-commerce)</option>
+                    <option value="Planning to Add Soon" className="bg-charcoal-950 text-cream">Planning to Add Soon</option>
+                  </select>
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gold">
+                    <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <label htmlFor="message" className="block text-[10px] font-bold uppercase tracking-[0.2em] text-gold mb-3">
+                Project Scope & Requirements <span className="text-gold/60">*</span>
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows={4}
+                placeholder="Tell us about your business, current monthly subscription pain points, or filing goals..."
+                className="w-full bg-charcoal-950/50 border-b border-gold/20 text-cream p-3 focus:outline-none focus:border-gold transition-colors text-sm font-light resize-none placeholder:text-cream/20"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-transparent border border-gold text-gold hover:bg-gold hover:text-charcoal-950 font-bold uppercase tracking-[0.2em] py-4 transition-all duration-300 flex items-center justify-center gap-3 text-xs group cursor-pointer focus-visible:ring-1 focus-visible:ring-gold"
+            >
+              Send Message <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.5} />
+            </button>
+          </form>
         </div>
       </div>
     </Section>

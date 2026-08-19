@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Calculator, ArrowRight, ShieldCheck } from 'lucide-react';
 import { calculatorContent } from '../content/calculator';
 
@@ -19,14 +19,12 @@ export const SaaSMetricsCalculator: React.FC = () => {
     disclaimer,
   } = calculatorContent;
 
-  const [monthlyFee, setMonthlyFee] = useState<number>(defaultFee);
-
-  const annualTax = monthlyFee * 12;
-  const threeYearTax = monthlyFee * 36;
-  const fiveYearTax = monthlyFee * 60;
+  const initialAnnualTax = defaultFee * 12;
+  const initialThreeYearTax = defaultFee * 36;
+  const initialFiveYearTax = defaultFee * 60;
 
   return (
-    <div className="mt-16 bg-navy/30 border border-gold/30 p-8 md:p-12 relative overflow-hidden backdrop-blur-md">
+    <div id="saas-calculator" className="mt-16 bg-navy/30 border border-gold/30 p-8 md:p-12 relative overflow-hidden backdrop-blur-md">
       <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-gold via-gold/50 to-transparent" />
       
       <div className="text-center mb-10">
@@ -51,9 +49,10 @@ export const SaaSMetricsCalculator: React.FC = () => {
         {presets.map((preset) => (
           <button
             key={preset.label}
-            onClick={() => setMonthlyFee(preset.amount)}
-            className={`px-4 py-2 text-xs font-semibold uppercase tracking-wider transition-all border ${
-              monthlyFee === preset.amount
+            type="button"
+            data-calc-preset={preset.amount}
+            className={`px-4 py-2 text-xs font-semibold uppercase tracking-wider transition-all border cursor-pointer ${
+              defaultFee === preset.amount
                 ? 'bg-gold text-charcoal-950 border-gold'
                 : 'bg-navy/40 text-cream/70 border-gold/20 hover:border-gold/50 hover:text-cream'
             }`}
@@ -70,7 +69,7 @@ export const SaaSMetricsCalculator: React.FC = () => {
             {sliderLabel}
           </label>
           <span className="text-2xl font-display font-bold text-cream">
-            ${monthlyFee}<span className="text-sm font-light text-cream/50">/mo</span>
+            <span data-calc-fee>${defaultFee}</span><span className="text-sm font-light text-cream/50">/mo</span>
           </span>
         </div>
         <input
@@ -79,8 +78,7 @@ export const SaaSMetricsCalculator: React.FC = () => {
           min={minSlider}
           max={maxSlider}
           step={step}
-          value={monthlyFee}
-          onChange={(e) => setMonthlyFee(Number(e.target.value))}
+          defaultValue={defaultFee}
           className="w-full h-2 bg-charcoal-950 rounded-lg appearance-none cursor-pointer accent-gold border border-gold/20"
         />
         <div className="flex justify-between text-[10px] text-cream/40 mt-1 uppercase tracking-widest font-mono">
@@ -95,8 +93,8 @@ export const SaaSMetricsCalculator: React.FC = () => {
         {/* 1-Year Card */}
         <div className="bg-charcoal-950/60 border border-gold/20 p-6 text-center">
           <span className="text-[11px] font-bold uppercase tracking-widest text-cream/50 block mb-2">{cards.oneYear.title}</span>
-          <div className="text-3xl font-display font-bold text-red-400 mb-2">
-            ${annualTax.toLocaleString()}
+          <div data-calc-1yr className="text-3xl font-display font-bold text-red-400 mb-2">
+            ${initialAnnualTax.toLocaleString()}
           </div>
           <p className="text-cream/50 text-xs font-light">{cards.oneYear.subtitle}</p>
         </div>
@@ -104,8 +102,8 @@ export const SaaSMetricsCalculator: React.FC = () => {
         {/* 3-Year Card */}
         <div className="bg-charcoal-950/60 border border-gold/20 p-6 text-center">
           <span className="text-[11px] font-bold uppercase tracking-widest text-cream/50 block mb-2">{cards.threeYear.title}</span>
-          <div className="text-3xl font-display font-bold text-red-400 mb-2">
-            ${threeYearTax.toLocaleString()}
+          <div data-calc-3yr className="text-3xl font-display font-bold text-red-400 mb-2">
+            ${initialThreeYearTax.toLocaleString()}
           </div>
           <p className="text-cream/50 text-xs font-light">{cards.threeYear.subtitle}</p>
         </div>
@@ -114,8 +112,8 @@ export const SaaSMetricsCalculator: React.FC = () => {
         <div className="bg-gold/10 border border-gold/50 p-6 text-center relative overflow-hidden">
           <div className="absolute top-0 right-0 w-20 h-20 bg-gold/20 blur-xl rounded-full" />
           <span className="text-[11px] font-bold uppercase tracking-widest text-gold block mb-2">{cards.fiveYear.title}</span>
-          <div className="text-4xl font-display font-bold text-gold mb-2">
-            ${fiveYearTax.toLocaleString()}
+          <div data-calc-5yr className="text-4xl font-display font-bold text-gold mb-2">
+            ${initialFiveYearTax.toLocaleString()}
           </div>
           <p className="text-cream/90 text-xs font-light">{cards.fiveYear.subtitle}</p>
         </div>

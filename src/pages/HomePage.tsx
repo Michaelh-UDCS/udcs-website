@@ -9,8 +9,23 @@ import { CaseStudy } from '../components/CaseStudy';
 import { Contact } from '../components/Contact';
 import { Faq } from '../components/Faq';
 
+import { faqContent } from '../content/faq';
+
 export const HomePage: React.FC = () => {
     const meta = routeMeta['/'];
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqContent.faqs.map(item => ({
+        "@type": "Question",
+        "name": item.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.answer
+        }
+      }))
+    };
+
     return (
         <main>
             {meta && (
@@ -25,6 +40,7 @@ export const HomePage: React.FC = () => {
         <meta name="twitter:url" content={meta.canonical} />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Head>
             )}
             <Hero />

@@ -1,34 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Menu, X, Hexagon } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
 import { navigationContent } from '../content/navigation';
 
 export const Navbar: React.FC = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const location = useLocation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   const { brandName, brandTagline, navLinks, ctaButtonText, ctaButtonHref } = navigationContent;
-  const isHomePage = location.pathname === '/';
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || !isHomePage
-        ? 'py-4 bg-charcoal-950/70 backdrop-blur-md border-b border-gold/20'
-        : 'py-6 bg-transparent'
-        }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 py-4 bg-charcoal-950/85 backdrop-blur-md border-b border-gold/20 transition-colors duration-300">
+      {/* CSS checkbox for mobile toggle */}
+      <input
+        type="checkbox"
+        id="nav-toggle"
+        className="peer sr-only"
+        aria-label="Toggle navigation menu"
+      />
+
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3 group shrink-0" onClick={() => window.scrollTo(0, 0)}>
+        <a href="/" className="flex items-center gap-3 group shrink-0 focus-visible:ring-1 focus-visible:ring-gold focus-visible:outline-none">
           <div className="relative shrink-0">
             <Hexagon className="w-8 h-8 text-gold group-hover:text-gold/80 transition-colors" strokeWidth={1} />
             <div className="absolute inset-0 bg-gold/10 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -37,15 +26,15 @@ export const Navbar: React.FC = () => {
             <span className="font-display font-bold text-base sm:text-lg tracking-wider leading-none text-cream whitespace-nowrap">{brandName}</span>
             <span className="font-display font-medium text-[0.5rem] sm:text-[0.55rem] tracking-[0.2em] leading-none text-gold whitespace-nowrap hidden xs:block">{brandTagline}</span>
           </div>
-        </Link>
+        </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-8" aria-label="Main Navigation">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-xs uppercase tracking-widest text-cream hover:text-gold transition-colors relative group py-2 font-sans"
+              className="text-xs uppercase tracking-widest text-cream hover:text-gold transition-colors relative group py-2 font-sans focus-visible:ring-1 focus-visible:ring-gold focus-visible:outline-none"
             >
               {link.name}
               <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-gold transition-all duration-300 group-hover:w-full"></span>
@@ -53,42 +42,52 @@ export const Navbar: React.FC = () => {
           ))}
           <a
             href={ctaButtonHref}
-            className="px-5 py-2 bg-navy hover:bg-navy/80 text-cream border border-gold/30 rounded-none text-xs uppercase tracking-wider transition-all hover:border-gold hover:shadow-[0_0_15px_rgba(197,165,114,0.15)] font-sans"
+            className="px-5 py-2 bg-navy hover:bg-navy/80 text-cream border border-gold/30 rounded-none text-xs uppercase tracking-wider transition-all hover:border-gold hover:shadow-[0_0_15px_rgba(197,165,114,0.15)] font-sans focus-visible:ring-1 focus-visible:ring-gold focus-visible:outline-none"
           >
             {ctaButtonText}
           </a>
         </nav>
 
-        {/* Mobile / Tablet Menu Button */}
-        <button
-          className="lg:hidden text-cream p-2 focus:outline-none"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        {/* Mobile / Tablet Menu Button (CSS-Only Label for Checkbox) */}
+        <label
+          htmlFor="nav-toggle"
+          tabIndex={0}
+          role="button"
           aria-label="Toggle navigation menu"
-          aria-expanded={isMobileMenuOpen}
+          className="lg:hidden text-cream p-2 cursor-pointer select-none rounded-sm block focus-visible:ring-1 focus-visible:ring-gold focus:outline-none peer-focus-visible:ring-1 peer-focus-visible:ring-gold"
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              const el = document.getElementById('nav-toggle') as HTMLInputElement | null;
+              if (el) el.checked = !el.checked;
+            }
+          }}
         >
-          {isMobileMenuOpen ? <X strokeWidth={1.5} className="w-6 h-6" /> : <Menu strokeWidth={1.5} className="w-6 h-6" />}
-        </button>
+          <Menu strokeWidth={1.5} className="w-6 h-6 nav-icon-menu block text-cream hover:text-gold transition-colors" />
+          <X strokeWidth={1.5} className="w-6 h-6 nav-icon-close hidden text-cream hover:text-gold transition-colors" />
+        </label>
       </div>
 
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div
-          className="md:hidden bg-charcoal-950 border-b border-gold/20 overflow-hidden transition-all duration-300"
-        >
-          <div className="flex flex-col p-6 gap-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-cream hover:text-gold py-2 border-b border-gold/10 font-sans"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
+      {/* CSS-Only Mobile Menu */}
+      <div className="hidden peer-checked:block lg:hidden bg-charcoal-950/95 border-b border-gold/20 backdrop-blur-xl">
+        <nav className="flex flex-col p-6 gap-4" aria-label="Mobile Navigation">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-cream hover:text-gold py-2 border-b border-gold/10 font-sans text-sm tracking-wide focus-visible:ring-1 focus-visible:ring-gold focus-visible:outline-none"
+            >
+              {link.name}
+            </a>
+          ))}
+          <a
+            href={ctaButtonHref}
+            className="mt-2 text-center py-3 bg-navy text-gold border border-gold/40 text-xs uppercase tracking-widest font-bold font-sans focus-visible:ring-1 focus-visible:ring-gold focus-visible:outline-none"
+          >
+            {ctaButtonText}
+          </a>
+        </nav>
+      </div>
     </header>
   );
 };
