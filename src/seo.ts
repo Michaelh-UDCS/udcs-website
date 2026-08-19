@@ -7,32 +7,32 @@ export interface RouteMeta {
 
 export const routeMeta: Record<string, RouteMeta> = {
   '/': {
-    title: '100% Owned Cloud Websites & Business Setup in Lake Jackson, TX | 77566',
-    description: 'Google Cloud websites with $0 monthly fees, Texas business setup, SAM.gov registration, and local SEO in Lake Jackson, Angleton, and Freeport.',
+    title: 'Cloud Web Design & Texas Business Setup | Universal Dynamic',
+    description: 'High-speed Google Cloud websites with $0 monthly fees, Texas business setup, SAM.gov registration, and local SEO in Lake Jackson, Angleton, and Freeport, TX.',
     canonical: 'https://universal-dynamic.com/',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
   },
   '/about': {
-    title: 'About Universal Dynamic | Consulting Services in Brazoria County, TX',
-    description: 'Michael Huerta founded UDCS in Lake Jackson, TX — 24+ years of operations leadership, modern web development, and turnkey business setup.',
+    title: 'About Universal Dynamic | Texas Business & Web Consulting',
+    description: 'Meet Michael Huerta, founder of Universal Dynamic in Lake Jackson, TX — 24+ years of operations leadership, turnkey Texas business setup, and web design.',
     canonical: 'https://universal-dynamic.com/about',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
   },
   '/contact': {
-    title: 'Contact Universal Dynamic | Lake Jackson, TX | Free Consultation',
+    title: 'Contact Universal Dynamic | Free Consultation in Lake Jackson',
     description: 'Free consultation on business setup, SAM.gov registration, or a self-hosted website on Google Cloud. Serving Lake Jackson, Brazoria County, and Houston.',
     canonical: 'https://universal-dynamic.com/contact',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
   },
   '/privacy-policy': {
     title: 'Privacy Policy | Universal Dynamic Consulting Services LLC',
-    description: 'Privacy policy for Universal Dynamic Consulting Services LLC — how we collect, use, and protect your data.',
+    description: 'Privacy policy for Universal Dynamic Consulting Services LLC. Learn how we collect, protect, and manage your data with complete transparency and security.',
     canonical: 'https://universal-dynamic.com/privacy-policy',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
   },
   '/terms-of-service': {
     title: 'Terms of Service | Universal Dynamic Consulting Services LLC',
-    description: 'Terms of service for Universal Dynamic Consulting Services LLC governing the use of our website and professional services.',
+    description: 'Official terms of service for Universal Dynamic Consulting Services LLC governing the use of our website, Google Cloud web design, and business services.',
     canonical: 'https://universal-dynamic.com/terms-of-service',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
   },
@@ -43,8 +43,8 @@ export const routeMeta: Record<string, RouteMeta> = {
     robots: 'noindex, nofollow',
   },
   '/services/lake-jackson-tx': {
-    title: 'Business Setup & Local SEO Web Design in Lake Jackson, TX | 77566',
-    description: 'Local business setup, SAM.gov registration, and custom self-hosted web design exclusively for businesses in Lake Jackson, TX and the 77566 surrounding area.',
+    title: 'Business Setup & Web Design in Lake Jackson, TX | 77566',
+    description: 'Local business setup, SAM.gov registration, and custom self-hosted web design for small businesses in Lake Jackson, TX and the 77566 surrounding area.',
     canonical: 'https://universal-dynamic.com/services/lake-jackson-tx',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
   },
