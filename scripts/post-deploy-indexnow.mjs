@@ -14,7 +14,6 @@ const urls = [
   `https://${DOMAIN}/contact`,
   `https://${DOMAIN}/privacy-policy`,
   `https://${DOMAIN}/terms-of-service`,
-  `https://${DOMAIN}/family-worship-assistant`,
   `https://${DOMAIN}/services/lake-jackson-tx`,
 ];
 
