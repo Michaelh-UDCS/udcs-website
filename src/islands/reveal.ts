@@ -21,12 +21,7 @@ if (typeof window !== 'undefined') {
 
     const init = () => {
       document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          el.classList.add('is-visible');
-        } else {
-          observer.observe(el);
-        }
+        observer.observe(el);
       });
     };
 

@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite-react-ssg build && node scripts/generate-sitemap.mjs && node scripts/check-faq.mjs",
+    "build": "vite-react-ssg build && node scripts/generate-sitemap.mjs && node scripts/check-faq.mjs && node scripts/verify-js-disabled.mjs",
+    "test:routes": "node scripts/test-static-routes.mjs",
+    "test:lighthouse": "node scripts/run-lighthouse-audit.mjs",
     "preview": "vite preview",
     "deploy": "npm run build && firebase deploy --only hosting && node scripts/post-deploy-indexnow.mjs",
     "deploy:clean": "npx rimraf dist && npm run build && firebase deploy --only hosting"

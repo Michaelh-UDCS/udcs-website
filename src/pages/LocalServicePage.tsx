@@ -29,9 +29,9 @@ const LocalHero: React.FC<{ props: LocalServiceProps }> = ({ props }) => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-charcoal-950 pt-32 pb-16">
       {/* Dynamic Cursor Glow Layer */}
       <div
-        className="hero-glow-layer pointer-events-none absolute inset-0 z-0 opacity-40 mix-blend-screen"
+        className="hero-glow-layer pointer-events-none absolute inset-0 z-0"
       />
-      <div className="absolute inset-0 bg-[url('/assets/carbon-fibre.png')] opacity-[0.03] mix-blend-overlay pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[url('/assets/carbon-fibre.png')] opacity-[0.03] pointer-events-none"></div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10 text-center flex flex-col items-center">
         <div className="mb-6 max-w-4xl">
@@ -111,12 +111,14 @@ export const LocalServicePage: React.FC<LocalServiceProps> = (props) => {
           <div className="w-full h-96 rounded-none border border-gold/30 overflow-hidden shadow-2xl">
             {/* OpenStreetMap Embed - No API Key Required */}
             <iframe 
+              title="Interactive service area map for Lake Jackson, TX and Brazoria County"
               width="100%" 
               height="100%" 
               frameBorder="0" 
               scrolling="no" 
               marginHeight={0} 
               marginWidth={0} 
+              loading="lazy"
               src={`https://www.openstreetmap.org/export/embed.html?bbox=${props.schema.geo.longitude - 0.05}%2C${props.schema.geo.latitude - 0.05}%2C${props.schema.geo.longitude + 0.05}%2C${props.schema.geo.latitude + 0.05}&layer=mapnik&marker=${props.schema.geo.latitude}%2C${props.schema.geo.longitude}`}
               style={{ border: '1px solid black', filter: 'grayscale(60%) invert(90%) hue-rotate(180deg)' }}
             ></iframe>

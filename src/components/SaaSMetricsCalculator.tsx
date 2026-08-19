@@ -39,7 +39,7 @@ export const SaaSMetricsCalculator: React.FC = () => {
         </p>
         
         {/* Industry Category Reference */}
-        <div className="text-[10px] text-cream/50 uppercase tracking-widest font-sans">
+        <div className="text-[10px] text-cream/70 uppercase tracking-widest font-sans">
           {referenceNote}
         </div>
       </div>
@@ -51,10 +51,10 @@ export const SaaSMetricsCalculator: React.FC = () => {
             key={preset.label}
             type="button"
             data-calc-preset={preset.amount}
-            className={`px-4 py-2 text-xs font-semibold uppercase tracking-wider transition-all border cursor-pointer ${
+            className={`px-4 py-2 text-xs font-semibold uppercase tracking-wider transition-all border cursor-pointer focus-visible:ring-1 focus-visible:ring-gold focus-visible:outline-none ${
               defaultFee === preset.amount
                 ? 'bg-gold text-charcoal-950 border-gold'
-                : 'bg-navy/40 text-cream/70 border-gold/20 hover:border-gold/50 hover:text-cream'
+                : 'bg-navy/40 text-cream/80 border-gold/30 hover:border-gold hover:text-cream'
             }`}
           >
             {preset.label} (${preset.amount}/mo)
@@ -69,7 +69,7 @@ export const SaaSMetricsCalculator: React.FC = () => {
             {sliderLabel}
           </label>
           <span className="text-2xl font-display font-bold text-cream">
-            <span data-calc-fee>${defaultFee}</span><span className="text-sm font-light text-cream/50">/mo</span>
+            <span data-calc-fee>${defaultFee}</span><span className="text-sm font-light text-cream/70">/mo</span>
           </span>
         </div>
         <input
@@ -79,9 +79,9 @@ export const SaaSMetricsCalculator: React.FC = () => {
           max={maxSlider}
           step={step}
           defaultValue={defaultFee}
-          className="w-full h-2 bg-charcoal-950 rounded-lg appearance-none cursor-pointer accent-gold border border-gold/20"
+          className="w-full h-2 bg-charcoal-950 rounded-lg appearance-none cursor-pointer accent-gold border border-gold/20 focus-visible:ring-1 focus-visible:ring-gold focus-visible:outline-none"
         />
-        <div className="flex justify-between text-[10px] text-cream/40 mt-1 uppercase tracking-widest font-mono">
+        <div className="flex justify-between text-[10px] text-cream/70 mt-1 uppercase tracking-widest font-mono">
           <span>${minSlider}/mo</span>
           <span>$400/mo</span>
           <span>${maxSlider}/mo</span>
@@ -92,20 +92,20 @@ export const SaaSMetricsCalculator: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
         {/* 1-Year Card */}
         <div className="bg-charcoal-950/60 border border-gold/20 p-6 text-center">
-          <span className="text-[11px] font-bold uppercase tracking-widest text-cream/50 block mb-2">{cards.oneYear.title}</span>
+          <span className="text-[11px] font-bold uppercase tracking-widest text-cream/70 block mb-2">{cards.oneYear.title}</span>
           <div data-calc-1yr className="text-3xl font-display font-bold text-red-400 mb-2">
             ${initialAnnualTax.toLocaleString()}
           </div>
-          <p className="text-cream/50 text-xs font-light">{cards.oneYear.subtitle}</p>
+          <p className="text-cream/70 text-xs font-light">{cards.oneYear.subtitle}</p>
         </div>
 
         {/* 3-Year Card */}
         <div className="bg-charcoal-950/60 border border-gold/20 p-6 text-center">
-          <span className="text-[11px] font-bold uppercase tracking-widest text-cream/50 block mb-2">{cards.threeYear.title}</span>
+          <span className="text-[11px] font-bold uppercase tracking-widest text-cream/70 block mb-2">{cards.threeYear.title}</span>
           <div data-calc-3yr className="text-3xl font-display font-bold text-red-400 mb-2">
             ${initialThreeYearTax.toLocaleString()}
           </div>
-          <p className="text-cream/50 text-xs font-light">{cards.threeYear.subtitle}</p>
+          <p className="text-cream/70 text-xs font-light">{cards.threeYear.subtitle}</p>
         </div>
 
         {/* 5-Year Net Saved Card */}
@@ -127,14 +127,14 @@ export const SaaSMetricsCalculator: React.FC = () => {
         </div>
         <a
           href={summary.ctaHref}
-          className="px-8 py-3 bg-gold text-charcoal-950 font-bold uppercase tracking-[0.2em] text-xs hover:bg-cream transition-colors shrink-0 flex items-center gap-2"
+          className="px-8 py-3 bg-gold text-charcoal-950 font-bold uppercase tracking-[0.2em] text-xs hover:bg-cream transition-colors shrink-0 flex items-center gap-2 focus-visible:ring-1 focus-visible:ring-gold focus-visible:outline-none"
         >
           {summary.ctaText} <ArrowRight className="w-4 h-4" />
         </a>
       </div>
 
       {/* Nominative Fair Use & Trademark Disclaimer */}
-      <p className="text-[9px] text-cream/40 font-sans leading-relaxed text-center border-t border-gold/10 pt-4">
+      <p className="text-[10px] text-cream/65 font-sans leading-relaxed text-center border-t border-gold/10 pt-4">
         {disclaimer}
       </p>
     </div>

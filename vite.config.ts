@@ -109,6 +109,16 @@ export default defineConfig(({ mode, isSsrBuild }) => {
           }
         }
 
+        // Find app-*.css for critical inlining
+        let cssContent = '';
+        if (fs.existsSync(assetsDir)) {
+          const cssFiles = fs.readdirSync(assetsDir).filter(f => f.startsWith('app-') && f.endsWith('.css'));
+          if (cssFiles.length > 0) {
+            cssContent = fs.readFileSync(path.join(assetsDir, cssFiles[0]), 'utf8');
+            console.log(`[CSS Inline] Loaded ${cssFiles[0]} (${(cssContent.length / 1024).toFixed(1)} kB) for inlining`);
+          }
+        }
+
         // Clean every generated HTML file to ensure zero hydration scripts remain
         const stripHtmlFiles = (dir: string) => {
           const entries = fs.readdirSync(dir, { withFileTypes: true });
@@ -122,12 +132,22 @@ export default defineConfig(({ mode, isSsrBuild }) => {
               content = content.replace(/<link[^>]*rel="modulepreload"[^>]*>/gi, '');
               content = content.replace(/<script[^>]*>window\.__staticRouterHydrationData[\s\S]*?<\/script>/gi, '');
               content = content.replace(/<script[^>]*>window\.__VITE_REACT_SSG_HASH__[\s\S]*?<\/script>/gi, '');
+
+              // Inline CSS to eliminate render-blocking network roundtrips
+              if (cssContent) {
+                content = content.replace(/<link[^>]*rel="stylesheet"[^>]*href="\/assets\/app-[^"]*\.css"[^>]*>/gi, `<style>${cssContent}</style>`);
+              }
+
+              // Ensure <meta charset="UTF-8"> is the very first child of <head>
+              content = content.replace(/<meta\s+charset=["']utf-8["']\s*\/?>/gi, '');
+              content = content.replace(/<head>/i, '<head><meta charset="UTF-8">');
+
               fs.writeFileSync(fullPath, content, 'utf8');
             }
           }
         };
         stripHtmlFiles(distDir);
-        console.log('[Hydration Strip] Cleaned all dist HTML files of hydration scripts.');
+        console.log('[Hydration Strip] Cleaned all dist HTML files of hydration scripts, inlined CSS, and positioned charset.');
       },
     },
     resolve: {

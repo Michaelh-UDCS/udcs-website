@@ -97,14 +97,14 @@ export const ContactPage: React.FC = () => {
               {item.href ? (
                 <a
                   href={item.href}
-                  className="text-cream font-medium hover:text-gold transition-colors duration-200 block mb-1"
+                  className="text-cream font-medium hover:text-gold transition-colors duration-200 block mb-1 focus-visible:ring-1 focus-visible:ring-gold focus-visible:outline-none"
                 >
                   {item.value}
                 </a>
               ) : (
                 <p className="text-cream font-medium mb-1">{item.value}</p>
               )}
-              <p className="text-cream/40 text-xs font-light">{item.note}</p>
+              <p className="text-cream/70 text-xs font-light">{item.note}</p>
             </div>
           ))}
         </div>
