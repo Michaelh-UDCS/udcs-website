@@ -11,7 +11,8 @@ export interface EngagementContent {
   heading: string;
   description: string;
   steps: HandoffStep[];
-  footerNote: string;
+  footerNotePrefix: string;
+  footerNoteBody: string;
 }
 
 export const engagementContent: EngagementContent = {
@@ -43,6 +44,7 @@ export const engagementContent: EngagementContent = {
       badge: "Direct Founder Access",
     },
   ],
-  footerNote:
-    "Non-technical trade & industrial business owners welcome. You don't need coding or cloud experience — we wire DNS, SSL security certificates, and email deliverability for you from start to finish.",
+  footerNotePrefix: "Non-technical trade & industrial business owners welcome.",
+  footerNoteBody:
+    " You don't need coding or cloud experience — we wire DNS, SSL security certificates, and email deliverability for you from start to finish.",
 };

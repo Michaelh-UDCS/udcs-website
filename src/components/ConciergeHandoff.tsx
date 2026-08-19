@@ -5,7 +5,7 @@ import { KeyRound, Video, Headphones, CheckCircle2 } from 'lucide-react';
 import { engagementContent } from '../content/engagement';
 
 export const ConciergeHandoff: React.FC = () => {
-  const { sectionId, badge, heading, description, steps, footerNote } = engagementContent;
+  const { sectionId, badge, heading, description, steps, footerNotePrefix, footerNoteBody } = engagementContent;
 
   const stepIcons = [KeyRound, Video, Headphones];
 
@@ -55,7 +55,7 @@ export const ConciergeHandoff: React.FC = () => {
 
         <div className="text-center bg-gold/5 border border-gold/20 p-6 md:p-8">
           <p className="text-cream/90 text-sm md:text-base font-light">
-            <strong className="text-gold font-semibold">Non-technical trade & industrial business owners welcome.</strong> {footerNote.replace("Non-technical trade & industrial business owners welcome. ", "")}
+            <strong className="text-gold font-semibold">{footerNotePrefix}</strong>{footerNoteBody}
           </p>
         </div>
       </div>
