@@ -5,6 +5,7 @@ import { Comparison } from '../components/Comparison';
 import { Solutions } from '../components/Solutions';
 import { Contact } from '../components/Contact';
 import { localServiceContent } from '../content/localService';
+import { BreadcrumbNav } from '../components/BreadcrumbNav';
 
 export interface LocalServiceProps {
   city: string;
@@ -34,6 +35,10 @@ const LocalHero: React.FC<{ props: LocalServiceProps }> = ({ props }) => {
       <div className="absolute inset-0 bg-[url('/assets/carbon-fibre.png')] opacity-[0.03] pointer-events-none"></div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10 text-center flex flex-col items-center">
+        <BreadcrumbNav
+          className="self-start mb-8 text-left w-full max-w-4xl"
+          items={[{ name: `${props.city}, ${props.state}` }]}
+        />
         <div className="mb-6 max-w-4xl">
           <span className="inline-block py-1.5 px-6 border border-gold/30 rounded-none bg-navy/30 backdrop-blur-sm text-gold-muted text-[10px] sm:text-xs font-bold tracking-[0.3em] uppercase mb-8">
             {heroTagline} | {props.city}, {props.state}
@@ -77,7 +82,7 @@ export const LocalServicePage: React.FC<LocalServiceProps> = (props) => {
   const { mapHeadingPrefix, mapBodyTemplate } = localServiceContent;
 
   return (
-    <main>
+    <main id="main-content">
       <Head>
         <title>{props.meta.title}</title>
         <meta name="description" content={props.meta.description} />

@@ -3,23 +3,25 @@ import { Head } from 'vite-react-ssg';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { Contact } from '../components/Contact';
 import { routeMeta } from '../seo';
+import { BreadcrumbNav } from '../components/BreadcrumbNav';
+import { addressDisplay, emailHref, phoneHref, siteConfig } from '../config/siteConfig';
 
 const contactSchema = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
-  name: 'Contact Universal Dynamic Consulting Services LLC',
-  url: 'https://universal-dynamic.com/contact',
+  name: `Contact ${siteConfig.businessName}`,
+  url: `${siteConfig.domain}/contact`,
   mainEntity: {
     '@type': 'ProfessionalService',
-    name: 'Universal Dynamic Consulting Services LLC',
-    telephone: '+19794176489',
-    email: 'michael@universal-dynamic.com',
+    name: siteConfig.businessName,
+    telephone: siteConfig.phoneE164,
+    email: siteConfig.email,
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Lake Jackson',
-      addressRegion: 'TX',
-      postalCode: '77566',
-      addressCountry: 'US',
+      addressLocality: siteConfig.address.addressLocality,
+      addressRegion: siteConfig.address.addressRegion,
+      postalCode: siteConfig.address.postalCode,
+      addressCountry: siteConfig.address.addressCountry,
     },
   },
 };
@@ -28,21 +30,21 @@ const contactInfo = [
   {
     icon: Phone,
     label: 'Phone / Text',
-    value: '(979) 417-6489',
-    href: 'tel:+19794176489',
+    value: siteConfig.phoneDisplay,
+    href: phoneHref,
     note: 'Text messages preferred for initial contact',
   },
   {
     icon: Mail,
     label: 'Email',
-    value: 'michael@universal-dynamic.com',
-    href: 'mailto:michael@universal-dynamic.com',
+    value: siteConfig.email,
+    href: emailHref,
     note: 'Emails answered within 1 business day',
   },
   {
     icon: MapPin,
     label: 'Location',
-    value: 'Lake Jackson, TX 77566',
+    value: addressDisplay,
     href: null,
     note: 'Serving Brazoria County & Greater Houston',
   },
@@ -52,7 +54,7 @@ export const ContactPage: React.FC = () => {
   const meta = routeMeta['/contact'];
 
   return (
-    <main className="min-h-screen bg-charcoal-950 text-cream pt-32 pb-24">
+    <main id="main-content" className="min-h-screen bg-charcoal-950 text-cream pt-32 pb-24">
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
@@ -68,6 +70,7 @@ export const ContactPage: React.FC = () => {
       </Head>
 
       <div className="container mx-auto px-6 md:px-12 max-w-5xl">
+        <BreadcrumbNav className="mb-10" items={[{ name: 'Contact' }]} />
 
         {/* Header */}
         <div className="text-center mb-16">

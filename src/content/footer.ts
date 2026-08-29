@@ -1,3 +1,10 @@
+import {
+  addressDisplay,
+  emailHref,
+  phoneHref,
+  siteConfig,
+} from "../config/siteConfig";
+
 export interface FooterSocialLink {
   name: string;
   href: string;
@@ -29,20 +36,20 @@ export interface FooterContent {
 }
 
 export const footerContent: FooterContent = {
-  brandName: "Universal Dynamic",
+  brandName: siteConfig.brand,
   brandTagline: "Consulting Services LLC",
-  addressLines: ["Lake Jackson, TX 77566"],
-  phoneDisplay: "(979) 417-6489",
-  phoneHref: "tel:+19794176489",
-  email: "michael@universal-dynamic.com",
-  emailHref: "mailto:michael@universal-dynamic.com",
+  addressLines: [addressDisplay],
+  phoneDisplay: siteConfig.phoneDisplay,
+  phoneHref,
+  email: siteConfig.email,
+  emailHref,
   serviceAreaNote: "Serving Brazoria County & Greater Houston",
   copyrightText: "Established for Excellence",
   socialLinks: {
-    linkedin: "https://www.linkedin.com/company/universal-dynamic",
-    twitter: "https://x.com/UniversalDynLLC",
-    facebook: "https://www.facebook.com/UniversalDynamicLLC",
-    youtube: "https://www.youtube.com/@UniversalDynamic",
+    linkedin: siteConfig.social.linkedin,
+    twitter: siteConfig.social.twitter,
+    facebook: siteConfig.social.facebook,
+    youtube: siteConfig.social.youtube,
   },
   legalLinks: [
     { name: "About", href: "/about" },
@@ -50,6 +57,5 @@ export const footerContent: FooterContent = {
     { name: "Lake Jackson, TX", href: "/services/lake-jackson-tx" },
     { name: "Privacy Policy", href: "/privacy-policy" },
     { name: "Terms of Service", href: "/terms-of-service" },
-    { name: "Client Portal", href: "#", isExternal: true },
   ],
 };

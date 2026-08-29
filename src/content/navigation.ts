@@ -1,3 +1,5 @@
+import { siteConfig } from "../config/siteConfig";
+
 export interface NavItem {
   name: string;
   href: string;
@@ -12,7 +14,7 @@ export interface NavigationContent {
 }
 
 export const navigationContent: NavigationContent = {
-  brandName: "UNIVERSAL DYNAMIC",
+  brandName: siteConfig.brand.toUpperCase(),
   brandTagline: "CONSULTING SERVICES LLC",
   navLinks: [
     { name: "About", href: "/about" },

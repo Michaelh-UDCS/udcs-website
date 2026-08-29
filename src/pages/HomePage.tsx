@@ -27,7 +27,7 @@ export const HomePage: React.FC = () => {
     };
 
     return (
-        <main>
+        <main id="main-content">
             {meta && (
               <Head>
         <title>{meta.title}</title>

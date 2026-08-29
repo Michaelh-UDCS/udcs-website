@@ -1,5 +1,7 @@
 # Multi-Platform Local SEO & Off-Page Elevation Checklist
 
+> **Status (2026-08-29):** Website on-page remediation wave landed; off-page profiles below are still required for indexation and the entity graph.
+
 This handoff checklist details the 5 high-impact off-page platforms required to achieve maximum local search authority across Google Maps, Apple Maps, Siri, Bing/Copilot, Nextdoor, and AI search engines.
 
 ---

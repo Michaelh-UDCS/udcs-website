@@ -7,7 +7,7 @@ export const ThankYouPage: React.FC = () => {
   const meta = routeMeta['/thank-you'];
 
   return (
-    <main className="min-h-screen bg-charcoal-950 text-cream pt-32 pb-24 flex items-center justify-center">
+    <main id="main-content" className="min-h-screen bg-charcoal-950 text-cream pt-32 pb-24 flex items-center justify-center">
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />

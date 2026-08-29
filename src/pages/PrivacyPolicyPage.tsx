@@ -2,12 +2,13 @@ import React from 'react';
 import { Head } from 'vite-react-ssg';
 import { Link } from 'react-router-dom';
 import { routeMeta } from '../seo';
+import { BreadcrumbNav } from '../components/BreadcrumbNav';
 
 export const PrivacyPolicyPage: React.FC = () => {
   const meta = routeMeta['/privacy-policy'];
 
   return (
-    <main className="min-h-screen bg-charcoal-950 text-cream pt-32 pb-24">
+    <main id="main-content" className="min-h-screen bg-charcoal-950 text-cream pt-32 pb-24">
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
@@ -22,6 +23,7 @@ export const PrivacyPolicyPage: React.FC = () => {
       </Head>
 
       <div className="container mx-auto px-6 md:px-12 max-w-3xl">
+        <BreadcrumbNav className="mb-10" items={[{ name: 'Privacy Policy' }]} />
         <article>
           <header className="mb-12">
             <span className="inline-block py-1.5 px-6 border border-gold/30 bg-navy/30 backdrop-blur-sm text-gold text-[10px] font-bold tracking-[0.3em] uppercase mb-6">
@@ -60,6 +62,7 @@ export const PrivacyPolicyPage: React.FC = () => {
                 <li><strong className="text-cream">Google Firebase Hosting</strong> — serves this website. Subject to Google's Privacy Policy.</li>
                 <li><strong className="text-cream">Self-Hosted Typography</strong> — all font files are served locally from our origin server with zero third-party tracking.</li>
                 <li><strong className="text-cream">FormSubmit.co</strong> — processes contact form submissions and delivers them to our email. No data is stored by FormSubmit beyond message delivery.</li>
+                <li><strong className="text-cream">Search &amp; AI citation crawlers</strong> — our robots.txt allows search/citation bots (Googlebot, Bingbot, Claude-SearchBot, OAI-SearchBot, PerplexityBot, DuckDuckBot, Applebot, Bravebot) and disallows default training crawlers (GPTBot, ClaudeBot, Google-Extended, Applebot-Extended, meta-externalagent).</li>
               </ul>
             </section>
 

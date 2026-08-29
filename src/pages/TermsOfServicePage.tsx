@@ -2,12 +2,13 @@ import React from 'react';
 import { Head } from 'vite-react-ssg';
 import { Link } from 'react-router-dom';
 import { routeMeta } from '../seo';
+import { BreadcrumbNav } from '../components/BreadcrumbNav';
 
 export const TermsOfServicePage: React.FC = () => {
   const meta = routeMeta['/terms-of-service'];
 
   return (
-    <main className="min-h-screen bg-charcoal-950 text-cream pt-32 pb-24">
+    <main id="main-content" className="min-h-screen bg-charcoal-950 text-cream pt-32 pb-24">
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
@@ -22,6 +23,7 @@ export const TermsOfServicePage: React.FC = () => {
       </Head>
 
       <div className="container mx-auto px-6 md:px-12 max-w-3xl">
+        <BreadcrumbNav className="mb-10" items={[{ name: 'Terms of Service' }]} />
         <article>
           <header className="mb-12">
             <span className="inline-block py-1.5 px-6 border border-gold/30 bg-navy/30 backdrop-blur-sm text-gold text-[10px] font-bold tracking-[0.3em] uppercase mb-6">

@@ -12,9 +12,14 @@ import { LakeJacksonPage } from './pages/LakeJacksonPage';
 import { ThankYouPage } from './pages/ThankYouPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { Footer } from './components/Footer';
+import { ScrollToTop } from './components/ScrollToTop';
 
 const Layout = () => (
   <div className="min-h-screen bg-charcoal-950 text-cream font-sans selection:bg-gold/30 selection:text-gold overflow-x-hidden">
+    <a href="#main-content" className="skip-to-content">
+      Skip to content
+    </a>
+    <ScrollToTop />
     <Navbar />
     <Outlet />
     <Footer />

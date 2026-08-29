@@ -8,13 +8,13 @@ export interface RouteMeta {
 export const routeMeta: Record<string, RouteMeta> = {
   '/': {
     title: 'Cloud Web Design & Texas Business Setup | Universal Dynamic',
-    description: 'High-speed Google Cloud websites with $0 monthly fees, Texas business setup, SAM.gov registration, and local SEO in Lake Jackson, Angleton, and Freeport, TX.',
+    description: 'High-speed Google Cloud websites with $0 monthly fees, Texas business setup and SAM.gov, plus local SEO for Lake Jackson, Angleton, and Freeport, TX.',
     canonical: 'https://universal-dynamic.com/',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
   },
   '/about': {
     title: 'About Universal Dynamic | Texas Business & Web Consulting',
-    description: 'Meet Michael Huerta, founder of Universal Dynamic in Lake Jackson, TX — 24+ years of operations leadership, turnkey Texas business setup, and web design.',
+    description: 'Meet Michael Huerta, founder of Universal Dynamic in Lake Jackson, TX. 24+ years of operations leadership, turnkey Texas business setup, and web design.',
     canonical: 'https://universal-dynamic.com/about',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
   },
@@ -50,7 +50,7 @@ export const routeMeta: Record<string, RouteMeta> = {
   },
   '/thank-you': {
     title: 'Inquiry Received | Universal Dynamic Consulting Services LLC',
-    description: 'Thank you for reaching out to Universal Dynamic. We have received your inquiry and will review your project details.',
+    description: 'Thank you for contacting Universal Dynamic Consulting Services LLC. We received your inquiry and will review your project details shortly.',
     canonical: 'https://universal-dynamic.com/thank-you',
     robots: 'noindex, nofollow',
   },

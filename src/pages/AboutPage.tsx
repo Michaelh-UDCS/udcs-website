@@ -4,19 +4,21 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { routeMeta } from '../seo';
 import { aboutContent } from '../content/about';
+import { BreadcrumbNav } from '../components/BreadcrumbNav';
+import { siteConfig } from '../config/siteConfig';
 
 const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  name: 'Michael Huerta',
-  jobTitle: 'CEO & Founder',
+  name: siteConfig.owner.name,
+  jobTitle: siteConfig.owner.jobTitle,
   worksFor: {
     '@type': 'Organization',
-    name: 'Universal Dynamic Consulting Services LLC',
+    name: siteConfig.businessName,
   },
   description:
     '24+ years of operations, compliance, and budget leadership paired with modern web development. Founder of Universal Dynamic Consulting Services LLC in Lake Jackson, TX.',
-  sameAs: ['https://www.linkedin.com/company/universal-dynamic'],
+  sameAs: [siteConfig.social.linkedin],
 };
 
 export const AboutPage: React.FC = () => {
@@ -39,7 +41,7 @@ export const AboutPage: React.FC = () => {
   } = aboutContent;
 
   return (
-    <main className="min-h-screen bg-charcoal-950 text-cream pt-32 pb-24">
+    <main id="main-content" className="min-h-screen bg-charcoal-950 text-cream pt-32 pb-24">
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
@@ -55,6 +57,10 @@ export const AboutPage: React.FC = () => {
       </Head>
 
       <div className="container mx-auto px-6 md:px-12 max-w-5xl">
+        <BreadcrumbNav
+          className="mb-10"
+          items={[{ name: 'About' }]}
+        />
 
         {/* Hero */}
         <div className="text-center mb-20">

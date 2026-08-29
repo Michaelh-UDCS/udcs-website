@@ -13,7 +13,7 @@ export const NotFoundPage: React.FC = () => {
   };
 
   return (
-    <main className="min-h-screen bg-charcoal-950 text-cream flex items-center justify-center pt-24 pb-16 px-6">
+    <main id="main-content" className="min-h-screen bg-charcoal-950 text-cream flex items-center justify-center pt-24 pb-16 px-6">
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
