@@ -36,10 +36,10 @@ export const Footer: React.FC = () => {
               ))}
               <p>Direct: <a href={phoneHref} className="text-gold underline hover:text-gold/80 focus-visible:ring-1 focus-visible:ring-gold focus-visible:outline-none">{phoneDisplay}</a></p>
               <p>Email: <a href={emailHref} className="text-gold underline hover:text-cream transition-colors focus-visible:ring-1 focus-visible:ring-gold focus-visible:outline-none">{email}</a></p>
-              <p className="text-[11px] text-cream/60 pt-1">{serviceAreaNote}</p>
+              <p className="text-[11px] text-cream/70 pt-1">{serviceAreaNote}</p>
             </address>
 
-            <p className="text-cream/60 text-[10px] mt-6 font-sans uppercase tracking-[0.2em]">
+            <p className="text-cream/70 text-[10px] mt-6 font-sans uppercase tracking-[0.2em]">
               © {new Date().getFullYear()} // {copyrightText}
             </p>
           </div>

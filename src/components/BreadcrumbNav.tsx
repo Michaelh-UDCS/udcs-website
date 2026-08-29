@@ -68,7 +68,7 @@ export const BreadcrumbNav: React.FC<BreadcrumbNavProps> = ({ items, className =
                 ) : (
                   <Link
                     to={item.href}
-                    className="text-cream/45 hover:text-gold transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold focus-visible:ring-offset-1 focus-visible:ring-offset-charcoal-950"
+                    className="text-cream/75 hover:text-gold transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold focus-visible:ring-offset-1 focus-visible:ring-offset-charcoal-950"
                   >
                     {item.name}
                   </Link>

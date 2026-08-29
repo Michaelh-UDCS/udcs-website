@@ -45,7 +45,7 @@ const server = http.createServer((req, res) => {
       'Cross-Origin-Opener-Policy': 'same-origin',
       'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
       'Cache-Control': 'public, max-age=31536000, immutable',
-      'Content-Security-Policy': "default-src 'self'; script-src 'self' 'sha256-yQ+zr7xyVDCj1fSCp51D7X9oKchKd9aj2LsZToiQ54U='; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com; frame-src 'self' https://www.openstreetmap.org; form-action 'self' https://formsubmit.co; frame-ancestors 'none'; object-src 'none'; base-uri 'none';"
+      'Content-Security-Policy': "default-src 'self'; script-src 'self' 'sha256-yQ+zr7xyVDCj1fSCp51D7X9oKchKd9aj2LsZToiQ54U=' 'sha256-nOHfe+QrS86Ci+MG38WTch0z7Ti6ZS1QaFSnfKs9NiQ=' 'sha256-v4SbjLYJOxbb/ejuluaA0wlrcpnXoCyGBgry/pwXUbE='; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com; frame-src 'self' https://www.openstreetmap.org; form-action 'self' https://formsubmit.co; frame-ancestors 'none'; object-src 'none'; base-uri 'none';"
     };
 
     if (['.html', '.js', '.css', '.json', '.svg', '.xml', '.txt'].includes(ext)) {

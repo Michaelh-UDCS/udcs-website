@@ -26,14 +26,32 @@
   <link rel="alternate icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/manifest.json" />
-  <meta name="theme-color" content="#0a0a0a" />
+  <!-- Critical first-paint styles (CSP-safe) — full CSS loads async via hashed activator.
+       Hero h1 LCP styles must live here: async app CSS otherwise delays LCP ~1s past FCP.
+       Size-adjusted fallbacks inline so deferred /fonts.css does not cause CLS. -->
+  <style>
+    html,body{background:#0a0a0a;color:#e0e0e0;margin:0}
+    @font-face{font-family:Inter-Fallback;src:local('Arial');ascent-override:90%;descent-override:22.5%;line-gap-override:0%;size-adjust:107.5%}
+    @font-face{font-family:CormorantGaramond-Fallback;src:local('Georgia'),local('Times New Roman');ascent-override:88%;descent-override:24%;line-gap-override:0%;size-adjust:102%}
+    .font-display{font-family:"Cormorant Garamond",CormorantGaramond-Fallback,Georgia,serif}
+    .font-sans{font-family:Inter,Inter-Fallback,Arial,sans-serif}
+    h1.font-display{font-size:2.25rem;line-height:1.05;letter-spacing:-.025em;color:#fff;font-weight:500;margin:0 0 2rem}
+    h1.font-display .bg-clip-text{color:#c5a572;-webkit-text-fill-color:#c5a572}
+    h1.font-display .block{display:block;font-size:1.5rem;line-height:1.2;color:rgba(197,165,114,.9);margin-top:1rem;font-weight:400;letter-spacing:normal;font-family:Inter,Inter-Fallback,Arial,sans-serif}
+    #main-content>section:first-of-type{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:8rem 1.5rem 4rem;box-sizing:border-box;text-align:center}
+  </style>
 
-  <!-- Local Self-Hosted Fonts (Zero third-party network requests, zero CLS) -->
-  <link rel="preload" as="font" type="font/woff2" href="/fonts/Inter-400-normal-5.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="/fonts/CormorantGaramond-500-normal-1.woff2" crossorigin>
+  <!-- Inline Reveal Arming (Zero flicker on slow connections; no-op when JS disabled) -->
+  <script>document.documentElement.classList.add('js-reveal')</script>
+  <!-- Defer WOFF2 until after load — keeps ~86KB fonts off the LCP critical path -->
+  <script>addEventListener('load',function(){var l=document.createElement('link');l.rel='stylesheet';l.href='/fonts.css';document.head.appendChild(l)})</script>
+  <noscript><link rel="stylesheet" href="/fonts.css"></noscript>
+</head>
 
+<body>
+  <div id="root"></div>
 
-  <!-- Schema.org JSON-LD Structured Data for Search Engine Primacy & Social Graph Interoperability -->
+  <!-- Schema after first paint — still crawlable; keeps &lt;head&gt; tiny for FCP -->
   <script type="application/ld+json">
   [
     {
@@ -134,12 +152,6 @@
   ]
   </script>
 
-  <!-- Inline Reveal Arming (Zero flicker on slow connections; no-op when JS disabled) -->
-  <script>document.documentElement.classList.add('js-reveal')</script>
-</head>
-
-<body>
-  <div id="root"></div>
   <script type="module" src="/src/index.tsx"></script>
   <script type="module" defer src="/src/islands/reveal.ts"></script>
   <script type="module" defer src="/src/islands/hero-glow.ts"></script>

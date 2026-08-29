@@ -36,4 +36,10 @@ phase1-dist-diff.txt
 lighthouse-*.json
 *.report.json
 
+# Local FormSubmit probe leftovers (never commit)
+formsubmit-headers.txt
+formsubmit-payload.json
+formsubmit-response-body.txt
+formsubmit-*
+
 

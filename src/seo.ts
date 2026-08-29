@@ -19,7 +19,7 @@ export const routeMeta: Record<string, RouteMeta> = {
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
   },
   '/contact': {
-    title: 'Contact Universal Dynamic | Free Consultation in Lake Jackson',
+    title: 'Contact Universal Dynamic | Free Consult Lake Jackson',
     description: 'Free consultation on business setup, SAM.gov registration, or a self-hosted website on Google Cloud. Serving Lake Jackson, Brazoria County, and Houston.',
     canonical: 'https://universal-dynamic.com/contact',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',

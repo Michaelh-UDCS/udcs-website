@@ -1,5 +1,8 @@
-/* Source of truth for @font-face — copy to public/fonts.css when changing.
-   Loaded deferred after window load (see index.html). Not imported into app CSS. */
+/* Gate 100 font budget: TWO files only.
+   Cormorant 500 = display/h1. Inter 400 = UI body/chrome.
+   Served as /fonts.css (public/) — deferred until window load so WOFF2
+   never contends with LCP. Size-adjusted fallbacks live in index.html critical CSS.
+   Keep this file in sync with public/fonts.css (copy source of truth). */
 
 @font-face {
   font-family: 'Cormorant Garamond';

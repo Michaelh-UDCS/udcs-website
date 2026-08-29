@@ -37,7 +37,7 @@ export const Solutions: React.FC = () => {
                   <IconComponent className="w-7 h-7 text-gold" strokeWidth={1} />
                 </div>
                 <h4 className="text-2xl font-bold text-cream mb-4 font-display">{card.title}</h4>
-                <p className="text-cream/60 leading-relaxed mb-6 font-light text-sm">
+                <p className="text-cream/70 leading-relaxed mb-6 font-light text-sm">
                   {card.description}
                 </p>
                 <ul className="space-y-3 text-cream/80 text-sm">

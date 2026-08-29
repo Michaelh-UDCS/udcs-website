@@ -109,13 +109,14 @@ export default defineConfig(({ mode, isSsrBuild }) => {
           }
         }
 
-        // Find app-*.css for critical inlining
-        let cssContent = '';
+        // Find app-*.css — keep as external stylesheet (smaller HTML = faster FCP/LCP).
+        // Full CSS inlining bloated homepage HTML to ~140 kB and delayed paint under Slow 4G.
+        let cssHref = '';
         if (fs.existsSync(assetsDir)) {
           const cssFiles = fs.readdirSync(assetsDir).filter(f => f.startsWith('app-') && f.endsWith('.css'));
           if (cssFiles.length > 0) {
-            cssContent = fs.readFileSync(path.join(assetsDir, cssFiles[0]), 'utf8');
-            console.log(`[CSS Inline] Loaded ${cssFiles[0]} (${(cssContent.length / 1024).toFixed(1)} kB) for inlining`);
+            cssHref = `/assets/${cssFiles[0]}`;
+            console.log(`[CSS Link] Keeping external stylesheet ${cssFiles[0]} (not fully inlined)`);
           }
         }
 
@@ -133,21 +134,34 @@ export default defineConfig(({ mode, isSsrBuild }) => {
               content = content.replace(/<script[^>]*>window\.__staticRouterHydrationData[\s\S]*?<\/script>/gi, '');
               content = content.replace(/<script[^>]*>window\.__VITE_REACT_SSG_HASH__[\s\S]*?<\/script>/gi, '');
 
-              // Inline CSS to eliminate render-blocking network roundtrips
-              if (cssContent) {
-                content = content.replace(/<link[^>]*rel="stylesheet"[^>]*href="\/assets\/app-[^"]*\.css"[^>]*>/gi, `<style>${cssContent}</style>`);
+              // Async non-blocking CSS (CSP-hashed activator) — keeps FCP free of 48 kB stylesheet
+              if (cssHref) {
+                content = content.replace(
+                  /<link[^>]*rel=["']stylesheet["'][^>]*href=["'](\/assets\/app-[^"']+\.css)["'][^>]*>/gi,
+                  `<link id="app-css" rel="stylesheet" href="$1" media="print"><script>document.getElementById('app-css').media='all'</script><noscript><link rel="stylesheet" href="$1"></noscript>`,
+                );
+                if (!content.includes('id="app-css"')) {
+                  content = content.replace(
+                    /<\/head>/i,
+                    `<link id="app-css" rel="stylesheet" href="${cssHref}" media="print"><script>document.getElementById('app-css').media='all'</script><noscript><link rel="stylesheet" href="${cssHref}"></noscript></head>`,
+                  );
+                }
               }
 
-              // Ensure <meta charset="UTF-8"> is the very first child of <head>
+              // Ensure charset + viewport are the first children of <head> (before Head-injected JSON-LD)
               content = content.replace(/<meta\s+charset=["']utf-8["']\s*\/?>/gi, '');
-              content = content.replace(/<head>/i, '<head><meta charset="UTF-8">');
+              content = content.replace(/<meta\s+name=["']viewport["'][^>]*>/gi, '');
+              content = content.replace(
+                /<head>/i,
+                '<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">',
+              );
 
               fs.writeFileSync(fullPath, content, 'utf8');
             }
           }
         };
         stripHtmlFiles(distDir);
-        console.log('[Hydration Strip] Cleaned all dist HTML files of hydration scripts, inlined CSS, and positioned charset.');
+        console.log('[Hydration Strip] Cleaned dist HTML (external CSS, no full inline bloat).');
       },
     },
     resolve: {

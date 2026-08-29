@@ -44,6 +44,14 @@ export default {
         sans: ['Inter', 'Inter-Fallback', 'sans-serif'],
         display: ['"Cormorant Garamond"', 'CormorantGaramond-Fallback', 'serif'],
       },
+      // All UI weights collapse to Inter 400; display medium uses Cormorant 500
+      fontWeight: {
+        light: '400',
+        normal: '400',
+        medium: '500',
+        semibold: '400',
+        bold: '400',
+      },
       backgroundImage: {
         'metal-gradient': 'linear-gradient(135deg, #1f2937 0%, #0a0a0a 100%)',
         'metal-sheen': 'linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%)',

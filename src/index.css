@@ -1,6 +1,6 @@
 @import "tailwindcss";
-@import "./fonts.css";
 @config "../tailwind.config.js";
+/* @font-face lives in /fonts.css — deferred after load so WOFF2 never contends with LCP */
 
 
 @layer base {
@@ -87,4 +87,11 @@
 }
 #nav-toggle:checked ~ div label .nav-icon-close {
   display: block;
+}
+
+/* Below-fold sections: skip style/layout until near viewport (Gate 100 LCP) */
+main > section:not(:first-of-type),
+main > div:not(:first-of-type) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 720px;
 }

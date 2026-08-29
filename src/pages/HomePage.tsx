@@ -40,7 +40,6 @@ export const HomePage: React.FC = () => {
         <meta name="twitter:url" content={meta.canonical} />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Head>
             )}
             <Hero />
@@ -49,6 +48,10 @@ export const HomePage: React.FC = () => {
             <ConciergeHandoff />
             <CaseStudy />
             <Faq />
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
             <Contact />
         </main>
     );

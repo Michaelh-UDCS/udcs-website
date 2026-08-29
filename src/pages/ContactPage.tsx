@@ -80,7 +80,7 @@ export const ContactPage: React.FC = () => {
           <h1 className="font-display font-medium text-4xl sm:text-5xl md:text-6xl leading-tight tracking-tight text-white mb-6">
             Contact Universal Dynamic
           </h1>
-          <p className="text-cream/60 text-lg max-w-xl mx-auto font-light leading-relaxed">
+          <p className="text-cream/70 text-lg max-w-xl mx-auto font-light leading-relaxed">
             Free consultations available for business setup, SAM.gov registration,
             and self-hosted website projects.
           </p>

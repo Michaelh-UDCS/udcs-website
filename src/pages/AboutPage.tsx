@@ -70,7 +70,7 @@ export const AboutPage: React.FC = () => {
           <h1 className="font-display font-medium text-4xl sm:text-5xl md:text-6xl leading-tight tracking-tight text-white mb-6">
             {heading}
           </h1>
-          <p className="text-cream/60 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-cream/70 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
             {subhead}
           </p>
         </div>
@@ -125,7 +125,7 @@ export const AboutPage: React.FC = () => {
               >
                 <v.icon className="w-6 h-6 text-gold mb-4" strokeWidth={1} aria-hidden="true" />
                 <h3 className="font-display font-bold text-lg text-cream mb-2">{v.title}</h3>
-                <p className="text-cream/60 text-sm font-light leading-relaxed">{v.body}</p>
+                <p className="text-cream/70 text-sm font-light leading-relaxed">{v.body}</p>
               </div>
             ))}
           </div>
@@ -133,7 +133,7 @@ export const AboutPage: React.FC = () => {
 
         {/* CTA */}
         <div className="reveal-on-scroll text-center">
-          <p className="text-cream/60 mb-6 font-light">
+          <p className="text-cream/70 mb-6 font-light">
             {ctaLead}
           </p>
           <Link

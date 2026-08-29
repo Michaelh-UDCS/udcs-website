@@ -14,7 +14,7 @@ export const Contact: React.FC = () => {
           <h3 className="text-4xl md:text-6xl font-display font-medium text-cream mb-6">
             {heading}
           </h3>
-          <p className="text-cream/60 text-lg leading-relaxed font-light">
+          <p className="text-cream/70 text-lg leading-relaxed font-light">
             {subhead}
           </p>
         </div>

@@ -17,7 +17,7 @@ export const CaseStudy: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-display font-bold text-cream mb-4">
             {heading}
           </h2>
-          <p className="text-cream/60 max-w-2xl mx-auto font-light text-base md:text-lg font-sans">
+          <p className="text-cream/70 max-w-2xl mx-auto font-light text-base md:text-lg font-sans">
             {subhead}
           </p>
         </div>
@@ -51,7 +51,7 @@ export const CaseStudy: React.FC = () => {
                   <ShieldCheck className="w-5 h-5 text-gold shrink-0 mt-0.5" strokeWidth={1.5} />
                   <div>
                     <strong className="block text-cream text-sm font-medium">{featured.pillars[0].title}</strong>
-                    <span className="text-cream/60 text-xs font-light">{featured.pillars[0].subtitle}</span>
+                    <span className="text-cream/70 text-xs font-light">{featured.pillars[0].subtitle}</span>
                   </div>
                 </div>
 
@@ -59,7 +59,7 @@ export const CaseStudy: React.FC = () => {
                   <Building2 className="w-5 h-5 text-gold shrink-0 mt-0.5" strokeWidth={1.5} />
                   <div>
                     <strong className="block text-cream text-sm font-medium">{featured.pillars[1].title}</strong>
-                    <span className="text-cream/60 text-xs font-light">{featured.pillars[1].subtitle}</span>
+                    <span className="text-cream/70 text-xs font-light">{featured.pillars[1].subtitle}</span>
                   </div>
                 </div>
               </div>
@@ -93,7 +93,7 @@ export const CaseStudy: React.FC = () => {
               <div className="border-b border-gold/10 pb-6">
                 <span className="text-[10px] uppercase tracking-[0.2em] text-gold font-bold block mb-2">{featured.capabilitiesTitle}</span>
                 <h4 className="text-xl font-display font-bold text-cream mb-3">{featured.capabilitiesHeading}</h4>
-                <p className="text-cream/60 text-xs font-light leading-relaxed">
+                <p className="text-cream/70 text-xs font-light leading-relaxed">
                   {featured.capabilitiesDescription}
                 </p>
               </div>
@@ -106,7 +106,7 @@ export const CaseStudy: React.FC = () => {
                       idx < featured.details.length - 1 ? 'border-b border-white/5' : ''
                     }`}
                   >
-                    <span className="text-cream/60">{detail.label}</span>
+                    <span className="text-cream/70">{detail.label}</span>
                     {detail.isLive ? (
                       <span className="text-emerald-400 font-medium flex items-center gap-1.5">
                         <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> {detail.value}

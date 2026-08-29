@@ -116,16 +116,16 @@ Other logged-in Firebase CLIs on this machine (do not use for this repo): `micha
 
 ## Active TODO Queue (from 2026-08-29 upgraded global-skills audit)
 
-**Scorecard (pre-remediation):** ~68/100. Canvas: `udcs-skills-gap-audit.canvas.tsx`. Mission: `MISSION_CONTROL.md`.  
-**Remediation wave:** 2026-08-29 — multi-agent + parent reconcile. Local `npm run build` + `test:routes` passed.
+**Scorecard (lab 2026-08-29):** Gate 100 mobile LH **100/100/100/100** on all indexables (local). Canvas/mission: `MISSION_CONTROL.md`.  
+**Perf upgrade:** 2-font budget, async `#app-css`, deferred `/fonts.css` after `load` (`font-display: swap`), hero critical CSS, `content-visibility` below-fold. Live must receive this deploy (old live still ~140KB inlined CSS).
 
 ### P0 — Visibility / ops (human)
 
 - [ ] **BLOCKER:** Google `site:universal-dynamic.com` returned no results — verify GSC + Request Indexing — see `docs/GSC_INDEXING.md`
 - [ ] Confirm FormSubmit test email arrived in `michael@universal-dynamic.com` (Inbox + Spam)
-- [ ] Reauth Firebase CLI before next deploy (`firebase login --reauth` as UDCS)
 - [ ] Create GitHub secret **`FIREBASE_SERVICE_ACCOUNT`** on Michaelh-UDCS (CI needs it)
-- [x] **Deploy** remediation build to `universal-dynamic-website` (`npm run deploy`) — 2026-08-29 live
+- [ ] **Deploy** Gate 100 perf build to `universal-dynamic-website` (commit → push → `npm run deploy`)
+- [x] Lab: homepage Perf 99 → **100** (deferred fonts + critical CSS + content-visibility) — 2026-08-29
 
 ### P1 — Skill-gap hardening — DONE (2026-08-29)
 
@@ -171,3 +171,5 @@ Off-page checklist: `SEO_CLIENT_CHECKLIST.md` (GBP, Apple Business Connect, Bing
 - [LEARN]: FormSubmit for this site is activated and API-successful as of 2026-08-29; inbox receipt still needs human eyeball confirmation.
 - [LEARN]: Git identity for this workspace is locked to `Michaelh-UDCS` + `michael@universal-dynamic.com`.
 - [LEARN]: 2026-08-29 — `.firebaserc` launch alias removed; `DEPLOY-FIX.md` archived; CI workflow targets `master` + secret `FIREBASE_SERVICE_ACCOUNT`.
+- [LEARN]: Gate 100 homepage cliff was LCP ~1.9s from ~86KB WOFF2 on the critical path + ~90KB HTML style/layout — not missing h1 font-size in critical CSS. Fix: defer `/fonts.css` until `load`, keep size-adjusted fallbacks + hero shell critical, `content-visibility` below-fold. With late load use `font-display: swap` (optional never applies brand).
+- [LEARN]: Never commit `formsubmit-*` probe files; they are gitignored.
