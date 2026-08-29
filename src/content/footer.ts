@@ -1,6 +1,7 @@
 import {
   addressDisplay,
   emailHref,
+  formatUpdatedDisplay,
   phoneHref,
   siteConfig,
 } from "../config/siteConfig";
@@ -26,6 +27,9 @@ export interface FooterContent {
   emailHref: string;
   serviceAreaNote: string;
   copyrightText: string;
+  /** Crawlable freshness line — mirrors siteConfig.updatedAt / JSON-LD dateModified. */
+  updatedLabel: string;
+  updatedAtIso: string;
   socialLinks: {
     linkedin: string;
     twitter: string;
@@ -45,6 +49,8 @@ export const footerContent: FooterContent = {
   emailHref,
   serviceAreaNote: "Serving Brazoria County & Greater Houston",
   copyrightText: "Established for Excellence",
+  updatedLabel: `Updated ${formatUpdatedDisplay(siteConfig.updatedAt)}`,
+  updatedAtIso: siteConfig.updatedAt,
   socialLinks: {
     linkedin: siteConfig.social.linkedin,
     twitter: siteConfig.social.twitter,

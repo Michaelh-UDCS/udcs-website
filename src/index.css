@@ -95,3 +95,71 @@ main > div:not(:first-of-type) {
   content-visibility: auto;
   contain-intrinsic-size: auto 720px;
 }
+
+/* Compact decorative markers — replace repeated Lucide SVGs (HTML weight) */
+.sol-check {
+  position: relative;
+  padding-left: 1.75rem;
+}
+.sol-check::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.35em;
+  width: 0.55rem;
+  height: 0.9rem;
+  border-right: 1.5px solid #c5a572;
+  border-bottom: 1.5px solid #c5a572;
+  transform: rotate(40deg);
+  pointer-events: none;
+}
+
+.faq-summary::after {
+  content: "";
+  flex-shrink: 0;
+  width: 0.55rem;
+  height: 0.55rem;
+  margin-top: -0.15rem;
+  border-right: 1.5px solid #c5a572;
+  border-bottom: 1.5px solid #c5a572;
+  transform: rotate(45deg);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+details[open] > .faq-summary::after {
+  transform: rotate(225deg);
+  margin-top: 0.15rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  .faq-summary::after {
+    transition: none;
+  }
+}
+
+.cmp-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  pointer-events: none;
+}
+.cmp-mark--ok {
+  background: rgba(197, 165, 114, 0.2);
+  color: #c5a572;
+}
+.cmp-mark--ok::before {
+  content: "✓";
+}
+.cmp-mark--no {
+  background: rgba(127, 29, 29, 0.2);
+  color: #f87171;
+}
+.cmp-mark--no::before {
+  content: "×";
+}

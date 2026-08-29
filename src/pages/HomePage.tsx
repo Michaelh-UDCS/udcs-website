@@ -10,6 +10,7 @@ import { Contact } from '../components/Contact';
 import { Faq } from '../components/Faq';
 
 import { faqContent } from '../content/faq';
+import { siteConfig } from '../config/siteConfig';
 
 export const HomePage: React.FC = () => {
     const meta = routeMeta['/'];
@@ -24,6 +25,28 @@ export const HomePage: React.FC = () => {
           "text": item.answer
         }
       }))
+    };
+
+    const webPageSchema = {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": meta?.title ?? siteConfig.brand,
+      "url": `${siteConfig.domain}/`,
+      "description": meta?.description,
+      "datePublished": siteConfig.publishedAt,
+      "dateModified": siteConfig.updatedAt,
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": siteConfig.alternateName,
+        "url": `${siteConfig.domain}/`,
+        "datePublished": siteConfig.publishedAt,
+        "dateModified": siteConfig.updatedAt,
+      },
+      "about": {
+        "@type": "ProfessionalService",
+        "name": siteConfig.businessName,
+        "url": `${siteConfig.domain}/`,
+      },
     };
 
     return (
@@ -51,6 +74,10 @@ export const HomePage: React.FC = () => {
             <script
               type="application/ld+json"
               dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
             />
             <Contact />
         </main>

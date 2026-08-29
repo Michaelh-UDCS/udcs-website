@@ -2,6 +2,7 @@ import React from 'react';
 import { LocalServicePage } from './LocalServicePage';
 import { routeMeta } from '../seo';
 import { lakeJacksonPageContent } from '../content/localService';
+import { siteConfig } from '../config/siteConfig';
 
 export const LakeJacksonPage: React.FC = () => {
   const meta = routeMeta['/services/lake-jackson-tx'];
@@ -15,6 +16,8 @@ export const LakeJacksonPage: React.FC = () => {
     "url": "https://universal-dynamic.com/services/lake-jackson-tx",
     "logo": "https://universal-dynamic.com/og-image.jpg",
     "image": "https://universal-dynamic.com/og-image.jpg",
+    "datePublished": siteConfig.publishedAt,
+    "dateModified": siteConfig.updatedAt,
     "description": "Local business setup, SAM.gov registration, and custom self-hosted web design exclusively for businesses in Lake Jackson, TX and the 77566 surrounding area.",
     "email": "michael@universal-dynamic.com",
     "telephone": "+19794176489",

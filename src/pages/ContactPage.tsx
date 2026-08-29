@@ -11,11 +11,15 @@ const contactSchema = {
   '@type': 'ContactPage',
   name: `Contact ${siteConfig.businessName}`,
   url: `${siteConfig.domain}/contact`,
+  datePublished: siteConfig.publishedAt,
+  dateModified: siteConfig.updatedAt,
   mainEntity: {
     '@type': 'ProfessionalService',
     name: siteConfig.businessName,
     telephone: siteConfig.phoneE164,
     email: siteConfig.email,
+    datePublished: siteConfig.publishedAt,
+    dateModified: siteConfig.updatedAt,
     address: {
       '@type': 'PostalAddress',
       addressLocality: siteConfig.address.addressLocality,

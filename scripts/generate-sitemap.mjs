@@ -9,13 +9,24 @@ const routes = [
   { loc: 'https://universal-dynamic.com/terms-of-service', priority: '0.8', changefreq: 'monthly' },
 ];
 
-const today = new Date().toISOString().split('T')[0];
+/** Mirror siteConfig.updatedAt — single SoT in src/config/siteConfig.ts */
+function readUpdatedAtFromSiteConfig() {
+  const configPath = new URL('../src/config/siteConfig.ts', import.meta.url);
+  const source = fs.readFileSync(configPath, 'utf8');
+  const match = source.match(/updatedAt:\s*["'](\d{4}-\d{2}-\d{2})["']/);
+  if (!match) {
+    throw new Error('Could not parse updatedAt from src/config/siteConfig.ts');
+  }
+  return match[1];
+}
+
+const lastmod = readUpdatedAtFromSiteConfig();
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${routes.map(r => `  <url>
     <loc>${r.loc}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${lastmod}</lastmod>
     <changefreq>${r.changefreq}</changefreq>
     <priority>${r.priority}</priority>
   </url>`).join('\n')}
@@ -27,4 +38,4 @@ if (fs.existsSync('dist')) {
   fs.writeFileSync('dist/sitemap.xml', xml, 'utf8');
 }
 
-console.log(`✅ Build-time sitemap.xml generated successfully for ${routes.length} URLs.`);
+console.log(`✅ Build-time sitemap.xml generated successfully for ${routes.length} URLs (lastmod=${lastmod}).`);

@@ -58,6 +58,10 @@ export interface SiteConfig {
   /** FormSubmit contact endpoint (derived from email). */
   formSubmitEndpoint: string;
   colors: SiteColors;
+  /** ISO date (YYYY-MM-DD) — first public ship / repo initial commit. */
+  publishedAt: string;
+  /** ISO date (YYYY-MM-DD) — last meaningful content/schema refresh (Gate 100). */
+  updatedAt: string;
 }
 
 const social: SiteSocial = {
@@ -124,7 +128,23 @@ export const siteConfig: SiteConfig = {
     cream: "#e0e0e0",
     navy: "#141e26",
   },
+
+  // Freshness SoT — mirror in index.html JSON-LD + sitemap lastmod.
+  publishedAt: "2026-08-05",
+  updatedAt: "2026-08-29",
 };
+
+/** Human-readable "Updated …" for crawlable footer copy (UTC calendar date). */
+export function formatUpdatedDisplay(isoDate: string = siteConfig.updatedAt): string {
+  const [y, m, d] = isoDate.split("-").map(Number);
+  const date = new Date(Date.UTC(y, m - 1, d));
+  return date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  });
+}
 
 /** tel: href from E.164 */
 export const phoneHref = `tel:${siteConfig.phoneE164}`;

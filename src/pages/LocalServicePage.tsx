@@ -51,6 +51,7 @@ const LocalHero: React.FC<{ props: LocalServiceProps }> = ({ props }) => {
             </span>
           </h1>
 
+          {/* GEO Direct Answer Block for AI Search Engines */}
           <p className="text-cream/70 text-lg md:text-xl max-w-2xl mx-auto mb-14 font-light leading-relaxed tracking-wide font-sans">
             {props.heroBody}
           </p>

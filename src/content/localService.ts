@@ -25,5 +25,5 @@ export const lakeJacksonPageContent: LakeJacksonPageContent = {
   heroHeadlineHighlight: "Lake Jackson?",
   heroSubheadline: "We handle the setup & build your website.",
   heroBody:
-    "Local to the 77566 area. Whether you need turnkey Texas SOS filings, SAM.gov registration, or a high-speed self-hosted website to dominate local search—we eliminate the friction for Brazoria County businesses.",
+    "Universal Dynamic Consulting Services LLC serves Lake Jackson, TX 77566 with turnkey Texas SOS filings, IRS EIN, SAM.gov registration, and self-hosted Google Cloud websites at $0 monthly agency fees. Brazoria County businesses receive Day-1 admin ownership of their cloud site with no agency lock-in.",
 };

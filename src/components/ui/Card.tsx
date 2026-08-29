@@ -13,7 +13,7 @@ export const Card: React.FC<CardProps> = ({ children, className = '', delay = 0 
         reveal-on-scroll
         relative overflow-hidden rounded-sm 
         border border-gold/10 bg-navy/40 
-        backdrop-blur-sm shadow-none
+        shadow-none
         group
         ${className}
       `}

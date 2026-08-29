@@ -23,7 +23,7 @@ export const comparisonContent: ComparisonContent = {
   badge: "The Digital Sovereignty Difference",
   heading: "Traditional Agency Tax vs. Universal Dynamic",
   description:
-    "Universal Dynamic Consulting Services LLC eliminates the recurring agency subscription tax by deploying websites directly into the client's own Google Cloud account. Clients maintain 100% admin ownership, pay ~$0/month base hosting, and save $1,800 to $3,600 annually ($9,000 to $18,000 over 5 years) compared to traditional agency retainers and platform locks.",
+    "Universal Dynamic Consulting Services LLC deploys websites into each client's own Google Cloud account with 100% Day-1 admin ownership, ~$0/month base hosting, and $0 monthly agency fees. Clients typically avoid $1,800–$3,600 per year ($9,000–$18,000 over five years) versus traditional agency retainers and platform locks.",
   roiCallout: "Average 5-Year Client Savings: $9,000 – $18,000+ Kept in Your Pocket",
   traditionalAgencyCard: {
     title: "Third-Party Subscription & Retainer Models",

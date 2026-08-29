@@ -1,10 +1,10 @@
 # Universal Dynamic Consulting Services LLC
 
-> High-speed self-hosted Google Cloud websites with $0 monthly agency fees, plus turnkey Texas business setup (SOS filings, IRS EIN, SAM.gov registration) for companies in Lake Jackson, TX and Greater Houston.
+> Self-hosted Google Cloud websites with $0 monthly agency fees, plus turnkey Texas business setup (Texas SOS filings, IRS EIN, SAM.gov registration) for companies in Lake Jackson, TX 77566, Brazoria County, and Greater Houston.
 
 ## Services & Solutions
 
-- [Home](https://universal-dynamic.com/): Overview of self-hosted Google Cloud websites, $0 monthly agency fees, and Texas business formation services.
+- [Home](https://universal-dynamic.com/): Self-hosted Google Cloud websites, $0 monthly agency fees, and Texas SOS / EIN / SAM.gov setup.
 - [Lake Jackson, TX Services](https://universal-dynamic.com/services/lake-jackson-tx): Local business setup, SAM.gov registration, and custom web design for the 77566 area.
 - [About](https://universal-dynamic.com/about): Founder credentials, mission, and ownership-first consulting model.
 - [Contact](https://universal-dynamic.com/contact): Free consultation for business setup, SAM.gov, or a self-hosted website.

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Section } from './ui/Section';
 import { Card } from './ui/Card';
-import { Check, X } from 'lucide-react';
 import { SaaSMetricsCalculator } from './SaaSMetricsCalculator';
 import { comparisonContent } from '../content/comparison';
 
@@ -44,9 +43,7 @@ export const Comparison: React.FC = () => {
           <ul className="space-y-6 text-cream/70">
             {traditionalAgencyCard.items.map((item, idx) => (
               <li key={idx} className="flex items-start gap-4">
-                <div className="mt-1 bg-red-900/20 p-1 rounded-full">
-                  <X className="w-4 h-4 text-red-400" strokeWidth={2} />
-                </div>
+                <span className="cmp-mark cmp-mark--no mt-1" aria-hidden="true" />
                 <div>
                   <strong className="block text-cream mb-1 font-medium">{item.title}</strong>
                   <span className="font-light text-sm">{item.description}</span>
@@ -65,9 +62,7 @@ export const Comparison: React.FC = () => {
           <ul className="space-y-6 text-cream/80">
             {universalDynamicCard.items.map((item, idx) => (
               <li key={idx} className="flex items-start gap-4">
-                <div className="mt-1 bg-gold/20 p-1 rounded-full">
-                  <Check className="w-4 h-4 text-gold" strokeWidth={2} />
-                </div>
+                <span className="cmp-mark cmp-mark--ok mt-1" aria-hidden="true" />
                 <div>
                   <strong className="block text-cream mb-1 font-medium">{item.title}</strong>
                   <span className="font-light text-sm">{item.description}</span>

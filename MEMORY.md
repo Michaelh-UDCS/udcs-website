@@ -173,3 +173,4 @@ Off-page checklist: `SEO_CLIENT_CHECKLIST.md` (GBP, Apple Business Connect, Bing
 - [LEARN]: 2026-08-29 — `.firebaserc` launch alias removed; `DEPLOY-FIX.md` archived; CI workflow targets `master` + secret `FIREBASE_SERVICE_ACCOUNT`.
 - [LEARN]: Gate 100 homepage cliff was LCP ~1.9s from ~86KB WOFF2 on the critical path + ~90KB HTML style/layout — not missing h1 font-size in critical CSS. Fix: defer `/fonts.css` until `load`, keep size-adjusted fallbacks + hero shell critical, `content-visibility` below-fold. With late load use `font-display: swap` (optional never applies brand).
 - [LEARN]: Never commit `formsubmit-*` probe files; they are gitignored.
+- [LEARN]: Freshness SoT is `siteConfig.publishedAt` / `updatedAt` (ISO YYYY-MM-DD). Mirror in `index.html` body JSON-LD; sitemap `lastmod` parses `updatedAt` from siteConfig. publishedAt=2026-08-05 (git initial commit); bump `updatedAt` on meaningful content/schema ships.

@@ -20,7 +20,7 @@ export const Contact: React.FC = () => {
         </div>
 
         {/* Contact Form */}
-        <div className="bg-navy/20 border border-gold/10 p-8 md:p-12 relative overflow-hidden backdrop-blur-sm">
+        <div className="bg-navy/20 border border-gold/10 p-8 md:p-12 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-gold/50 to-transparent"></div>
 
           <form

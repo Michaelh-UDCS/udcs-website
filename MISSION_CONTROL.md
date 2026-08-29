@@ -1,27 +1,24 @@
-# MISSION CONTROL — Gate 100 A+++
+# MISSION CONTROL — Premium A+++ Sprint
 
 **Date:** 2026-08-29  
-**Verdict:** **PASS (lab + shipped)** — commit `25d03fc` → pushed → deployed to `universal-dynamic-website`
+**Verdict:** Sprint **LAB PASS** — freshness + HTML weight + GEO shipped locally; Gate 100 held
 
-## Lab scores (all indexables)
+## Sprint results
+| Workstream | Status |
+| :--- | :--- |
+| Freshness (`publishedAt` 2026-08-05 / `updatedAt` 2026-08-29) | Done — schema + footer `<time>` + sitemap |
+| HTML weight (CSS markers, no below-fold blur) | Done — index.html ~89KB → **~80KB** |
+| GEO BLUF + FAQ clarity + llms sync | Done |
+| Build / FAQ / JS-off / routes | Green |
+| LH indexables | **100/100/100/100** held |
 
-| Route | Perf | A11y | BP | SEO |
-| :--- | ---: | ---: | ---: | ---: |
-| `/` | **100** | 100 | 100 | 100 |
-| `/about` | 100 | 100 | 100 | 100 |
-| `/contact` | 100 | 100 | 100 | 100 |
-| `/services/lake-jackson-tx` | 100 | 100 | 100 | 100 |
-| `/privacy-policy` | 100 | 100 | 100 | 100 |
-| `/terms-of-service` | 100 | 100 | 100 | 100 |
-| `/thank-you`, `/404` | 100 | 100 | 100 | 63 | Expected (noindex) |
+## Still human (ultra-premium)
+1. GSC Request Indexing — `docs/GSC_INDEXING.md`
+2. FormSubmit inbox confirm
+3. Claim GBP/Apple/Bing → real `sameAs`
+4. CI: workflow scope + `FIREBASE_SERVICE_ACCOUNT`
+5. GA4 when Measurement ID ready
 
-## Shipped
-- Defer `/fonts.css` until `load` + `font-display: swap` + CSP hash
-- Async `#app-css` media=print (no full CSS inline)
-- Critical hero LCP + shell; `content-visibility` below-fold
-- FAQ JSON-LD in body; charset+viewport first in head
-
-## Still human
-- GSC Request Indexing — `docs/GSC_INDEXING.md`
-- FormSubmit inbox confirm; `FIREBASE_SERVICE_ACCOUNT` + workflow scope before committing `.github/workflows`
-- GA4 / real `sameAs` when ready
+## Next
+- Commit → push → deploy this sprint
+- Hold `.github/workflows` until secret exists

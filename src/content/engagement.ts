@@ -20,7 +20,7 @@ export const engagementContent: EngagementContent = {
   badge: "Concierge Onboarding & Transfer",
   heading: "The Done-For-You Handoff",
   description:
-    "Universal Dynamic Consulting Services LLC delivers a complete done-for-you digital handoff. We transfer 100% admin ownership of your Google Cloud website and Google Workspace directly to your account on Day 1, backed by plain-English video training and 2 months of included concierge support.",
+    "Universal Dynamic Consulting Services LLC transfers 100% admin ownership of the client's Google Cloud website and Google Workspace on Day 1. The done-for-you handoff includes plain-English video training and two months of concierge support from founder Michael Huerta—with $0 monthly agency fees after delivery.",
   steps: [
     {
       step: "Step 01",

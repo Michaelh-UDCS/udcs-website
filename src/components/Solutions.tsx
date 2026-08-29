@@ -34,7 +34,7 @@ export const Solutions: React.FC = () => {
             >
               <div>
                 <div className="w-14 h-14 bg-navy rounded-sm flex items-center justify-center mb-8 border border-gold/20 group-hover:border-gold/50 transition-all">
-                  <IconComponent className="w-7 h-7 text-gold" strokeWidth={1} />
+                  <IconComponent className="w-7 h-7 text-gold" strokeWidth={1} aria-hidden="true" />
                 </div>
                 <h4 className="text-2xl font-bold text-cream mb-4 font-display">{card.title}</h4>
                 <p className="text-cream/70 leading-relaxed mb-6 font-light text-sm">
@@ -42,16 +42,15 @@ export const Solutions: React.FC = () => {
                 </p>
                 <ul className="space-y-3 text-cream/80 text-sm">
                   {card.bullets.map((bullet, bIdx) => (
-                    <li key={bIdx} className="flex items-start gap-3">
-                      <ShieldCheck className="w-5 h-5 text-gold shrink-0" strokeWidth={1} />
-                      <span className="font-light">{bullet}</span>
+                    <li key={bIdx} className="sol-check font-light">
+                      {bullet}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="mt-8 pt-8 border-t border-gold/10 flex justify-end">
-                <button className="text-xs font-bold uppercase tracking-wider text-cream/80 flex items-center gap-2 group-hover:text-gold transition-colors font-sans">
-                  Learn More <ArrowUpRight className="w-4 h-4" strokeWidth={1.5} />
+                <button className="text-xs font-bold uppercase tracking-wider text-cream/80 flex items-center gap-2 group-hover:text-gold transition-colors font-sans focus-visible:outline focus-visible:outline-1 focus-visible:outline-gold/50">
+                  Learn More <ArrowUpRight className="w-4 h-4" strokeWidth={1.5} aria-hidden="true" />
                 </button>
               </div>
             </Card>
