@@ -23,4 +23,11 @@
 ## Notes
 
 - Sitemap should already be submitted (`https://universal-dynamic.com/sitemap.xml`); Request Indexing accelerates key pages.
+- IndexNow already fires on every `npm run deploy` (Bing / Yandex / ChatGPT Search / Copilot).
 - Off-page listings (GBP, Apple, Bing, etc.) still help entity discovery — see `SEO_CLIENT_CHECKLIST.md`.
+
+## Also do in the same session (Bing)
+
+1. Open [Bing Webmaster Tools](https://www.bing.com/webmasters) for `universal-dynamic.com`.
+2. Confirm sitemap `https://universal-dynamic.com/sitemap.xml` is submitted.
+3. Use URL Submission / IndexNow status if available (site already posts IndexNow on deploy).

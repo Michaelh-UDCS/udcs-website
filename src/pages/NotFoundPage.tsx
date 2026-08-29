@@ -26,7 +26,7 @@ export const NotFoundPage: React.FC = () => {
           <span className="absolute font-display font-bold text-3xl text-gold tracking-wider">404</span>
         </div>
 
-        <span className="inline-block py-1.5 px-6 border border-gold/30 bg-navy/30 backdrop-blur-sm text-gold text-[10px] font-bold tracking-[0.3em] uppercase mb-6">
+        <span className="inline-block py-1.5 px-6 border border-gold/30 bg-navy/30 text-gold text-[10px] font-bold tracking-[0.3em] uppercase mb-6">
           Error 404 // Route Undefined
         </span>
 

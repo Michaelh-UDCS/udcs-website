@@ -19,7 +19,7 @@ export const Faq: React.FC = () => {
           {faqs.map((faq, index) => (
             <details 
               key={index} 
-              className="group border border-gold/20 bg-navy/20 overflow-hidden transition-colors duration-200 open:border-gold/40 open:bg-navy/30"
+              className="ud-faq group"
             >
               <summary className="faq-summary w-full px-6 py-5 text-left flex justify-between items-center cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden focus:outline-none focus-visible:ring-1 focus-visible:ring-gold/50">
                 <span className="font-display font-medium text-lg text-cream pr-8 group-hover:text-gold transition-colors">

@@ -13,7 +13,7 @@ export const ConciergeHandoff: React.FC = () => {
     <Section id={sectionId} background="dark">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <span className="inline-block py-1.5 px-6 border border-gold/30 rounded-none bg-navy/30 backdrop-blur-sm text-gold text-[10px] sm:text-xs font-bold tracking-[0.3em] uppercase mb-6">
+          <span className="inline-block py-1.5 px-6 border border-gold/30 rounded-none bg-navy/30 text-gold text-[10px] sm:text-xs font-bold tracking-[0.3em] uppercase mb-6">
             {badge}
           </span>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-cream mb-6">

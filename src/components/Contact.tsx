@@ -47,7 +47,7 @@ export const Contact: React.FC = () => {
                   name="name"
                   required
                   placeholder="e.g. Sarah Jenkins"
-                  className="w-full bg-charcoal-950/50 border-b border-gold/20 text-cream p-3 focus:outline-none focus:border-gold transition-colors text-sm font-light placeholder:text-cream/20"
+                  className="ud-input"
                 />
               </div>
 
@@ -61,7 +61,7 @@ export const Contact: React.FC = () => {
                   name="email"
                   required
                   placeholder="e.g. sarah@example.com"
-                  className="w-full bg-charcoal-950/50 border-b border-gold/20 text-cream p-3 focus:outline-none focus:border-gold transition-colors text-sm font-light placeholder:text-cream/20"
+                  className="ud-input"
                 />
               </div>
             </div>
@@ -76,7 +76,7 @@ export const Contact: React.FC = () => {
                   id="phone"
                   name="phone"
                   placeholder="e.g. (979) 555-0123"
-                  className="w-full bg-charcoal-950/50 border-b border-gold/20 text-cream p-3 focus:outline-none focus:border-gold transition-colors text-sm font-light placeholder:text-cream/20"
+                  className="ud-input"
                 />
               </div>
 
@@ -90,7 +90,7 @@ export const Contact: React.FC = () => {
                     name="type"
                     required
                     defaultValue={inquiryOptions[0]}
-                    className="w-full bg-charcoal-950/50 border-b border-gold/20 text-cream p-3 focus:outline-none focus:border-gold transition-colors text-sm font-light appearance-none"
+                    className="ud-input ud-input--select"
                   >
                     {inquiryOptions.map((opt, idx) => (
                       <option key={idx} value={opt} className="bg-charcoal-950 text-cream">{opt}</option>
@@ -113,7 +113,7 @@ export const Contact: React.FC = () => {
                   id="currentUrl"
                   name="currentUrl"
                   placeholder="e.g. mybusiness.com (or None)"
-                  className="w-full bg-charcoal-950/50 border-b border-gold/20 text-cream p-3 focus:outline-none focus:border-gold transition-colors text-sm font-light placeholder:text-cream/20"
+                  className="ud-input"
                 />
               </div>
 
@@ -126,7 +126,7 @@ export const Contact: React.FC = () => {
                     id="currentPlatform"
                     name="currentPlatform"
                     defaultValue="Squarespace / Wix / GoDaddy"
-                    className="w-full bg-charcoal-950/50 border-b border-gold/20 text-cream p-3 focus:outline-none focus:border-gold transition-colors text-sm font-light appearance-none"
+                    className="ud-input ud-input--select"
                   >
                     <option value="Squarespace / Wix / GoDaddy" className="bg-charcoal-950 text-cream">Squarespace / Wix / GoDaddy</option>
                     <option value="WordPress / WooCommerce" className="bg-charcoal-950 text-cream">WordPress / WooCommerce</option>
@@ -149,7 +149,7 @@ export const Contact: React.FC = () => {
                     id="takesPaymentsOnline"
                     name="takesPaymentsOnline"
                     defaultValue="No / Invoicing Only"
-                    className="w-full bg-charcoal-950/50 border-b border-gold/20 text-cream p-3 focus:outline-none focus:border-gold transition-colors text-sm font-light appearance-none"
+                    className="ud-input ud-input--select"
                   >
                     <option value="No / Invoicing Only" className="bg-charcoal-950 text-cream">No / Invoicing Only</option>
                     <option value="Yes (Credit Card / E-commerce)" className="bg-charcoal-950 text-cream">Yes (Credit Card / E-commerce)</option>
@@ -172,7 +172,7 @@ export const Contact: React.FC = () => {
                 required
                 rows={4}
                 placeholder="Tell us about your business, current monthly subscription pain points, or filing goals..."
-                className="w-full bg-charcoal-950/50 border-b border-gold/20 text-cream p-3 focus:outline-none focus:border-gold transition-colors text-sm font-light resize-none placeholder:text-cream/20"
+                className="ud-input ud-input--area"
               ></textarea>
             </div>
 

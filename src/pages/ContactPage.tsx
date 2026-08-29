@@ -78,7 +78,7 @@ export const ContactPage: React.FC = () => {
 
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="inline-block py-1.5 px-6 border border-gold/30 bg-navy/30 backdrop-blur-sm text-gold text-[10px] font-bold tracking-[0.3em] uppercase mb-6">
+          <span className="inline-block py-1.5 px-6 border border-gold/30 bg-navy/30 text-gold text-[10px] font-bold tracking-[0.3em] uppercase mb-6">
             Get in Touch
           </span>
           <h1 className="font-display font-medium text-4xl sm:text-5xl md:text-6xl leading-tight tracking-tight text-white mb-6">
@@ -95,7 +95,7 @@ export const ContactPage: React.FC = () => {
           {contactInfo.map((item) => (
             <div
               key={item.label}
-              className="border border-gold/10 bg-navy/20 backdrop-blur-sm p-6 text-center"
+              className="border border-gold/10 bg-navy/20 p-6 text-center"
             >
               <item.icon className="w-6 h-6 text-gold mx-auto mb-3" strokeWidth={1} aria-hidden="true" />
               <p className="text-gold text-[10px] font-bold uppercase tracking-widest mb-2">

@@ -14,6 +14,9 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 
@@ -29,11 +32,15 @@ Allow: /
 User-agent: Bravebot
 Allow: /
 
+# Meta link previews (do not block)
+User-agent: facebookexternalhit
+Allow: /
+
 # ── GENERAL CRAWLERS ─────────────────────────────────────────
 User-agent: *
 Allow: /
 
-# ── TRAINING OPT-OUT (DEFAULT DISALLOW) ────────────────────────
+# ── TRAINING / DATASET OPT-OUT (DEFAULT DISALLOW) ────────────
 User-agent: GPTBot
 Disallow: /
 
@@ -49,11 +56,32 @@ Disallow: /
 User-agent: meta-externalagent
 Disallow: /
 
+User-agent: CCBot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: omgilibot
+Disallow: /
+
+User-agent: Omgili
+Disallow: /
+
 # ── NOTES ────────────────────────────────────────────────────
-# Brave Search uses TWO crawlers: (1) stealth index crawler follows Googlebot
-# rules; (2) Bravebot (above) powers Leo AI citations — allow both paths.
-# ChatGPT-User & Perplexity-User are user-initiated and may ignore robots.txt.
-# facebookexternalhit MUST stay allowed for Meta link previews — do not block.
-# Re-audit this file quarterly — new AI crawlers appear regularly.
+# Brave Search: stealth index crawler follows Googlebot; Bravebot powers Leo AI.
+# ChatGPT-User & Perplexity-User are user-initiated (may ignore robots.txt).
+# Bytespider often ignores robots.txt — WAF/UA block is the real control if needed.
+# Re-audit quarterly — new AI crawlers appear regularly.
+# Last reviewed: 2026-08-29
 
 Sitemap: https://universal-dynamic.com/sitemap.xml

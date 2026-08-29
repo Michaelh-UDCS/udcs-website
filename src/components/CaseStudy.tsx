@@ -1,7 +1,7 @@
 import React from 'react';
 import { Section } from './ui/Section';
 import { Card } from './ui/Card';
-import { ExternalLink, ShieldCheck, CheckCircle2, Building2 } from 'lucide-react';
+import { ExternalLink, ShieldCheck, Building2 } from 'lucide-react';
 import { caseStudiesContent } from '../content/caseStudies';
 
 export const CaseStudy: React.FC = () => {
@@ -11,7 +11,7 @@ export const CaseStudy: React.FC = () => {
     <Section id={sectionId} background="gradient">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <span className="inline-block py-1 px-4 border border-gold/30 rounded-none bg-navy/30 backdrop-blur-sm text-gold text-xs font-bold tracking-[0.2em] uppercase mb-4 font-sans">
+          <span className="inline-block py-1 px-4 border border-gold/30 rounded-none bg-navy/30 text-gold text-xs font-bold tracking-[0.2em] uppercase mb-4 font-sans">
             {badge}
           </span>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-cream mb-4">
@@ -68,9 +68,8 @@ export const CaseStudy: React.FC = () => {
                 <h4 className="text-xs uppercase tracking-widest text-gold font-bold mb-3">{featured.deliverablesTitle}</h4>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-cream/80">
                   {featured.deliverables.map((item, idx) => (
-                    <li key={idx} className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-gold shrink-0" />
-                      <span>{item}</span>
+                    <li key={idx} className="sol-check font-light">
+                      {item}
                     </li>
                   ))}
                 </ul>

@@ -64,7 +64,7 @@ export const AboutPage: React.FC = () => {
 
         {/* Hero */}
         <div className="text-center mb-20">
-          <span className="inline-block py-1.5 px-6 border border-gold/30 bg-navy/30 backdrop-blur-sm text-gold text-[10px] font-bold tracking-[0.3em] uppercase mb-6">
+          <span className="inline-block py-1.5 px-6 border border-gold/30 bg-navy/30 text-gold text-[10px] font-bold tracking-[0.3em] uppercase mb-6">
             {badge}
           </span>
           <h1 className="font-display font-medium text-4xl sm:text-5xl md:text-6xl leading-tight tracking-tight text-white mb-6">
@@ -76,7 +76,7 @@ export const AboutPage: React.FC = () => {
         </div>
 
         {/* Mission */}
-        <section className="mb-20 border border-gold/10 bg-navy/20 backdrop-blur-sm p-8 md:p-12 relative overflow-hidden">
+        <section className="mb-20 border border-gold/10 bg-navy/20 p-8 md:p-12 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-gold/50 to-transparent" />
           <h2 className="text-gold font-bold tracking-widest uppercase text-sm mb-4">
             {missionBadge}

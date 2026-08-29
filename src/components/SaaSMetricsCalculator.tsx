@@ -24,7 +24,7 @@ export const SaaSMetricsCalculator: React.FC = () => {
   const initialFiveYearTax = defaultFee * 60;
 
   return (
-    <div id="saas-calculator" className="mt-16 bg-navy/30 border border-gold/30 p-8 md:p-12 relative overflow-hidden backdrop-blur-md">
+    <div id="saas-calculator" className="mt-16 bg-navy/30 border border-gold/30 p-8 md:p-12 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-gold via-gold/50 to-transparent" />
       
       <div className="text-center mb-10">

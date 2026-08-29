@@ -15,7 +15,7 @@ export const ThankYouPage: React.FC = () => {
       </Head>
 
       <div className="container mx-auto px-6 md:px-12 max-w-2xl text-center">
-        <div className="border border-gold/20 bg-navy/20 backdrop-blur-sm p-8 sm:p-12 relative overflow-hidden">
+        <div className="border border-gold/20 bg-navy/20 p-8 sm:p-12 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-gold/50 to-transparent"></div>
 
           <div className="w-16 h-16 bg-gold/10 border border-gold/30 flex items-center justify-center mx-auto mb-6">

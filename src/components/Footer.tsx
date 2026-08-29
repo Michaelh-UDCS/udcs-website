@@ -21,8 +21,7 @@ export const Footer: React.FC = () => {
   } = footerContent;
 
   return (
-    // Added backdrop-blur and a softer border color for a premium feel
-    <footer className="bg-[#050505] backdrop-blur-xl py-16 border-t border-gold/10">
+    <footer className="bg-[#050505] py-16 border-t border-gold/10">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
           <div className="text-left">

@@ -28,7 +28,7 @@ export const Hero: React.FC = () => {
 
       <div className="container mx-auto px-6 md:px-12 relative z-10 text-center flex flex-col items-center">
         <div className="mb-6 max-w-4xl">
-          <span className="inline-block py-1.5 px-6 border border-gold/30 rounded-none bg-navy/30 backdrop-blur-sm text-gold-muted text-[10px] sm:text-xs font-bold tracking-[0.3em] uppercase mb-8">
+          <span className="inline-block py-1.5 px-6 border border-gold/30 rounded-none bg-navy/30 text-gold-muted text-[10px] sm:text-xs font-bold tracking-[0.3em] uppercase mb-8">
             {badge}
           </span>
 

@@ -9,26 +9,18 @@ interface CardProps {
 export const Card: React.FC<CardProps> = ({ children, className = '', delay = 0 }) => {
   return (
     <div
-      className={`
-        reveal-on-scroll
-        relative overflow-hidden rounded-sm 
-        border border-gold/10 bg-navy/40 
-        shadow-none
-        group
-        ${className}
-      `}
+      className={`ud-card reveal-on-scroll group ${className}`}
       style={delay ? { transitionDelay: `${delay}s` } : undefined}
     >
       {/* Metallic Sheen Overlay */}
-      <div className="absolute inset-0 bg-metal-sheen opacity-10 pointer-events-none group-hover:opacity-20 transition-opacity duration-500"></div>
+      <div className="ud-card__sheen"></div>
 
       {/* Inner Highlight Border */}
-      <div className="absolute inset-0 rounded-xl border border-white/5 pointer-events-none"></div>
+      <div className="ud-card__frame"></div>
 
-      <div className="relative z-10 p-8 h-full">
+      <div className="ud-card__body">
         {children}
       </div>
     </div>
   );
 };
-

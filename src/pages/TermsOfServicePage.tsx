@@ -26,7 +26,7 @@ export const TermsOfServicePage: React.FC = () => {
         <BreadcrumbNav className="mb-10" items={[{ name: 'Terms of Service' }]} />
         <article>
           <header className="mb-12">
-            <span className="inline-block py-1.5 px-6 border border-gold/30 bg-navy/30 backdrop-blur-sm text-gold text-[10px] font-bold tracking-[0.3em] uppercase mb-6">
+            <span className="inline-block py-1.5 px-6 border border-gold/30 bg-navy/30 text-gold text-[10px] font-bold tracking-[0.3em] uppercase mb-6">
               Legal
             </span>
             <h1 className="font-display font-medium text-4xl sm:text-5xl text-white mb-4">
