@@ -39,6 +39,9 @@
     h1.font-display .bg-clip-text{color:#c5a572;-webkit-text-fill-color:#c5a572}
     h1.font-display .block{display:block;font-size:1.5rem;line-height:1.2;color:rgba(197,165,114,.9);margin-top:1rem;font-weight:400;letter-spacing:normal;font-family:Inter,Inter-Fallback,Arial,sans-serif}
     #main-content>section:first-of-type{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:8rem 1.5rem 4rem;box-sizing:border-box;text-align:center}
+    /* Form controls must be cream-on-charcoal before async CSS — UA black text fails contrast */
+    input,select,textarea{color:#e0e0e0;background:#0a0a0a;caret-color:#c5a572;color-scheme:dark}
+    input::placeholder,textarea::placeholder{color:rgba(224,224,224,.55)}
   </style>
 
   <!-- Inline Reveal Arming (Zero flicker on slow connections; no-op when JS disabled) -->

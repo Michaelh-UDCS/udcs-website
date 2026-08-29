@@ -12,7 +12,6 @@ export const Navbar: React.FC = () => {
         type="checkbox"
         id="nav-toggle"
         className="peer sr-only"
-        aria-label="Toggle navigation menu"
       />
 
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
@@ -48,24 +47,14 @@ export const Navbar: React.FC = () => {
           </a>
         </nav>
 
-        {/* Mobile / Tablet Menu Button (CSS-Only Label for Checkbox) */}
+        {/* Mobile menu — native label only (role=button breaks agentic a11y tree) */}
         <label
           htmlFor="nav-toggle"
-          tabIndex={0}
-          role="button"
-          aria-label="Toggle navigation menu"
-          aria-expanded="false"
-          className="lg:hidden text-cream p-2 cursor-pointer select-none rounded-sm block focus-visible:ring-1 focus-visible:ring-gold focus:outline-none peer-focus-visible:ring-1 peer-focus-visible:ring-gold"
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault();
-              const el = document.getElementById('nav-toggle') as HTMLInputElement | null;
-              if (el) el.checked = !el.checked;
-            }
-          }}
+          className="lg:hidden text-cream p-2 cursor-pointer select-none rounded-sm block peer-focus-visible:ring-1 peer-focus-visible:ring-gold"
         >
-          <Menu strokeWidth={1.5} className="w-6 h-6 nav-icon-menu block text-cream hover:text-gold transition-colors" />
-          <X strokeWidth={1.5} className="w-6 h-6 nav-icon-close hidden text-cream hover:text-gold transition-colors" />
+          <span className="sr-only">Toggle navigation menu</span>
+          <Menu strokeWidth={1.5} className="w-6 h-6 nav-icon-menu block text-cream hover:text-gold transition-colors" aria-hidden="true" />
+          <X strokeWidth={1.5} className="w-6 h-6 nav-icon-close hidden text-cream hover:text-gold transition-colors" aria-hidden="true" />
         </label>
       </div>
 

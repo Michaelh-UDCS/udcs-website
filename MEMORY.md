@@ -121,11 +121,11 @@ Other logged-in Firebase CLIs on this machine (do not use for this repo): `micha
 
 ### P0 — Visibility / ops (human)
 
-- [ ] **BLOCKER:** Google `site:universal-dynamic.com` returned no results — verify GSC + Request Indexing — see `docs/GSC_INDEXING.md`
+- [x] **GSC:** Domain property live; homepage + local page **indexed**; 50 search clicks (Aug 5–26). Requested priority recrawl 2026-08-29 for `/`, `/services/lake-jackson-tx`, `/about` (+ `/contact` in progress).
 - [ ] Confirm FormSubmit test email arrived in `michael@universal-dynamic.com` (Inbox + Spam)
 - [ ] Create GitHub secret **`FIREBASE_SERVICE_ACCOUNT`** on Michaelh-UDCS (CI needs it)
-- [x] **Deploy** Gate 100 perf build to `universal-dynamic-website` (`25d03fc`, 2026-08-29)
-- [x] Lab: homepage Perf 99 → **100** (deferred fonts + critical CSS + content-visibility) — 2026-08-29
+- [x] **Deploy** Gate 100 + premium sprint builds to `universal-dynamic-website` (through `67af311`)
+- [x] Lab: homepage Perf 99 → **100** — held through semantic/blur/robots sprint
 
 ### P1 — Skill-gap hardening — DONE (2026-08-29)
 

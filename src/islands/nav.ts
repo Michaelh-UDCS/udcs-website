@@ -1,26 +1,16 @@
 /**
  * Standalone Mobile Navigation Island
- * Handles Escape key closing, focus restoration, and mobile link selection.
+ * Escape closes the CSS checkbox menu; links auto-close on navigate.
  */
 if (typeof window !== 'undefined') {
   const initNav = () => {
     const toggle = document.getElementById('nav-toggle') as HTMLInputElement | null;
     if (!toggle) return;
 
-    const label = document.querySelector('label[for="nav-toggle"]') as HTMLElement | null;
-
-    // Sync aria-expanded state with checkbox
-    const syncAria = () => {
-      label?.setAttribute('aria-expanded', String(toggle.checked));
-    };
-    syncAria();
-    toggle.addEventListener('change', syncAria);
-
     document.addEventListener('keydown', (e: KeyboardEvent) => {
       if (e.key === 'Escape' && toggle.checked) {
         toggle.checked = false;
-        syncAria();
-        label?.focus();
+        toggle.focus();
       }
     });
 
@@ -28,7 +18,6 @@ if (typeof window !== 'undefined') {
     mobileNav?.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => {
         toggle.checked = false;
-        syncAria();
       });
     });
   };
