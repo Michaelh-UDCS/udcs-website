@@ -124,7 +124,7 @@ Other logged-in Firebase CLIs on this machine (do not use for this repo): `micha
 - [ ] **BLOCKER:** Google `site:universal-dynamic.com` returned no results — verify GSC + Request Indexing — see `docs/GSC_INDEXING.md`
 - [ ] Confirm FormSubmit test email arrived in `michael@universal-dynamic.com` (Inbox + Spam)
 - [ ] Create GitHub secret **`FIREBASE_SERVICE_ACCOUNT`** on Michaelh-UDCS (CI needs it)
-- [ ] **Deploy** Gate 100 perf build to `universal-dynamic-website` (commit → push → `npm run deploy`)
+- [x] **Deploy** Gate 100 perf build to `universal-dynamic-website` (`25d03fc`, 2026-08-29)
 - [x] Lab: homepage Perf 99 → **100** (deferred fonts + critical CSS + content-visibility) — 2026-08-29
 
 ### P1 — Skill-gap hardening — DONE (2026-08-29)

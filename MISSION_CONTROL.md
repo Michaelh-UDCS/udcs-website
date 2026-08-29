@@ -1,9 +1,9 @@
 # MISSION CONTROL — Gate 100 A+++
 
 **Date:** 2026-08-29  
-**Verdict:** **LAB PASS** — all indexables **100/100/100/100** mobile LH. Deploy in progress.
+**Verdict:** **PASS (lab + shipped)** — commit `25d03fc` → pushed → deployed to `universal-dynamic-website`
 
-## Lab scores
+## Lab scores (all indexables)
 
 | Route | Perf | A11y | BP | SEO |
 | :--- | ---: | ---: | ---: | ---: |
@@ -15,19 +15,13 @@
 | `/terms-of-service` | 100 | 100 | 100 | 100 |
 | `/thank-you`, `/404` | 100 | 100 | 100 | 63 | Expected (noindex) |
 
-Homepage: LCP **~1.4s** (was flaky 1.8–2.0s / Perf 98–99).
+## Shipped
+- Defer `/fonts.css` until `load` + `font-display: swap` + CSP hash
+- Async `#app-css` media=print (no full CSS inline)
+- Critical hero LCP + shell; `content-visibility` below-fold
+- FAQ JSON-LD in body; charset+viewport first in head
 
-## Shipped locally (this session)
-- Defer `/fonts.css` until `window.load` + CSP hash `sha256-v4SbjLYJOxbb/...`
-- `font-display: swap` on deferred faces (optional + late load never applied brand)
-- Size-adjusted fallbacks + hero LCP + hero shell in critical CSS
-- Async `#app-css` media=print activator (no full CSS inline)
-- `content-visibility: auto` below-fold sections
-- FAQ JSON-LD moved to body; charset+viewport forced first in head
-- `formsubmit-*` gitignored
-
-## Next
-1. [ ] Commit (hold `.github/workflows` until workflow scope + secret)
-2. [ ] Push + `npm run deploy` → `universal-dynamic-website`
-3. [ ] Verify live async CSS + deferred fonts
-4. [ ] Human: GSC Request Indexing (`docs/GSC_INDEXING.md`)
+## Still human
+- GSC Request Indexing — `docs/GSC_INDEXING.md`
+- FormSubmit inbox confirm; `FIREBASE_SERVICE_ACCOUNT` + workflow scope before committing `.github/workflows`
+- GA4 / real `sameAs` when ready
