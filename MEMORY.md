@@ -149,6 +149,8 @@ Other logged-in Firebase CLIs on this machine (do not use for this repo): `micha
 ### P2 — Polish / off-page (open)
 
 - [x] **GA4 configured with real Measurement ID**: `G-DNXEY3KTKZ` (Web Stream ID `15675001369`); deferred zero-hydration island injected (`src/islands/analytics.ts`); CSP updated in `firebase.json` for `googletagmanager.com` & `google-analytics.com`
+- [x] **GA4 Product Links: Search Console linked**: Domain property `universal-dynamic.com` linked to Web Stream `15675001369` (`LINK CREATED` Sep 2, 2026 by `michael@universal-dynamic.com`)
+- [x] **GA4 Product Links: Firebase linked**: Connected to project `universal-dynamic-website`
 - [ ] Add GBP / Apple / Bing `sameAs` URLs after listings are claimed (do not invent)
 - [ ] Complete off-page claims — GBP, Apple, Bing, Nextdoor, Foursquare
 - [ ] Optional FormSubmit captcha / `_cc` backup notify
