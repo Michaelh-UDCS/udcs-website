@@ -1,7 +1,7 @@
 # MISSION CONTROL — Ultra-Premium Gate 100
 
-**Date:** 2026-08-29  
-**Live HEAD:** `0548af8` (a11y + agentic fixes live)
+**Date:** 2026-09-02  
+**Live HEAD:** `140f0c6` (client-owned GA4 integration live + CSP Level 3)
 
 ## Live PageSpeed Insights (mobile) — VERIFIED
 https://pagespeed.web.dev/analysis/https-universal-dynamic-com/aysk35poz7?form_factor=mobile
