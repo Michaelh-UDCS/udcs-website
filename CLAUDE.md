@@ -100,8 +100,9 @@ Only confirmed profiles belong in `siteConfig.sameAs` and JSON-LD:
 | Lighthouse | `npm run test:lighthouse` — **target 100/100/100/100** mobile |
 | Preview | `npm run preview` |
 | Deploy | `npm run deploy` — **only** to `universal-dynamic-website`; never guess project IDs |
+| Post-deploy | Antigravity skill **`gate100_browser_scorecard`** — live PSI + Agentic + GSC side-panel indexing |
 
-**Quality Gate 100:** Zero-hydration SSG, self-hosted fonts, CSP-aware Firebase headers, multi-AI crawl assets (`robots.txt`, optional `llms.txt`), GSC/Bing measurement readiness, answer-first local content.
+**Quality Gate 100:** Zero-hydration SSG, self-hosted fonts, CSP-aware Firebase headers, multi-AI crawl assets (`robots.txt`, optional `llms.txt`), GSC/Bing measurement readiness, answer-first local content. Session log: `docs/GATE100_BROWSER_SESSION_2026-08-29.md`.
 
 ## 7. Two-Tier Memory
 

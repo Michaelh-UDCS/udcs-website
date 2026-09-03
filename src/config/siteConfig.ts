@@ -117,7 +117,7 @@ export const siteConfig: SiteConfig = {
   ogImage: "/og-image.jpg",
 
   analytics: {
-    ga4MeasurementId: "",
+    ga4MeasurementId: "G-DNXEY3KTKZ",
   },
 
   formSubmitEndpoint: "https://formsubmit.co/michael@universal-dynamic.com",

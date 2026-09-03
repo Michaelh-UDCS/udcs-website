@@ -28,6 +28,7 @@ export default defineConfig(({ mode, isSsrBuild }) => {
           'hero-glow': path.resolve(__dirname, 'src/islands/hero-glow.ts'),
           calculator: path.resolve(__dirname, 'src/islands/calculator.ts'),
           nav: path.resolve(__dirname, 'src/islands/nav.ts'),
+          analytics: path.resolve(__dirname, 'src/islands/analytics.ts'),
         },
         output: {
           entryFileNames: 'assets/[name]-[hash].js',
@@ -47,6 +48,7 @@ export default defineConfig(({ mode, isSsrBuild }) => {
         let heroGlowFile = 'assets/hero-glow.js';
         let calcFile = 'assets/calculator.js';
         let navFile = 'assets/nav.js';
+        let analyticsFile = 'assets/analytics.js';
         if (fs.existsSync(manifestPath)) {
           try {
             const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
@@ -54,6 +56,7 @@ export default defineConfig(({ mode, isSsrBuild }) => {
             if (manifest['src/islands/hero-glow.ts']) heroGlowFile = manifest['src/islands/hero-glow.ts'].file;
             if (manifest['src/islands/calculator.ts']) calcFile = manifest['src/islands/calculator.ts'].file;
             if (manifest['src/islands/nav.ts']) navFile = manifest['src/islands/nav.ts'].file;
+            if (manifest['src/islands/analytics.ts']) analyticsFile = manifest['src/islands/analytics.ts'].file;
           } catch (e) {
             console.error('Error reading manifest in onPageRendered', e);
           }
@@ -70,7 +73,7 @@ export default defineConfig(({ mode, isSsrBuild }) => {
 
         // 5. Inject island scripts
         const isCalcRoute = route === '/' || route === '';
-        const islandScripts = `<script type="module" defer src="/${revealFile}"></script><script type="module" defer src="/${heroGlowFile}"></script><script type="module" defer src="/${navFile}"></script>${isCalcRoute ? `<script type="module" defer src="/${calcFile}"></script>` : ''}</body>`;
+        const islandScripts = `<script type="module" defer src="/${revealFile}"></script><script type="module" defer src="/${heroGlowFile}"></script><script type="module" defer src="/${navFile}"></script><script type="module" defer src="/${analyticsFile}"></script>${isCalcRoute ? `<script type="module" defer src="/${calcFile}"></script>` : ''}</body>`;
         return cleanHtml.replace('</body>', islandScripts);
       },
       onFinished() {
@@ -84,6 +87,7 @@ export default defineConfig(({ mode, isSsrBuild }) => {
               file.startsWith('hero-glow-') ||
               file.startsWith('calculator-') ||
               file.startsWith('nav-') ||
+              file.startsWith('analytics-') ||
               file.endsWith('.css') ||
               file.endsWith('.woff2') ||
               file.endsWith('.svg') ||
