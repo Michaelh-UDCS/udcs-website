@@ -7,11 +7,12 @@ export const Navbar: React.FC = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 py-4 bg-charcoal-950/85 backdrop-blur-md border-b border-gold/20 transition-colors duration-300">
-      {/* CSS checkbox for mobile toggle */}
+      {/* CSS checkbox for mobile toggle — also lg:hidden so desktop LH/axe
+          do not see a form control whose only <label> is display:none (Agentic 2/3). */}
       <input
         type="checkbox"
         id="nav-toggle"
-        className="peer sr-only"
+        className="peer sr-only lg:hidden"
       />
 
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">

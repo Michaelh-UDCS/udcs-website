@@ -1,56 +1,29 @@
 # MISSION CONTROL — Ultra-Premium Gate 100
 
-**Date:** 2026-09-02  
-**Live HEAD:** `140f0c6` (client-owned GA4 integration live + CSP Level 3)
+**Date:** 2026-09-05  
+**Live:** desktop Agentic + Perf fix deployed this session
 
-## Live PageSpeed Insights (mobile) — VERIFIED
-https://pagespeed.web.dev/analysis/https-universal-dynamic-com/aysk35poz7?form_factor=mobile
+## Live PageSpeed Insights — VERIFIED
+https://pagespeed.web.dev/analysis/https-universal-dynamic-com/byxb4x1axc
 
-| Category | Score |
-| :--- | ---: |
-| Performance | **100** |
-| Accessibility | **100** |
-| Best Practices | **100** |
-| SEO | **100** |
-| Agentic Browsing | **3/3** |
+| Form | Perf | A11y | BP | SEO | Agentic |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| Mobile | **100** | **100** | **100** | **100** | **3/3** |
+| Desktop | **100** | **100** | **100** | **100** | **3/3** |
 
-Field data: **No Data** (CrUX not filled yet — expected).
+### What fixed desktop Agentic 2/3 (your screenshot)
+Fail was **not** SEO. Agentic audits: (1) a11y tree (2) llms.txt (3) CLS-related.
+- Desktop failed **a11y tree** because `#nav-toggle` stayed in the DOM while its `<label>` was `lg:hidden` → “Form element has explicit label that is hidden.”
+- Fix: `className="peer sr-only lg:hidden"` on the checkbox (`Navbar.tsx`).
 
-### Shipped in `0548af8`
-1. Critical CSS cream text on `input/select/textarea` before async CSS (closed color-contrast 97).
-2. Native nav `<label>` + `sr-only` (no `role="button"`) — closed agent-accessibility-tree fail.
+### What fixed desktop Perf 89
+- TBT ~280ms from early `gtag.js` (`G-DNXEY3KTKZ`).
+- Fix: load GA4 only after first gesture, or 12s post-load fallback (`analytics.ts`).
 
-## Lab LH (local, this session)
-All indexables **100/100/100/100**. SEO 63 on noindex `/thank-you` + `/404` expected.
-
-## GSC (sc-domain:universal-dynamic.com) — audited 2026-08-29
-Account: `michael@universal-dynamic.com` · Property confirmed (not Iron Prairie)
-- Pages: **7 indexed / 1 not indexed** (Page with redirect ×1; Crawled not indexed ×0). Last update 8/20/26
-- URL Inspection — all Indexed; last crawls pre-a11y → Request indexing **clicked & queued**:
-  - `/` — Aug 14, 2026 crawl → requested
-  - `/services/lake-jackson-tx` — Aug 8, 2026 crawl → requested
-  - `/about` — Aug 6, 2026 crawl → requested
-  - `/contact` — Aug 6, 2026 crawl → requested
-- Sitemap `sitemap.xml`: **Success**; submitted/last read Aug 29, 2026; 6 discovered pages
-- CWV Mobile/Desktop: not enough usage data (updated 8/21/26)
-- Performance (3 months, Web): **0 clicks**, 58 impressions, CTR 0%, avg pos 50.7 (Aug 5–27)
+## Lab LH
+Mobile indexables still **100/100/100/100** after fixes.
 
 ## Still human / blocked
 - Real GBP / Apple / Bing `sameAs` after claim
-- CI: `FIREBASE_SERVICE_ACCOUNT` + `gh auth refresh -s workflow`
-- Field CWV 100 waits on CrUX traffic
-
-## GA4 Integration (Verified 2026-09-02)
-- Property: `universal-dynamic-website` (under `michael@universal-dynamic.com`)
-- Measurement ID: `G-DNXEY3KTKZ` (Stream ID `15675001369`)
-- Implementation: Deferred non-blocking island (`src/islands/analytics.ts`) + strict CSP in `firebase.json`
-- Lab Mobile Lighthouse: **100/100/100/100** verified across all indexable routes
-
-## Do not commit
-- `.github/` (workflow scope/secret pending)
-- `psi-live.json`
-
-## Documentation (this session)
-- Session log: `docs/GATE100_BROWSER_SESSION_2026-08-29.md`
-- Global SOP skill: `Antigravity/skills/gate100_browser_scorecard/SKILL.md`
-- Scorecard canvas: `canvases/udcs-premium-scorecard.canvas.tsx`
+- CI: `FIREBASE_SERVICE_ACCOUNT`
+- Field CWV waits on CrUX
