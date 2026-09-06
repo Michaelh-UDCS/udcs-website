@@ -65,7 +65,7 @@ export interface SiteConfig {
 }
 
 const social: SiteSocial = {
-  linkedin: "https://www.linkedin.com/company/universal-dynamic",
+  linkedin: "https://www.linkedin.com/in/michael-huerta-6240189a/",
   twitter: "https://x.com/UniversalDynLLC",
   facebook: "https://www.facebook.com/UniversalDynamicLLC",
   youtube: "https://www.youtube.com/@UniversalDynamic",

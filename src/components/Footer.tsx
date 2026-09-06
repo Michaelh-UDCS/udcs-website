@@ -55,7 +55,7 @@ export const Footer: React.FC = () => {
                 href={socialLinks.linkedin} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                aria-label="LinkedIn"
+                aria-label="Michael Huerta on LinkedIn"
                 className="hover:text-gold transition-colors duration-300 focus-visible:ring-1 focus-visible:ring-gold focus-visible:outline-none p-1"
               >
                 <Linkedin size={18} aria-hidden="true" />

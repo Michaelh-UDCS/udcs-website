@@ -27,7 +27,7 @@ export const aboutContent: AboutContent = {
   badge: "Our Story",
   heading: "About Universal Dynamic",
   subhead:
-    "A Lake Jackson, TX consulting firm built on decades of real-world operations experience and modern web engineering.",
+    "A Lake Jackson, TX consulting firm grounded in 24+ years of industrial operations — and the management, project, and web skills built along the way.",
   missionBadge: "Our Mission",
   missionBody:
     "Universal Dynamic exists to close the gap between where a small business starts and where it needs to be — legally registered, federally compliant, and online with a fast, modern presence that belongs entirely to the owner.",
@@ -35,7 +35,7 @@ export const aboutContent: AboutContent = {
   founderName: "Michael Huerta",
   founderTitle: "CEO & Founder — Lake Jackson, TX",
   founderBio:
-    "I help local entrepreneurs launch and scale with a rare combination: 24+ years of hands-on operations, compliance, and budget leadership, paired with modern web development skills. Through Universal Dynamic, I handle Texas Secretary of State business setup and SAM.gov federal contracting readiness, then build high-speed, self-hosted websites on Google Cloud — fully owned by the client, with zero monthly agency fees.",
+    "I help local entrepreneurs launch and scale with experience that was earned on the floor first. Over 24+ years in industrial operations, I spent years in scheduling, shop coordinating, and expediting before moving into management oversight (about 10–12 years) and project management (the last 5–6 years). I also design and ship A++ websites aimed at full marks on local SEO and GEO scorecards. Through Universal Dynamic, I handle Texas Secretary of State business setup and SAM.gov federal contracting readiness, then build high-speed, self-hosted sites on Google Cloud — fully owned by the client, with zero monthly agency fees.",
   valuesBadge: "Why Choose Universal Dynamic",
   values: [
     {
@@ -45,8 +45,8 @@ export const aboutContent: AboutContent = {
     },
     {
       icon: Star,
-      title: "24+ Years of Operations Leadership",
-      body: "Deep expertise in compliance, budget management, and business operations — not just code. We understand what it actually takes to run a business.",
+      title: "Operations + Project Experience",
+      body: "A career built in the shop and the office — scheduling, coordinating, and expediting first, then management oversight and project leadership. That grounding shapes how we advise and build.",
     },
     {
       icon: Zap,

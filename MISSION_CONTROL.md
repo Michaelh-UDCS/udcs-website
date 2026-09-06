@@ -1,7 +1,9 @@
 # MISSION CONTROL — Ultra-Premium Gate 100
 
 **Date:** 2026-09-05  
-**Live:** desktop Agentic + Perf fix deployed this session
+**Workspace root:** `C:\Users\micha\Desktop\UDCS Website`  
+**Account:** `michael@universal-dynamic.com`  
+**Live:** desktop Agentic + Perf fix deployed; About/LinkedIn factual pass in progress
 
 ## Live PageSpeed Insights — VERIFIED
 https://pagespeed.web.dev/analysis/https-universal-dynamic-com/byxb4x1axc
@@ -20,6 +22,11 @@ Fail was **not** SEO. Agentic audits: (1) a11y tree (2) llms.txt (3) CLS-related
 - TBT ~280ms from early `gtag.js` (`G-DNXEY3KTKZ`).
 - Fix: load GA4 only after first gesture, or 12s post-load fallback (`analytics.ts`).
 
+## This session
+- Factual About copy (ops → management 10–12 yrs → PM 5–6 yrs; A++ SEO/GEO)
+- LinkedIn → personal profile `https://www.linkedin.com/in/michael-huerta-6240189a/`
+- Case studies portfolio expansion (local commit pending rebase)
+
 ## Lab LH
 Mobile indexables still **100/100/100/100** after fixes.
 
@@ -27,3 +34,9 @@ Mobile indexables still **100/100/100/100** after fixes.
 - Real GBP / Apple / Bing `sameAs` after claim
 - CI: `FIREBASE_SERVICE_ACCOUNT`
 - Field CWV waits on CrUX
+- Firebase CLI login for deploy
+
+## Account targets
+- **GitHub:** `https://github.com/Michaelh-UDCS/udcs-website.git`
+- **Firebase project:** `universal-dynamic-website` (number `879702190148`)
+- **Live:** https://universal-dynamic.com / https://universal-dynamic-website.web.app

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Head } from 'vite-react-ssg';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Linkedin } from 'lucide-react';
 import { routeMeta } from '../seo';
 import { aboutContent } from '../content/about';
 import { BreadcrumbNav } from '../components/BreadcrumbNav';
@@ -17,7 +17,8 @@ const personSchema = {
     name: siteConfig.businessName,
   },
   description:
-    '24+ years of operations, compliance, and budget leadership paired with modern web development. Founder of Universal Dynamic Consulting Services LLC in Lake Jackson, TX.',
+    '24+ years in industrial operations, including 10+ years in management oversight and several years as a project manager, paired with A++ website builds and local SEO/GEO. Founder of Universal Dynamic Consulting Services LLC in Lake Jackson, TX.',
+  url: 'https://universal-dynamic.com/about',
   sameAs: [siteConfig.social.linkedin],
 };
 
@@ -98,9 +99,20 @@ export const AboutPage: React.FC = () => {
               </div>
             </div>
             <div className="md:col-span-10">
-              <h3 className="font-display font-bold text-2xl text-cream mb-1">
-                {founderName}
-              </h3>
+              <div className="flex flex-wrap items-center gap-3 mb-1">
+                <h3 className="font-display font-bold text-2xl text-cream">
+                  {founderName}
+                </h3>
+                <a
+                  href={siteConfig.social.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Michael Huerta on LinkedIn"
+                  className="text-cream/50 hover:text-gold transition-colors duration-300 focus-visible:ring-1 focus-visible:ring-gold focus-visible:outline-none p-1"
+                >
+                  <Linkedin size={18} strokeWidth={1.5} aria-hidden="true" />
+                </a>
+              </div>
               <p className="text-gold text-xs font-bold uppercase tracking-widest mb-6">
                 {founderTitle}
               </p>
@@ -152,4 +164,3 @@ export const AboutPage: React.FC = () => {
     </main>
   );
 };
-
