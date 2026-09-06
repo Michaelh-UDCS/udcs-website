@@ -16,7 +16,7 @@ export const Comparison: React.FC = () => {
   } = comparisonContent;
 
   return (
-    <Section id={sectionId} background="darker">
+    <Section id={sectionId} background="darker" className="!pb-4 md:!pb-6">
       <div className="text-center mb-16">
         <h2 className="text-gold font-bold tracking-widest uppercase text-sm mb-2">{badge}</h2>
         <h3 className="text-4xl md:text-5xl font-display font-bold text-cream mb-6">
@@ -55,7 +55,7 @@ export const Comparison: React.FC = () => {
 
         {/* Universal Dynamic Approach Card */}
         <Card className="flex flex-col border border-gold/40 bg-gold/5 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-gold/10 rounded-bl-full blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-32 h-32 bg-gold/10 rounded-bl-full"></div>
           <h4 className="text-2xl font-bold text-gold mb-8 font-display border-b border-gold/20 pb-4">
             {universalDynamicCard.title}
           </h4>

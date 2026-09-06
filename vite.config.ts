@@ -11,6 +11,16 @@ export default defineConfig(({ mode, isSsrBuild }) => {
     server: {
       port: 5173,
       host: '0.0.0.0',
+      watch: {
+        ignored: [
+          '**/.firebase/**',
+          '**/dist/**',
+          '**/stats-client.json',
+          '**/psi-saved-report.html',
+          '**/*-report.html',
+          '**/.tmp-screens/**',
+        ],
+      },
     },
     plugins: [
       react(),

@@ -23,9 +23,6 @@ export const Hero: React.FC = () => {
         className="hero-glow-layer pointer-events-none absolute inset-0 z-0"
       />
 
-      {/* Background Texture (Carbon Fiber - Local) */}
-      <div className="absolute inset-0 bg-[url('/assets/carbon-fibre.png')] opacity-[0.03] pointer-events-none"></div>
-
       <div className="container mx-auto px-6 md:px-12 relative z-10 text-center flex flex-col items-center">
         <div className="mb-6 max-w-4xl">
           <span className="inline-block py-1.5 px-6 border border-gold/30 rounded-none bg-navy/30 text-gold-muted text-[10px] sm:text-xs font-bold tracking-[0.3em] uppercase mb-8">
@@ -34,7 +31,7 @@ export const Hero: React.FC = () => {
 
           <h1 className="font-display font-medium text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.05] tracking-tight text-white mb-8">
             {titleMain}{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cream to-gold">
+            <span className="text-gold">
               {titleGradient}
             </span>
             <span className="block text-2xl sm:text-4xl md:text-5xl font-light text-gold/90 mt-4 tracking-normal font-sans">
@@ -85,4 +82,4 @@ export const Hero: React.FC = () => {
       </div>
     </section>
   );
-};
+};

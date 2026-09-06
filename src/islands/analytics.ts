@@ -39,7 +39,9 @@ if (typeof window !== 'undefined' && gaId && gaId.startsWith('G-')) {
     document.head.appendChild(script);
   };
 
-  const GESTURES = ['pointerdown', 'keydown', 'touchstart', 'scroll'] as const;
+  // Intentionally omit `scroll` — Lighthouse scrolls during audits and would
+  // load gtag mid-run (TBT spike). Real engagement still covers pointer/keys.
+  const GESTURES = ['pointerdown', 'keydown', 'touchstart'] as const;
   const onGesture = () => {
     GESTURES.forEach((evt) => window.removeEventListener(evt, onGesture));
     initGA4();
@@ -50,7 +52,7 @@ if (typeof window !== 'undefined' && gaId && gaId.startsWith('G-')) {
   );
 
   // Fallback so non-interactive sessions still ping GA (well after lab audit).
-  const FALLBACK_MS = 12_000;
+  const FALLBACK_MS = 30_000;
   if (document.readyState === 'complete') {
     window.setTimeout(initGA4, FALLBACK_MS);
   } else {

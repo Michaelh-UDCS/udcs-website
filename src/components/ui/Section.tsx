@@ -20,7 +20,10 @@ export const Section: React.FC<SectionProps> = ({
     };
 
     return (
-        <section id={id} className={`py-20 lg:py-32 relative ${bgClasses[background]} ${className}`}>
+        <section
+          id={id}
+          className={`pt-12 pb-12 md:pt-16 md:pb-16 relative scroll-mt-24 ${bgClasses[background]} ${className}`}
+        >
             <div className="container mx-auto px-6 md:px-12 relative z-10">
                 {children}
             </div>

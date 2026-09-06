@@ -24,7 +24,7 @@ export const SaaSMetricsCalculator: React.FC = () => {
   const initialFiveYearTax = defaultFee * 60;
 
   return (
-    <div id="saas-calculator" className="mt-16 bg-navy/30 border border-gold/30 p-8 md:p-12 relative overflow-hidden">
+    <div id="saas-calculator" className="mt-10 bg-navy/30 border border-gold/30 p-8 md:p-12 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-gold via-gold/50 to-transparent" />
       
       <div className="text-center mb-10">
@@ -110,7 +110,7 @@ export const SaaSMetricsCalculator: React.FC = () => {
 
         {/* 5-Year Net Saved Card */}
         <div className="bg-gold/10 border border-gold/50 p-6 text-center relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-20 h-20 bg-gold/20 blur-xl rounded-full" />
+          <div className="absolute top-0 right-0 w-20 h-20 bg-gold/15 rounded-full" />
           <span className="text-[11px] font-bold uppercase tracking-widest text-gold block mb-2">{cards.fiveYear.title}</span>
           <div data-calc-5yr className="text-4xl font-display font-bold text-gold mb-2">
             ${initialFiveYearTax.toLocaleString()}

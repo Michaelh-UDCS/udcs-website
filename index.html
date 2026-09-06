@@ -36,8 +36,12 @@
     .font-display{font-family:"Cormorant Garamond",CormorantGaramond-Fallback,Georgia,serif}
     .font-sans{font-family:Inter,Inter-Fallback,Arial,sans-serif}
     h1.font-display{font-size:2.25rem;line-height:1.05;letter-spacing:-.025em;color:#fff;font-weight:500;margin:0 0 2rem}
-    h1.font-display .bg-clip-text{color:#c5a572;-webkit-text-fill-color:#c5a572}
+    h1.font-display .bg-clip-text,h1.font-display .text-gold{color:#c5a572;-webkit-text-fill-color:#c5a572}
     h1.font-display .block{display:block;font-size:1.5rem;line-height:1.2;color:rgba(197,165,114,.9);margin-top:1rem;font-weight:400;letter-spacing:normal;font-family:Inter,Inter-Fallback,Arial,sans-serif}
+    /* Mirror Hero.tsx breakpoints so async Tailwind does not resize LCP text (CLS). */
+    @media (min-width:640px){h1.font-display{font-size:3.75rem}h1.font-display .block{font-size:2.25rem;line-height:1.15}}
+    @media (min-width:768px){h1.font-display{font-size:4.5rem}h1.font-display .block{font-size:3rem}}
+    @media (min-width:1024px){h1.font-display{font-size:6rem}}
     #main-content>section:first-of-type{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:8rem 1.5rem 4rem;box-sizing:border-box;text-align:center}
     /* Form controls must be cream-on-charcoal before async CSS — UA black text fails contrast */
     input,select,textarea{color:#e0e0e0;background:#0a0a0a;caret-color:#c5a572;color-scheme:dark}

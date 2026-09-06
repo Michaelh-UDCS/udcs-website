@@ -29,7 +29,7 @@ export interface CalculatorContent {
 
 export const calculatorContent: CalculatorContent = {
   badge: "Interactive Cost Comparison Calculator",
-  heading: "Calculate Your 5-Year Capital Drain",
+  heading: "Calculate Your 5-Year Agency Spend",
   description:
     "Adjust the slider or select an industry cost tier below to calculate your estimated 1, 3, and 5-year savings when migrating from recurring subscription models to a 100% client-owned Google Cloud website.",
   referenceNote:
@@ -44,16 +44,17 @@ export const calculatorContent: CalculatorContent = {
     { label: "Managed CMS & Hosting", amount: 85 },
     { label: "Managed Agency Hosting", amount: 180 },
     { label: "Standard Agency Retainer", amount: 350 },
+    { label: "Prior Host-Only Retainer", amount: 500 },
     { label: "All-in-One Enterprise SaaS", amount: 600 },
   ],
   cards: {
     oneYear: {
-      title: "1-Year SaaS Tax",
-      subtitle: "Surrendered in recurring fees",
+      title: "1-Year Agency Spend",
+      subtitle: "Paid in recurring fees",
     },
     threeYear: {
-      title: "3-Year Wealth Drain",
-      subtitle: "Lost capital with $0 equity",
+      title: "3-Year Agency Spend",
+      subtitle: "Recurring cost with $0 equity",
     },
     fiveYear: {
       title: "5-Year Capital Preserved",

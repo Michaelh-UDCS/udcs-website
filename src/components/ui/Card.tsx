@@ -9,7 +9,7 @@ interface CardProps {
 export const Card: React.FC<CardProps> = ({ children, className = '', delay = 0 }) => {
   return (
     <div
-      className={`ud-card reveal-on-scroll group ${className}`}
+      className={`ud-card group ${className}`}
       style={delay ? { transitionDelay: `${delay}s` } : undefined}
     >
       {/* Metallic Sheen Overlay */}

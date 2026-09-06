@@ -60,7 +60,8 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .animate-bounce-subtle {
-    animation: bounce-subtle 2s infinite ease-in-out;
+    /* Single settle — infinite bounce burns Style/Layout during LH scroll. */
+    animation: bounce-subtle 2s 2 ease-in-out;
   }
 }
 
@@ -89,12 +90,9 @@
   display: block;
 }
 
-/* Below-fold sections: skip style/layout until near viewport (Gate 100 LCP) */
-main > section:not(:first-of-type),
-main > div:not(:first-of-type) {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 720px;
-}
+/* NOTE: Do not use content-visibility on homepage sections.
+   Fixed contain-intrinsic-size left blank slabs between sections and
+   broke #hash scroll (e.g. #case-study). Prefer DOM/SVG weight cuts. */
 
 /* Compact decorative markers — replace repeated Lucide SVGs (HTML weight) */
 .sol-check {

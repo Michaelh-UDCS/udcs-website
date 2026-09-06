@@ -23,7 +23,7 @@ export const faqContent: FaqContent = {
     {
       question: "Do I really own my website—with $0 monthly agency fees?",
       answer:
-        "Yes, 100%. Unlike agencies that keep sites on proprietary servers and charge $150–$300/month, Universal Dynamic transfers full admin access to your Google account on Day 1. Google Cloud/Firebase hosting for small-business sites is virtually $0/month for standard traffic—you pay Google, not an agency retainer.",
+        "Yes, 100%. Local clients have paid $500+/month just for website hosting before switching. Unlike agencies that keep sites on proprietary servers, Universal Dynamic transfers full admin access to your Google account on Day 1. Google Cloud/Firebase hosting for small-business sites is virtually $0/month for standard traffic—you pay Google, not a host-only retainer.",
     },
     {
       question: "How does self-hosting work if I don't know how to code?",

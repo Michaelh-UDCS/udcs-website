@@ -6,7 +6,7 @@ export const Navbar: React.FC = () => {
   const { brandName, brandTagline, navLinks, ctaButtonText, ctaButtonHref } = navigationContent;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 py-4 bg-charcoal-950/85 backdrop-blur-md border-b border-gold/20 transition-colors duration-300">
+    <header className="fixed top-0 left-0 right-0 z-50 py-4 bg-charcoal-950/95 border-b border-gold/20 transition-colors duration-300">
       {/* CSS checkbox for mobile toggle — also lg:hidden so desktop LH/axe
           do not see a form control whose only <label> is display:none (Agentic 2/3). */}
       <input
@@ -20,7 +20,6 @@ export const Navbar: React.FC = () => {
         <a href="/" className="flex items-center gap-3 group shrink-0 focus-visible:ring-1 focus-visible:ring-gold focus-visible:outline-none">
           <div className="relative shrink-0">
             <Hexagon className="w-8 h-8 text-gold group-hover:text-gold/80 transition-colors" strokeWidth={1} />
-            <div className="absolute inset-0 bg-gold/10 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
           </div>
           <div className="flex flex-col">
             <span className="font-display font-bold text-base sm:text-lg tracking-wider leading-none text-cream whitespace-nowrap">{brandName}</span>
@@ -60,7 +59,7 @@ export const Navbar: React.FC = () => {
       </div>
 
       {/* CSS-Only Mobile Menu */}
-      <div className="hidden peer-checked:block lg:hidden bg-charcoal-950/95 border-b border-gold/20 backdrop-blur-xl">
+      <div className="hidden peer-checked:block lg:hidden bg-charcoal-950 border-b border-gold/20">
         <nav className="flex flex-col p-6 gap-4" aria-label="Mobile Navigation">
           {navLinks.map((link) => (
             <a

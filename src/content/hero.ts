@@ -21,7 +21,7 @@ export const heroContent: HeroContent = {
   featurePills: [
     "100% Key Transfer Day 1",
     "~$0/mo Base Hosting",
-    "2 Months Support Included",
+    "1 Month Support Included",
   ],
   primaryCtaText: "Get Started Today",
   primaryCtaHref: "#contact",

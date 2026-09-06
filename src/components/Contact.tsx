@@ -2,9 +2,11 @@ import React from 'react';
 import { Section } from './ui/Section';
 import { Send } from 'lucide-react';
 import { contactContent } from '../content/contact';
+import { siteConfig } from '../config/siteConfig';
 
 export const Contact: React.FC = () => {
   const { sectionId, badge, heading, subhead, inquiryOptions } = contactContent;
+  const thankYouUrl = `${siteConfig.domain}/thank-you`;
 
   return (
     <Section id={sectionId}>
@@ -19,22 +21,31 @@ export const Contact: React.FC = () => {
           </p>
         </div>
 
-        {/* Contact Form */}
+        {/* Contact Form — FormSubmit emails michael@universal-dynamic.com on every submit */}
         <div className="bg-navy/20 border border-gold/10 p-8 md:p-12 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-gold/50 to-transparent"></div>
 
           <form
             method="POST"
-            action="https://formsubmit.co/michael@universal-dynamic.com"
+            action={siteConfig.formSubmitEndpoint}
+            acceptCharset="UTF-8"
             className="space-y-8"
           >
-            {/* FormSubmit Configuration */}
-            <input type="hidden" name="_next" value="https://universal-dynamic.com/thank-you" />
+            {/* FormSubmit: deliver to Workspace inbox + thank-you redirect */}
+            <input type="hidden" name="_next" value={thankYouUrl} />
             <input type="hidden" name="_subject" value="New Universal Dynamic Client Inquiry" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
-            {/* Anti-spam Honeypot */}
-            <input type="text" name="_honey" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
+            {/* Anti-spam honeypot (must stay empty) */}
+            <input
+              type="text"
+              name="_honey"
+              className="hidden"
+              style={{ display: 'none' }}
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+            />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
@@ -55,6 +66,7 @@ export const Contact: React.FC = () => {
                 <label htmlFor="email" className="block text-[10px] font-bold uppercase tracking-[0.2em] text-gold mb-3">
                   Email Address <span className="text-gold/60">*</span>
                 </label>
+                {/* FormSubmit uses name="email" for delivery Reply-To */}
                 <input
                   type="email"
                   id="email"

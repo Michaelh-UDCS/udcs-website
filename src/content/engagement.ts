@@ -20,7 +20,7 @@ export const engagementContent: EngagementContent = {
   badge: "Concierge Onboarding & Transfer",
   heading: "The Done-For-You Handoff",
   description:
-    "Universal Dynamic Consulting Services LLC transfers 100% admin ownership of the client's Google Cloud website and Google Workspace on Day 1. The done-for-you handoff includes plain-English video training and two months of concierge support from founder Michael Huerta—with $0 monthly agency fees after delivery.",
+    "Universal Dynamic Consulting Services LLC transfers 100% admin ownership of the client's Google Cloud website and Google Workspace on Day 1. The done-for-you handoff includes plain-English video training and one month (30 days) of concierge support from founder Michael Huerta—with $0 monthly agency fees after delivery.",
   steps: [
     {
       step: "Step 01",
@@ -38,9 +38,9 @@ export const engagementContent: EngagementContent = {
     },
     {
       step: "Step 03",
-      title: "2 Months Included Support",
+      title: "1 Month Included Support",
       description:
-        "Enjoy 60 days of direct concierge access to founder Michael Huerta for questions, fine-tuning, domain record verification, and operational guidance as your new system launches.",
+        "Enjoy 30 days of direct concierge access to founder Michael Huerta for questions, fine-tuning, domain record verification, and operational guidance as your new system launches.",
       badge: "Direct Founder Access",
     },
   ],

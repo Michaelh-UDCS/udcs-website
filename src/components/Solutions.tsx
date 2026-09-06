@@ -10,8 +10,8 @@ export const Solutions: React.FC = () => {
   const cardIcons = [Cloud, Building, ShieldCheck];
 
   return (
-    <Section id={sectionId} background="darker">
-      <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+    <Section id={sectionId} background="darker" className="!pt-4 md:!pt-6">
+      <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-6">
         <div>
           <h2 className="text-gold font-bold tracking-widest uppercase text-sm mb-2">{badge}</h2>
           <h3 className="text-4xl md:text-5xl font-display font-bold text-cream">
@@ -30,7 +30,7 @@ export const Solutions: React.FC = () => {
             <Card
               key={index}
               delay={index * 0.2}
-              className="min-h-[400px] flex flex-col justify-between group hover:border-gold/40 transition-colors duration-500"
+              className="flex flex-col justify-between group hover:border-gold/40 transition-colors duration-500"
             >
               <div>
                 <div className="w-14 h-14 bg-navy rounded-sm flex items-center justify-center mb-8 border border-gold/20 group-hover:border-gold/50 transition-all">

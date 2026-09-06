@@ -37,7 +37,7 @@ Core offers:
 - Deployed into the client's own Google Cloud / Firebase project.
 - 100% administrative ownership transferred on Day 1.
 - Performance-oriented static / SSG architecture aimed at excellent Core Web Vitals.
-- Includes plain-English handoff training and typically 2 months of concierge support.
+- Includes plain-English handoff training and typically 1 month (30 days) of concierge support.
 - Canonical overview: https://universal-dynamic.com/
 
 ### Texas SOS & Entity Filings

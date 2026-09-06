@@ -20,7 +20,7 @@ export const navigationContent: NavigationContent = {
     { name: "About", href: "/about" },
     { name: "Ownership", href: "/#comparison" },
     { name: "Services", href: "/#solutions" },
-    { name: "Case Study", href: "/#case-study" },
+    { name: "Case Studies", href: "/#case-study" },
     { name: "Contact", href: "/contact" },
   ],
   ctaButtonText: "Get Started",
