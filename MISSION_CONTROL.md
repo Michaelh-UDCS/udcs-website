@@ -19,6 +19,17 @@ https://pagespeed.web.dev/analysis/https-universal-dynamic-com/hf9sn6ts4u
 - Hardening staged locally (not yet redeployed): GA4 no longer fires on `scroll` (LH scroll was a live regression risk); fallback 30s; reveal early-exits when no targets; case-study SVG/blur/pulse cuts; nav backdrop-blur removed; hero carbon texture + gradient text simplified; critical CSS h1 breakpoints mirrored to Hero (`sm/md/lg`) to kill async-CSS CLS.
 
 ## This session
+- **Site-wide copy audit** — DONE
+  - Live career copy was already mostly confined to About; fixed residual soft phrasing
+  - `/about` meta: specific role path (not vague “shop floor to…”)
+  - Values card: “Fabrication Floor Experience” + dual Sales/PM titles
+  - `llms-full.txt`: founder background aligned; employer name still omitted
+  - OK as-is: hero, FAQ, engagement, home schemas, city “Freeport” service-area mentions
+  - Stale only in docs: `CSP-HASHES.md` old Person JSON (regenerates on next CSP hash pass); old MC bullet about A++/10–12 yrs
+- **About subhead clarity** — DONE
+  - Subhead is service-first (formation / SAM / client-owned sites); Lake Jackson, TX in hero
+- **About founder bio** — DONE (locked for now)
+  - Approved: 25+ years industrial fabrication OJT path → Sales Manager + Project Manager → UDCS offer
 - **PSI re-audit (mobile + desktop 100)** — LIVE VERIFIED 100/100/100/100; local hardening pending deploy + re-PSI
 - **Case study $500 hosting story** — DONE
   - Barbershop (Mike) + Max Press (Tony): over $500/mo host-only → client-owned GCP ~$0/mo + $0 retainer
@@ -30,8 +41,8 @@ https://pagespeed.web.dev/analysis/https-universal-dynamic-com/hf9sn6ts4u
   - `Card.tsx`: removed `reveal-on-scroll` (cards always visible; keep `ud-card`)
   - `reveal.ts`: MutationObserver + delayed re-observe for late mounts; reduced-motion still strips `js-reveal`
   - `index.css`: `contain-intrinsic-size` 720px → 480px; opacity:0 stays `html.js-reveal`-only
-- Factual About copy (ops → management 10–12 yrs → PM 5–6 yrs; A++ SEO/GEO)
 - LinkedIn → personal profile `https://www.linkedin.com/in/michael-huerta-6240189a/`
+- About founder copy locked: 25+ yrs industrial fabrication OJT path → Sales Manager + Project Manager (employer name off-site)
 - Case studies portfolio expansion (local commit pending rebase)
 - **DONE:** `CaseStudy.tsx` uses `caseStudiesContent.studies` — featured Iron Prairie + Barbershop/Max Press grid; empty guard; nav "Case Studies"; no paddle-blinds; dropped unused `Building2`
 
@@ -40,6 +51,7 @@ Mobile indexables still **100/100/100/100** after fixes.
 
 ## Still human / blocked
 - Real GBP / Apple / Bing `sameAs` after claim
+  - **Apple Business Connect:** Namecheap TXT domain verification done (2026-09-05) — finish claim in Apple Business Connect, then paste public listing URL for `sameAs`
 - CI: `FIREBASE_SERVICE_ACCOUNT`
 - Field CWV waits on CrUX
 - Firebase CLI login for deploy

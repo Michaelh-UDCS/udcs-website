@@ -14,7 +14,7 @@ export const routeMeta: Record<string, RouteMeta> = {
   },
   '/about': {
     title: 'About Universal Dynamic | Texas Business & Web Consulting',
-    description: 'Meet Michael Huerta, founder of Universal Dynamic in Lake Jackson, TX. 24+ years in industrial operations, management and project experience, and A++ websites for local SEO/GEO. Turnkey Texas business setup and self-hosted sites.',
+    description: 'Meet Michael Huerta, founder of Universal Dynamic in Lake Jackson, TX. More than 25 years in industrial fabrication — from welder and fabricator through scheduling, estimating, sales, and project management. Texas business setup, SAM.gov readiness, and client-owned websites.',
     canonical: 'https://universal-dynamic.com/about',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
   },

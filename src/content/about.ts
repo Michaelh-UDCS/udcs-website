@@ -27,7 +27,7 @@ export const aboutContent: AboutContent = {
   badge: "Our Story",
   heading: "About Universal Dynamic",
   subhead:
-    "A Lake Jackson, TX consulting firm grounded in 24+ years of industrial operations — and the management, project, and web skills built along the way.",
+    "Business formation, federal contracting readiness, and high-performance websites — built in Lake Jackson, TX for owners who want full control.",
   missionBadge: "Our Mission",
   missionBody:
     "Universal Dynamic exists to close the gap between where a small business starts and where it needs to be — legally registered, federally compliant, and online with a fast, modern presence that belongs entirely to the owner.",
@@ -35,7 +35,7 @@ export const aboutContent: AboutContent = {
   founderName: "Michael Huerta",
   founderTitle: "CEO & Founder — Lake Jackson, TX",
   founderBio:
-    "I help local entrepreneurs launch and scale with experience that was earned on the floor first. Over 24+ years in industrial operations, I spent years in scheduling, shop coordinating, and expediting before moving into management oversight (about 10–12 years) and project management (the last 5–6 years). I also design and ship A++ websites aimed at full marks on local SEO and GEO scorecards. Through Universal Dynamic, I handle Texas Secretary of State business setup and SAM.gov federal contracting readiness, then build high-speed, self-hosted sites on Google Cloud — fully owned by the client, with zero monthly agency fees.",
+    "For more than 25 years I have built a career in industrial fabrication through hands-on, on-the-job training — progressing from master shop fabricator and welder through shop coordination, scheduling, expediting, and estimating. I currently serve as Sales Manager and Project Manager. That same discipline drives Universal Dynamic: Texas business formation, SAM.gov readiness, and high-performance Google Cloud websites that clients own outright, with no monthly agency fees.",
   valuesBadge: "Why Choose Universal Dynamic",
   values: [
     {
@@ -45,8 +45,8 @@ export const aboutContent: AboutContent = {
     },
     {
       icon: Star,
-      title: "Operations + Project Experience",
-      body: "A career built in the shop and the office — scheduling, coordinating, and expediting first, then management oversight and project leadership. That grounding shapes how we advise and build.",
+      title: "Fabrication Floor Experience",
+      body: "More than 25 years in industrial fabrication — welding and fab through shop coordination, scheduling, expediting, estimating, and dual roles as Sales Manager and Project Manager. Hands-on experience shapes how we advise and build.",
     },
     {
       icon: Zap,

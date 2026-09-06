@@ -17,7 +17,7 @@ const personSchema = {
     name: siteConfig.businessName,
   },
   description:
-    '24+ years in industrial operations, including 10+ years in management oversight and several years as a project manager, paired with A++ website builds and local SEO/GEO. Founder of Universal Dynamic Consulting Services LLC in Lake Jackson, TX.',
+    'More than 25 years in industrial fabrication — from master shop fabricator and welder through shop coordination, scheduling, expediting, and estimating. Sales Manager and Project Manager; founder of Universal Dynamic Consulting Services LLC in Lake Jackson, TX.',
   url: 'https://universal-dynamic.com/about',
   sameAs: [siteConfig.social.linkedin],
 };
