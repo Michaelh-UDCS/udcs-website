@@ -26,7 +26,7 @@ export const caseStudiesContent = {
     "Self-hosted Google Cloud launches across fabrication, local retail, and home services—each site transferred to the owner with $0 monthly agency retainers.",
   supportingHeading: "More Client Launches",
   supportingSubhead:
-    "Same ownership model—different verticals. Retail checkout, booking, and home-services lead gen, all on infrastructure the client controls.",
+    "Same ownership model—different verticals. Retail checkout, booking, and home-services lead generation, all on infrastructure the client controls.",
   studies: [
     {
       id: "iron-prairie",
@@ -77,46 +77,49 @@ export const caseStudiesContent = {
     },
     {
       id: "barbershop",
-      eyebrow: "Local Retail + Booking",
-      tags: ["Lake Jackson Local SEO", "Stripe Checkout"],
+      eyebrow: "Owner-Trained Independence",
+      tags: ["Lake Jackson Local SEO", "Owner Training"],
       client: "The Barbershop by Mike",
       location: "Lake Jackson, TX",
       description:
-        "Mike was paying over $500/month just for someone to host his website. Universal Dynamic rebuilt a speakeasy-branded men's grooming presence—appointment booking, 200+ Google review proof, and a full retail catalog—with Don Juan and Johnny B. products wired to Mike's own Stripe, then moved him to client-owned Google Cloud at ~$0/mo base hosting with a $0 agency retainer.",
+        "Mike replaced a $400+/month confined website package—where updates were tightly limited inside a vendor-controlled system—with a client-owned Google Cloud site he now hosts and manages independently. The engagement delivered online booking and a product catalog for his hair products, integrated with the Stripe account he already used, with no monthly agency retainer. Like many owners in similar arrangements, Mike had not realized that self-hosting and direct site management were available to him. Mike was the first to accept the included owner training; on his own device, he learned to edit photos, publish content, and administer the site and domain without a middleman or permission gates. That ownership quickly opened new possibilities—for the website, and for streamlining how he operates the shop.",
       pillars: [
         {
-          title: "Escaped $500+/mo Hosting",
-          subtitle: "Replaced a costly host-only retainer with client-owned Google Cloud (~$0/mo base).",
+          title: "From Confined Package to Ownership",
+          subtitle: "Replaced a $400+/mo limited-update vendor system with client-owned Google Cloud (~$0/mo base).",
         },
         {
-          title: "Owner Stripe Payments",
-          subtitle: "Online product sales checkout into Mike's Stripe—no middleman storefront fees.",
+          title: "Included Owner Training",
+          subtitle: "Hands-on training so Mike edits photos, content, and domain settings without a third party.",
         },
       ],
       deliverablesTitle: "Key Project Deliverables:",
       deliverables: [
+        "Owner Training — Device Setup & Handover",
         "Self-Hosted Google Cloud Site",
-        "Migrated Off $500+/mo Host Retainer",
-        "Stripe Product Checkout (Owner Account)",
-        "Retail Catalog & Category Filters",
+        "Migration from $400+/mo Confined Package",
+        "Online Hair-Product Catalog",
+        "Existing Stripe Checkout Integration",
         "Online Appointment Booking",
         "BarberShop Schema + Local NAP",
       ],
       liveUrl: "https://www.thebarbershopbymike.com/",
       ctaLabel: "Visit Live Website",
-      capabilitiesTitle: "Commerce Focus",
-      capabilitiesHeading: "Chair Products, Owner Checkout",
+      capabilitiesTitle: "Independence Focus",
+      capabilitiesHeading: "Liberty to Maintain & Improve",
       capabilitiesDescription:
-        "Mike's favorite deliverable: chair-trusted pomades and aftershaves customers can buy online—paid straight into his Stripe—on infrastructure he owns.",
+        "Through included owner training on his own device, Mike gained the ability to edit photos, publish content, and manage his domain without a middleman or waiting on permission. That ownership extended beyond the website—prompting clearer ideas for streamlining shop operations, reducing costs, and running more efficiently on infrastructure he controls.",
       details: [
         { label: "Client Location:", value: "Lake Jackson, TX" },
-        { label: "Prior Hosting Cost:", value: "$500+/mo (host-only)" },
-        { label: "Commerce:", value: "Stripe (Client-Owned)" },
+        { label: "Infrastructure:", value: "Google Cloud & Firebase" },
+        { label: "Prior Package:", value: "$400+/mo · Limited Updates" },
+        { label: "Owner Training:", value: "Included · Accepted" },
+        { label: "Commerce:", value: "Existing Stripe Account" },
         { label: "Hosting Retainer:", value: "$0 / Month (Client Owned)", isHighlight: true },
         { label: "Status:", value: "Live & Operational", isLive: true },
       ],
       quote:
-        "Mike left a $500+/month host-only bill behind—now the shop site, booking, and product checkout run on client-owned Google Cloud at ~$0/mo base hosting with a $0 agency retainer.",
+        "Mike was the first to accept the included owner training. On his own device, he learned to edit photos, publish content, and manage his site and domain—without a middleman or waiting for permission—opening new ideas for both the website and the shop.",
     },
     {
       id: "max-press",
@@ -125,23 +128,24 @@ export const caseStudiesContent = {
       client: "Max Press Foundation Repair LLC",
       location: "Clute, TX",
       description:
-        "Tony at Max Press was paying over $500/month just for someone to host the company website. The new build is an owner-supervised foundation-repair authority site for Brazoria County—process pages, warning-sign diagnostics, city routes, and Google/Apple/Bing Maps sameAs—moved to client-owned Google Cloud at ~$0/mo base hosting with a $0 agency retainer.",
+        "Tony replaced a $500+/month confined website package—limited updates inside a vendor-controlled system, alongside a markedly outdated Max Press site—with a client-owned Google Cloud presence he now hosts and manages independently. The new build is an owner-supervised foundation-repair authority site for Brazoria County: process pages, warning-sign diagnostics, city service routes, and official Google, Apple, and Bing business listings linked to the website, with no agency retainer. Tony had not realized that self-hosting was an option; transferring ownership removed the middleman so Max Press can update its web presence whenever the business requires—without requesting permission.",
       pillars: [
         {
-          title: "Escaped $500+/mo Hosting",
-          subtitle: "Replaced a costly host-only retainer with client-owned Google Cloud (~$0/mo base).",
+          title: "From Confined Package to Ownership",
+          subtitle: "Replaced a $500+/mo limited-update vendor system with client-owned Google Cloud (~$0/mo base).",
         },
         {
-          title: "Lead-Gen Architecture",
-          subtitle: "Free inspection CTAs, photo diagnostic path, and owner-direct contact wired end-to-end.",
+          title: "Lead-Generation Architecture",
+          subtitle: "Free inspection CTAs, photo diagnostic path, and owner-direct contact wired end to end.",
         },
       ],
       deliverablesTitle: "Key Project Deliverables:",
       deliverables: [
         "Self-Hosted React/Firebase Launch",
-        "Migrated Off $500+/mo Host Retainer",
+        "Migration from $500+/mo Confined Package",
+        "Modern Rebuild of Outdated Site",
         "HomeAndConstructionBusiness Schema",
-        "Google / Apple / Bing Maps sameAs",
+        "Google, Apple & Bing Business Listings Linked",
         "City Service Landing Pages",
         "Warning-Signs Diagnostic Guide",
       ],
@@ -150,16 +154,18 @@ export const caseStudiesContent = {
       capabilitiesTitle: "Authority Focus",
       capabilitiesHeading: "Residential Foundation Repair",
       capabilitiesDescription:
-        "Owner-supervised foundation authority online—every lift story, warranty signal, and inspection CTA owned by the client, without a $500+/month host middleman.",
+        "Owner-supervised foundation authority online—every lift story, warranty signal, and inspection CTA owned by the client. Max Press no longer operates inside a $500+/month confined package or behind an outdated site: the company controls its presence directly, without a middleman between the business and its web assets.",
       details: [
         { label: "Client Location:", value: "Clute, TX" },
-        { label: "Prior Hosting Cost:", value: "$500+/mo (host-only)" },
         { label: "Infrastructure:", value: "Google Cloud & Firebase" },
+        { label: "Prior Package:", value: "$500+/mo · Limited Updates" },
+        { label: "Prior Site:", value: "Markedly Outdated" },
+        { label: "Listings:", value: "Google, Apple & Bing Linked" },
         { label: "Hosting Retainer:", value: "$0 / Month (Client Owned)", isHighlight: true },
         { label: "Status:", value: "Live & Operational", isLive: true },
       ],
       quote:
-        "Tony stopped paying $500+/month just for hosting—Max Press now runs on client-owned Google Cloud at ~$0/mo base hosting with a $0 agency retainer.",
+        "Tony moved Max Press from a $500+/month confined package and an outdated site onto client-owned Google Cloud—gaining the ability to host and manage the presence himself, without a middleman or permission gates.",
     },
   ] as CaseStudyItem[],
 };

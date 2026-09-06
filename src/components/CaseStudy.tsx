@@ -10,7 +10,7 @@ function PillarIcon() {
   return <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gold shrink-0" aria-hidden="true" />;
 }
 
-const FeaturedStudy: React.FC<{ study: CaseStudyItem }> = ({ study }) => (
+const StudyLayout: React.FC<{ study: CaseStudyItem }> = ({ study }) => (
   <Card className="border border-gold/30 bg-navy/30 relative overflow-hidden">
     <div className="absolute top-0 right-0 w-72 h-72 bg-gold/[0.06] rounded-full pointer-events-none" />
 
@@ -88,18 +88,18 @@ const FeaturedStudy: React.FC<{ study: CaseStudyItem }> = ({ study }) => (
           {study.details.map((detail, idx) => (
             <div
               key={detail.label}
-              className={`flex items-center justify-between py-2 text-xs ${
+              className={`flex items-center justify-between gap-4 py-2 text-xs ${
                 idx < study.details.length - 1 ? 'border-b border-white/5' : ''
               }`}
             >
-              <span className="text-cream/60">{detail.label}</span>
+              <span className="text-cream/60 shrink-0">{detail.label}</span>
               {detail.isLive ? (
-                <span className="text-emerald-400 font-medium flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                <span className="text-emerald-400 font-medium flex items-center gap-1.5 text-right">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 shrink-0" />
                   {detail.value}
                 </span>
               ) : (
-                <span className={detail.isHighlight ? 'text-gold font-bold' : 'text-cream font-medium'}>
+                <span className={`text-right ${detail.isHighlight ? 'text-gold font-bold' : 'text-cream font-medium'}`}>
                   {detail.value}
                 </span>
               )}
@@ -115,55 +115,6 @@ const FeaturedStudy: React.FC<{ study: CaseStudyItem }> = ({ study }) => (
   </Card>
 );
 
-const StudyCard: React.FC<{ study: CaseStudyItem; delay?: number }> = ({ study, delay = 0 }) => (
-  <Card delay={delay} className="border border-gold/20 bg-navy/30 h-full hover:border-gold/40 transition-colors duration-500">
-    <div className="flex flex-col h-full space-y-5 font-sans">
-      <div className="flex flex-wrap gap-2">
-        {study.tags.map((tag) => (
-          <span
-            key={tag}
-            className="px-2.5 py-1 bg-gold/10 border border-gold/25 text-gold text-[10px] font-bold uppercase tracking-wider"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
-
-      <div>
-        <span className="text-[10px] uppercase tracking-[0.2em] text-gold/80 font-bold block mb-2">
-          {study.eyebrow}
-        </span>
-        <h3 className="text-2xl font-display font-bold text-cream leading-tight mb-1">{study.client}</h3>
-        <p className="text-cream/45 text-xs">{study.location}</p>
-      </div>
-
-      <p className="text-cream/70 text-sm font-light leading-relaxed">{study.description}</p>
-
-      <ul className="grid grid-cols-1 gap-1.5 text-xs text-cream/75 border-t border-gold/10 pt-4">
-        {study.deliverables.slice(0, 3).map((item) => (
-          <li key={item} className="sol-check">
-            {item}
-          </li>
-        ))}
-      </ul>
-
-      <div className="flex items-center justify-between text-xs border-t border-gold/10 pt-4">
-        <span className="text-cream/50">Hosting retainer</span>
-        <span className="text-gold font-bold">$0 / mo · Client owned</span>
-      </div>
-
-      <a
-        href={study.liveUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 mt-auto bg-transparent border border-gold text-gold font-bold uppercase tracking-widest text-xs hover:bg-gold hover:text-charcoal-950 transition-colors duration-300"
-      >
-        {study.ctaLabel} <ExternalLink className="w-4 h-4" strokeWidth={2} />
-      </a>
-    </div>
-  </Card>
-);
-
 export const CaseStudy: React.FC = () => {
   const { sectionId, badge, heading, subhead, supportingHeading, supportingSubhead, studies } =
     caseStudiesContent;
@@ -172,6 +123,7 @@ export const CaseStudy: React.FC = () => {
 
   const featured = studies.find((s) => s.featured) ?? studies[0];
   const supporting = studies.filter((s) => s.id !== featured.id);
+  const ordered = [featured, ...supporting];
 
   return (
     <Section id={sectionId} background="gradient">
@@ -186,24 +138,21 @@ export const CaseStudy: React.FC = () => {
           </p>
         </div>
 
-        <FeaturedStudy study={featured} />
-
-        {supporting.length > 0 && (
-          <>
-            <div className="mt-12 mb-6">
-              <h3 className="text-gold font-bold tracking-widest uppercase text-xs mb-2 font-sans">
-                {supportingHeading}
-              </h3>
-              <p className="text-cream/50 text-sm font-light font-sans max-w-xl">{supportingSubhead}</p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {supporting.map((study, i) => (
-                <StudyCard key={study.id} study={study} delay={0.05 * (i + 1)} />
-              ))}
-            </div>
-          </>
-        )}
+        <div className="space-y-10 md:space-y-12">
+          {ordered.map((study, i) => (
+            <React.Fragment key={study.id}>
+              {i === 1 && supporting.length > 0 && (
+                <div>
+                  <h3 className="text-gold font-bold tracking-widest uppercase text-xs mb-2 font-sans">
+                    {supportingHeading}
+                  </h3>
+                  <p className="text-cream/50 text-sm font-light font-sans max-w-xl">{supportingSubhead}</p>
+                </div>
+              )}
+              <StudyLayout study={study} />
+            </React.Fragment>
+          ))}
+        </div>
       </div>
     </Section>
   );

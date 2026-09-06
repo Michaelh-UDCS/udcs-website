@@ -19,6 +19,14 @@ https://pagespeed.web.dev/analysis/https-universal-dynamic-com/hf9sn6ts4u
 - Hardening staged locally (not yet redeployed): GA4 no longer fires on `scroll` (LH scroll was a live regression risk); fallback 30s; reveal early-exits when no targets; case-study SVG/blur/pulse cuts; nav backdrop-blur removed; hero carbon texture + gradient text simplified; critical CSS h1 breakpoints mirrored to Hero (`sm/md/lg`) to kill async-CSS CLS.
 
 ## This session
+- **Case study layout uniformity** — DONE
+  - All three studies use the same full StudyLayout (pillars, full deliverables, capabilities panel, detail rows, quote)
+  - Mike/Tony details aligned with Infrastructure + Status indicators like Iron Prairie
+- **Barbershop case study — owner training / liberty** — DONE
+  - Eyebrow/tags: Owner-Trained Independence + Owner Training
+  - Description + quote: first client to take included training; device handover; photos/content/domain; ops efficiency spillover
+  - Pillar #2 + deliverable #1 + details row: hands-on owner training
+  - Capabilities panel reframed to “Liberty to Maintain & Improve”
 - **Site-wide copy audit** — DONE
   - Live career copy was already mostly confined to About; fixed residual soft phrasing
   - `/about` meta: specific role path (not vague “shop floor to…”)
