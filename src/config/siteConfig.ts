@@ -111,8 +111,14 @@ export const siteConfig: SiteConfig = {
 
   social,
 
-  // Confirmed public profiles only — add GBP / Apple / Bing after listings are claimed.
-  sameAs: [social.linkedin, social.twitter, social.facebook, social.youtube],
+  // Confirmed public profiles only — GBP claimed, Apple / Bing queued.
+  sameAs: [
+    social.linkedin,
+    social.twitter,
+    social.facebook,
+    social.youtube,
+    "https://www.google.com/maps?cid=105280992748935528",
+  ],
 
   ogImage: "/og-image.jpg",
 
@@ -131,7 +137,7 @@ export const siteConfig: SiteConfig = {
 
   // Freshness SoT — mirror in index.html JSON-LD + sitemap lastmod.
   publishedAt: "2026-08-05",
-  updatedAt: "2026-08-29",
+  updatedAt: "2026-09-11",
 };
 
 /** Human-readable "Updated …" for crawlable footer copy (UTC calendar date). */

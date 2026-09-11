@@ -121,7 +121,8 @@ Other logged-in Firebase CLIs on this machine (do not use for this repo): `micha
 
 ### P0 — Visibility / ops (human)
 
-- [x] **GSC:** 7 indexed / 1 not indexed (redirect); `/` + local + about + contact Indexed; Request indexing re-queued 2026-08-29 (pre-a11y crawls); sitemap Success (6 pages). Perf 3mo: 0 clicks / 58 impressions.
+- [x] **GSC:** 7 indexed / 1 not indexed (Page with redirect); homepage URL Inspection = on Google; sitemap Success (6 pages, last read Sep 2). Perf 3mo (2026-09-05): **1 click / 74 impressions** · CTR 1.4% · avg pos 52.8. GA4 associated in GSC Settings.
+- [x] **GBP:** Universal Dynamic Consulting Services LLC is **VERIFIED** (confirmed Sep 11, 2026). Blue verified badge active; Category: Business management consultant; Service areas: Freeport, Lake Jackson, and 3 surrounding areas; Phone & Website connected. Profile strength completion & Bing sync queued.
 - [ ] Confirm FormSubmit test email arrived in `michael@universal-dynamic.com` (Inbox + Spam)
 - [ ] Create GitHub secret **`FIREBASE_SERVICE_ACCOUNT`** on Michaelh-UDCS (CI needs it); `gh auth refresh -s workflow` as needed
 - [x] **Deploy** Gate 100 + premium sprint + a11y fix to `universal-dynamic-website` (through **`0548af8`**)
@@ -151,8 +152,8 @@ Other logged-in Firebase CLIs on this machine (do not use for this repo): `micha
 - [x] **GA4 configured with real Measurement ID**: `G-DNXEY3KTKZ` (Web Stream ID `15675001369`); deferred zero-hydration island injected (`src/islands/analytics.ts`); CSP updated in `firebase.json` for `googletagmanager.com` & `google-analytics.com`
 - [x] **GA4 Product Links: Search Console linked**: Domain property `universal-dynamic.com` linked to Web Stream `15675001369` (`LINK CREATED` Sep 2, 2026 by `michael@universal-dynamic.com`)
 - [x] **GA4 Product Links: Firebase linked**: Connected to project `universal-dynamic-website`
-- [ ] Add GBP / Apple / Bing `sameAs` URLs after listings are claimed (do not invent)
-- [ ] Complete off-page claims — GBP, Apple, Bing, Nextdoor, Foursquare
+- [x] **GBP sameAs added**: Google Maps CID `https://www.google.com/maps?cid=105280992748935528` (2026-09-11; Apple / Bing queued)
+- [ ] Complete remaining off-page claims — Apple, Bing (1-click import from GBP), Nextdoor, Foursquare
 - [ ] Optional FormSubmit captcha / `_cc` backup notify
 
 ---

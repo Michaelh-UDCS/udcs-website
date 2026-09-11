@@ -5,6 +5,38 @@
 **Account:** `michael@universal-dynamic.com`  
 **Live:** `ef2ee94` pushed + deployed to `universal-dynamic-website` (2026-09-05)
 
+## Active — Real-world discoverability audit — DONE 2026-09-05
+
+### Verdict
+**Engineering / GSC / GA4: PASS.** Real-world local findability: **GBP VERIFIED & LIVE (2026-09-11)**; Apple/Bing Places queued.
+
+### Google Search Console (`michael@universal-dynamic.com` · `sc-domain:universal-dynamic.com`)
+- [x] Verified owner · property added Aug 6, 2026
+- [x] Sitemap `https://universal-dynamic.com/sitemap.xml` — **Success** (last read Sep 2; 6 discovered)
+- [x] Pages: **7 indexed** / **1 not indexed** = Page with redirect (harmless)
+- [x] Homepage URL Inspection: **URL is on Google** · Page is indexed · HTTPS
+- [x] Associations: **GA4** linked (`Universal Dynamic Website` / `universal-dynamic-website`)
+- [x] Search generative AI: **Include**
+- [x] robots.txt: All files valid · Crawl stats: 86 requests / 90d
+- Performance (3 mo Web): **1 click · 74 impressions · 1.4% CTR · avg position 52.8**
+- Top queries (impressions, 0 clicks): seo agency lake jackson tx · universal dynamic · local seo lake jackson · lake jackson tx seo · website designer lake jackson
+
+### Analytics
+- [x] Live GA4 island ships `G-DNXEY3KTKZ` (deferred load)
+- [x] GSC ↔ GA4 association confirmed in Settings
+
+### Big 3 business profiles
+- [x] **GBP:** **VERIFIED & LIVE (2026-09-11)** — Store code `01716419578033243039`; CID `105280992748935528` (`https://www.google.com/maps?cid=105280992748935528`); website & phone connected; category Business management consultant; service areas active; hours set (opens 9 AM).
+- [ ] **Apple Business Connect:** Namecheap TXT domain verification done (2026-09-05) — finish claim in Apple Business Connect, then paste public listing URL for `sameAs`
+- [ ] **Bing Places + Bing Webmaster:** ready for 1-click import from verified GBP at `bing.com/forbusiness`; IndexNow key live at `/udcs2026indexnow.txt`
+- [x] Site JSON-LD `sameAs`: updated with live Google Maps CID `https://www.google.com/maps?cid=105280992748935528` (2026-09-11)
+
+### Ordered next actions (human)
+1. [DONE] GBP verification complete and canonical Maps CID wired into site schema & sitemap
+2. Claim Bing Places via 1-click import from verified GBP ([bing.com/forbusiness](https://bing.com/forbusiness))
+3. Claim Apple Business Connect ([businessconnect.apple.com](https://businessconnect.apple.com))
+4. Sign into Bing Webmaster with Microsoft account → import from GSC or add sitemap + IndexNow
+
 ## Live PageSpeed Insights — VERIFIED (2026-09-05 re-audit)
 https://pagespeed.web.dev/analysis/https-universal-dynamic-com/hf9sn6ts4u
 
@@ -58,8 +90,11 @@ https://pagespeed.web.dev/analysis/https-universal-dynamic-com/hf9sn6ts4u
 Mobile indexables still **100/100/100/100** after fixes.
 
 ## Still human / blocked
-- Real GBP / Apple / Bing `sameAs` after claim
+- [DONE] **GBP verification & Maps CID sameAs** (`105280992748935528`)
+- Apple Business Connect + Bing Places claims (Bing 1-click import from GBP)
   - **Apple Business Connect:** Namecheap TXT domain verification done (2026-09-05) — finish claim in Apple Business Connect, then paste public listing URL for `sameAs`
+- Bing Webmaster sign-in / site add
+- Real Apple / Bing `sameAs` after claims
 - CI: `FIREBASE_SERVICE_ACCOUNT`
 - Field CWV waits on CrUX
 - Firebase CLI login for deploy
