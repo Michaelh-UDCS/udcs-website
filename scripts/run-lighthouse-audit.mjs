@@ -74,6 +74,7 @@ async function runAudits() {
   const routes = [
     '/',
     '/about',
+    '/case-studies',
     '/contact',
     '/services/lake-jackson-tx',
     '/guides/google-workspace-for-startups',

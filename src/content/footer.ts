@@ -61,6 +61,7 @@ export const footerContent: FooterContent = {
   },
   legalLinks: [
     { name: "About", href: "/about" },
+    { name: "Case Studies", href: "/case-studies" },
     { name: "Contact", href: "/contact" },
     { name: "Lake Jackson, TX", href: "/services/lake-jackson-tx" },
     { name: "Privacy Policy", href: "/privacy-policy" },

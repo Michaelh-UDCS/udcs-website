@@ -13,11 +13,11 @@ export interface HeroContent {
 
 export const heroContent: HeroContent = {
   badge: "Universal Dynamic Consulting Services LLC",
-  titleMain: "100% Owned Cloud Websites &",
-  titleGradient: "Turnkey Texas Business Setup",
-  titleSub: "Zero Monthly Agency Fees.",
+  titleMain: "100% Owned Cloud Websites",
+  titleGradient: "Zero Monthly Agency Fees",
+  titleSub: "Turnkey Texas business setup when you need it.",
   description:
-    "Universal Dynamic Consulting Services LLC builds self-hosted Google Cloud websites with $0 monthly agency fees. The firm also delivers turnkey Texas business setup—Texas SOS filings, IRS EIN, and SAM.gov registration—for companies in Lake Jackson, TX 77566, Brazoria County, and Greater Houston.",
+    "Self-hosted Google Cloud websites plus Texas SOS filings, IRS EIN, and SAM.gov setup for Lake Jackson, Brazoria County, and Greater Houston.",
   featurePills: [
     "100% Key Transfer Day 1",
     "~$0/mo Base Hosting",
@@ -25,6 +25,6 @@ export const heroContent: HeroContent = {
   ],
   primaryCtaText: "Get Started Today",
   primaryCtaHref: "#contact",
-  secondaryCtaText: "See How Ownership Works",
-  secondaryCtaHref: "#comparison",
+  secondaryCtaText: "See How It Works",
+  secondaryCtaHref: "#how-it-works",
 };

@@ -19,8 +19,8 @@ export const navigationContent: NavigationContent = {
   navLinks: [
     { name: "About", href: "/about" },
     { name: "Ownership", href: "/#comparison" },
-    { name: "Services", href: "/#solutions" },
-    { name: "Case Studies", href: "/#case-study" },
+    { name: "Services", href: "/#how-it-works" },
+    { name: "Case Studies", href: "/case-studies" },
     { name: "Contact", href: "/contact" },
   ],
   ctaButtonText: "Get Started",

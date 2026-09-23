@@ -35,14 +35,16 @@
     @font-face{font-family:CormorantGaramond-Fallback;src:local('Georgia'),local('Times New Roman');ascent-override:88%;descent-override:24%;line-gap-override:0%;size-adjust:102%}
     .font-display{font-family:"Cormorant Garamond",CormorantGaramond-Fallback,Georgia,serif}
     .font-sans{font-family:Inter,Inter-Fallback,Arial,sans-serif}
-    h1.font-display{font-size:2.25rem;line-height:1.05;letter-spacing:-.025em;color:#fff;font-weight:500;margin:0 0 2rem}
+    /* Hero LCP h1 — stacked ownership line + gold fees + Inter subline (A+++ hierarchy) */
+    h1.font-display{font-size:2rem;line-height:1.1;letter-spacing:-.025em;color:#fff;font-weight:500;margin:0 0 1rem}
+    h1.font-display .text-white{color:#fff;-webkit-text-fill-color:#fff}
     h1.font-display .bg-clip-text,h1.font-display .text-gold{color:#c5a572;-webkit-text-fill-color:#c5a572}
-    h1.font-display .block{display:block;font-size:1.5rem;line-height:1.2;color:rgba(197,165,114,.9);margin-top:1rem;font-weight:400;letter-spacing:normal;font-family:Inter,Inter-Fallback,Arial,sans-serif}
+    h1.font-display .font-sans{display:block;font-size:1.125rem;line-height:1.35;color:rgba(224,224,224,.8);margin-top:.75rem;font-weight:400;letter-spacing:normal;font-family:Inter,Inter-Fallback,Arial,sans-serif}
     /* Mirror Hero.tsx breakpoints so async Tailwind does not resize LCP text (CLS). */
-    @media (min-width:640px){h1.font-display{font-size:3.75rem}h1.font-display .block{font-size:2.25rem;line-height:1.15}}
-    @media (min-width:768px){h1.font-display{font-size:4.5rem}h1.font-display .block{font-size:3rem}}
+    @media (min-width:640px){h1.font-display{font-size:3.75rem;line-height:1.05}h1.font-display .font-sans{font-size:1.875rem;line-height:1.2}}
+    @media (min-width:768px){h1.font-display{font-size:4.5rem}h1.font-display .font-sans{font-size:2.25rem}}
     @media (min-width:1024px){h1.font-display{font-size:6rem}}
-    #main-content>section:first-of-type{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:8rem 1.5rem 4rem;box-sizing:border-box;text-align:center}
+    #main-content>section:first-of-type{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:6rem 1.5rem 5rem;box-sizing:border-box;text-align:center}
     /* Form controls must be cream-on-charcoal before async CSS — UA black text fails contrast */
     input,select,textarea{color:#e0e0e0;background:#0a0a0a;caret-color:#c5a572;color-scheme:dark}
     input::placeholder,textarea::placeholder{color:rgba(224,224,224,.55)}
@@ -168,6 +170,9 @@
   <script type="module" src="/src/index.tsx"></script>
   <script type="module" defer src="/src/islands/reveal.ts"></script>
   <script type="module" defer src="/src/islands/hero-glow.ts"></script>
+  <script type="module" defer src="/src/islands/nav.ts"></script>
+  <script type="module" defer src="/src/islands/calculator.ts"></script>
+  <script type="module" defer src="/src/islands/sticky-cta.ts"></script>
   <script type="module" defer src="/src/islands/analytics.ts"></script>
 </body>
 

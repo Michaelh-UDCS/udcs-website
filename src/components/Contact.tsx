@@ -10,7 +10,7 @@ export const Contact: React.FC = () => {
 
   return (
     <Section id={sectionId}>
-      <div className="max-w-3xl mx-auto">
+      <div className="reveal-on-scroll max-w-3xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-gold font-bold tracking-widest uppercase text-sm mb-4">{badge}</h2>
           <h3 className="text-4xl md:text-6xl font-display font-medium text-cream mb-6">

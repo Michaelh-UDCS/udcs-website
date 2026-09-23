@@ -3,6 +3,7 @@ export * from './comparison';
 export * from './calculator';
 export * from './services';
 export * from './engagement';
+export * from './howItWorks';
 export * from './caseStudies';
 export * from './faq';
 export * from './contact';

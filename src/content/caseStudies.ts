@@ -20,13 +20,30 @@ export interface CaseStudyItem {
 
 export const caseStudiesContent = {
   sectionId: "case-study",
+  /** Homepage flagship teaser */
+  homeBadge: "Proven Launch Model",
+  homeHeading: "Flagship Client Launch",
+  homeSubhead:
+    "One flagship launch—Texas setup through client-owned Google Cloud. Full portfolio on the Case Studies page.",
+  viewAllLabel: "View All Case Studies",
+  viewAllHref: "/case-studies",
+  homeConsultLabel: "Schedule a Consultation",
+  homeConsultHref: "#contact",
+  /** Dedicated /case-studies page */
+  pageBadge: "Client Work",
+  pageHeading: "Case Studies",
+  pageSubhead:
+    "Universal Dynamic Consulting Services LLC launches self-hosted Google Cloud websites for Texas businesses—each transferred to the owner with $0 monthly agency retainers. Fabrication, local retail, and home services.",
+  pageCtaLead: "Ready for the same ownership model?",
+  pageCtaLabel: "Start Your Consultation",
+  pageCtaHref: "/contact",
+  supportingHeading: "More Client Launches",
+  supportingSubhead:
+    "Same ownership model—different verticals. Retail checkout, booking, and home-services lead generation, all on infrastructure the client controls.",
   badge: "Proven Launch Model",
   heading: "Client Case Studies",
   subhead:
     "Self-hosted Google Cloud launches across fabrication, local retail, and home services—each site transferred to the owner with $0 monthly agency retainers.",
-  supportingHeading: "More Client Launches",
-  supportingSubhead:
-    "Same ownership model—different verticals. Retail checkout, booking, and home-services lead generation, all on infrastructure the client controls.",
   studies: [
     {
       id: "iron-prairie",

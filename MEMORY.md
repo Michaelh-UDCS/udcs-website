@@ -117,6 +117,7 @@ Other logged-in Firebase CLIs on this machine (do not use for this repo): `micha
 ## Active TODO Queue (from 2026-08-29 upgraded global-skills audit)
 
 **Scorecard (2026-08-29 Gate 100 live PASS):** Live HEAD **`0548af8`**. Lab indexables **100/100/100/100**. Live PSI mobile **100/100/100/100** + Agentic **3/3** ([aysk35poz7](https://pagespeed.web.dev/analysis/https-universal-dynamic-com/aysk35poz7?form_factor=mobile)). Canvas: `canvases/udcs-premium-scorecard.canvas.tsx`. Handoff: `MISSION_CONTROL.md`.  
+**Scorecard (2026-09-22 Sprint 5 Gate 100 PASS):** Live LM `2026-09-23 03:12:11 GMT` · Firebase `universal-dynamic-website`. PSI mobile+desktop **100×4** + Agentic **3/3** ([xpeuc0x136](https://pagespeed.web.dev/analysis/https-universal-dynamic-com/xpeuc0x136)); first desktop run `pxc8jjoxck` Perf **97** (TBT 140ms) cleared on retry. GSC URL Inspection **PENDING HUMAN**. Details: `MISSION_CONTROL.md` + `docs/GATE100_BROWSER_SESSION_2026-08-29.md`.
 **Perf + a11y ship:** 2-font budget, async `#app-css`, deferred `/fonts.css`, hero critical CSS, `content-visibility` below-fold; **`0548af8`** cream form text in critical CSS + native nav label (closed live A11y 97 + agentic tree fail).
 
 ### P0 — Visibility / ops (human)
@@ -187,3 +188,4 @@ Off-page checklist: `SEO_CLIENT_CHECKLIST.md` (GBP, Apple Business Connect, Bing
 - [LEARN]: Gate 100 browser SOP is global skill `gate100_browser_scorecard` (Antigravity Pair A + Cursor personal junction `~/.cursor/skills/gate100_browser_scorecard` + project `.cursor/rules/gate100-browser-scorecard.mdc`). UDCS session log: `docs/GATE100_BROWSER_SESSION_2026-08-29.md`. Agents open GSC side panel already-authenticated as Workspace biz email — never invent passwords; hard-stop on wrong property.
 - [LEARN]: GSC URL Inspection in Cursor browser: use `browser_fill` + Search click; plain `browser_type` often fails to commit the inspect URL.
 - [LEARN]: 2026-09-22 — Footer copyright SoT is `siteConfig.copyrightYear` + legal `businessName` (not `new Date()` / tagline). Live PSI after deploy can cold-run Perf ~88; warm homepage then retest — confirmed `uqqxwb6og8` = 100×4 + Agentic 3/3. Footer copyright changes do not need GSC Request indexing.
+- [LEARN]: 2026-09-22 Sprint 5 — After ship, wait for live HTML markers (Show breakdown / how-it-works / case-studies h2s) before PSI; first desktop PSI can land Perf 97 on TBT ~140ms then clear to 100 on retry (`pxc8jjoxck` → `xpeuc0x136`). GSC in agent browser may bounce to marketing `/about` if biz session missing → PENDING HUMAN.

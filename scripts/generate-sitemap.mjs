@@ -3,6 +3,7 @@ import fs from 'fs';
 const routes = [
   { loc: 'https://universal-dynamic.com/', priority: '1.0', changefreq: 'weekly' },
   { loc: 'https://universal-dynamic.com/about', priority: '0.8', changefreq: 'monthly' },
+  { loc: 'https://universal-dynamic.com/case-studies', priority: '0.9', changefreq: 'monthly' },
   { loc: 'https://universal-dynamic.com/contact', priority: '0.8', changefreq: 'monthly' },
   { loc: 'https://universal-dynamic.com/services/lake-jackson-tx', priority: '0.9', changefreq: 'weekly' },
   { loc: 'https://universal-dynamic.com/guides/google-workspace-for-startups', priority: '0.8', changefreq: 'monthly' },

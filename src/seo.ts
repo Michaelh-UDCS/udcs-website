@@ -18,6 +18,12 @@ export const routeMeta: Record<string, RouteMeta> = {
     canonical: 'https://universal-dynamic.com/about',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
   },
+  '/case-studies': {
+    title: 'Case Studies | Client-Owned Cloud Websites | Universal Dynamic',
+    description: 'See Universal Dynamic launches—Iron Prairie, The Barbershop by Mike, and Max Press—self-hosted Google Cloud sites with Day-1 ownership and $0 monthly agency retainers in Texas.',
+    canonical: 'https://universal-dynamic.com/case-studies',
+    robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+  },
   '/contact': {
     title: 'Contact Universal Dynamic | Free Consult Lake Jackson',
     description: 'Free consultation on business setup, SAM.gov registration, or a self-hosted website on Google Cloud. Serving Lake Jackson, Brazoria County, and Houston.',

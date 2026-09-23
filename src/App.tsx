@@ -6,6 +6,7 @@ import { HomePage } from './pages/HomePage';
 import { FamilyWorshipPage } from './pages/FamilyWorshipPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
+import { CaseStudiesPage } from './pages/CaseStudiesPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { TermsOfServicePage } from './pages/TermsOfServicePage';
 import { LakeJacksonPage } from './pages/LakeJacksonPage';
@@ -43,6 +44,10 @@ export const routes: RouteRecord[] = [
       {
         path: 'about',
         element: <AboutPage />,
+      },
+      {
+        path: 'case-studies',
+        element: <CaseStudiesPage />,
       },
       {
         path: 'contact',

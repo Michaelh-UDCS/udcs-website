@@ -1,0 +1,26 @@
+---
+description: Gate 100 post-ship scorecard — lab LH, live PSI + Agentic, side-panel GSC. Apply on website builds, deploys, and scorecard work.
+alwaysApply: true
+---
+
+# Gate 100 Browser Scorecard (project rule)
+
+After every meaningful website ship on this repo, agents MUST follow Antigravity skill **`gate100_browser_scorecard`**:
+
+`C:\Users\micha\OneDrive - freeweld.com\Antigravity\skills\gate100_browser_scorecard\SKILL.md`
+
+Also available as Cursor personal skill: `~/.cursor/skills/gate100_browser_scorecard/` (junction → Antigravity).
+
+## Mandatory close-out
+1. Identity lock (`michael@universal-dynamic.com` · Firebase `universal-dynamic-website`)
+2. `npm run build` + lab mobile LH **100/100/100/100** on indexables
+3. Deploy correct project; confirm live HTML markers
+4. Fresh live PSI mobile **100/100/100/100** + Agentic **3/3**
+5. GSC side panel: `sc-domain:universal-dynamic.com` as biz account → Pages + URL Inspection / Request indexing
+6. Update `MISSION_CONTROL.md` / `MEMORY.md`
+
+## Never invent
+- GA4 Measurement IDs
+- Maps / Apple / Bing `sameAs` URLs before listings are claimed
+
+Session log: `docs/GATE100_BROWSER_SESSION_2026-08-29.md`

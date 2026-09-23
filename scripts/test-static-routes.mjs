@@ -42,6 +42,7 @@ server.listen(5189, async () => {
   const routes = [
     '/',
     '/about',
+    '/case-studies',
     '/contact',
     '/services/lake-jackson-tx',
     '/guides/google-workspace-for-startups',

@@ -7,7 +7,7 @@ export const Faq: React.FC = () => {
 
   return (
     <Section id={sectionId}>
-      <div className="max-w-3xl mx-auto">
+      <div className="reveal-on-scroll max-w-3xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-gold font-bold tracking-widest uppercase text-sm mb-2">{badge}</h2>
           <h3 className="text-4xl md:text-5xl font-display font-bold text-cream">
@@ -17,8 +17,8 @@ export const Faq: React.FC = () => {
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <details 
-              key={index} 
+            <details
+              key={index}
               className="ud-faq group"
             >
               <summary className="faq-summary w-full px-6 py-5 text-left flex justify-between items-center cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden focus:outline-none focus-visible:ring-1 focus-visible:ring-gold/50">
@@ -26,7 +26,7 @@ export const Faq: React.FC = () => {
                   {faq.question}
                 </span>
               </summary>
-              
+
               <div className="px-6 pb-5 pt-0 text-cream/70 font-light leading-relaxed border-t border-gold/10 mt-2">
                 {faq.answer}
               </div>

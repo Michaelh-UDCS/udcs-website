@@ -3,11 +3,11 @@ import { Head } from 'vite-react-ssg';
 import { routeMeta } from '../seo';
 import { Hero } from '../components/Hero';
 import { Comparison } from '../components/Comparison';
-import { Solutions } from '../components/Solutions';
-import { ConciergeHandoff } from '../components/ConciergeHandoff';
+import { HowItWorks } from '../components/HowItWorks';
 import { CaseStudy } from '../components/CaseStudy';
 import { Contact } from '../components/Contact';
 import { Faq } from '../components/Faq';
+import { StickyMobileCta } from '../components/StickyMobileCta';
 
 import { faqContent } from '../content/faq';
 import { siteConfig } from '../config/siteConfig';
@@ -67,8 +67,7 @@ export const HomePage: React.FC = () => {
             )}
             <Hero />
             <Comparison />
-            <Solutions />
-            <ConciergeHandoff />
+            <HowItWorks />
             <CaseStudy />
             <Faq />
             <script
@@ -80,6 +79,7 @@ export const HomePage: React.FC = () => {
               dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
             />
             <Contact />
+            <StickyMobileCta />
         </main>
     );
 };

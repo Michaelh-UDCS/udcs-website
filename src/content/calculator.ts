@@ -19,6 +19,8 @@ export interface CalculatorContent {
     threeYear: { title: string; subtitle: string };
     fiveYear: { title: string; subtitle: string };
   };
+  /** Mobile progressive disclosure for 1yr / 3yr cards */
+  breakdownLabel: string;
   summary: {
     text: string;
     ctaText: string;
@@ -35,7 +37,7 @@ export const calculatorContent: CalculatorContent = {
   referenceNote:
     "Comparative analysis against standard third-party platform tiers & agency retainers",
   sliderLabel: "Current Monthly Agency / Hosting Fee:",
-  defaultFee: 200,
+  defaultFee: 180,
   minSlider: 30,
   maxSlider: 800,
   step: 10,
@@ -61,9 +63,10 @@ export const calculatorContent: CalculatorContent = {
       subtitle: "Kept in your business account",
     },
   },
+  breakdownLabel: "Show breakdown",
   summary: {
     text: "With Universal Dynamic, your website base hosting on Google Cloud is ~$0/month for standard traffic. Zero agency markups.",
-    ctaText: "Eliminate Recurring Fees",
+    ctaText: "Eliminate My Fees",
     ctaHref: "#contact",
   },
   disclaimer:

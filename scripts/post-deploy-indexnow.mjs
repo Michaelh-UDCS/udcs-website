@@ -11,6 +11,7 @@ const DOMAIN = 'universal-dynamic.com';
 const urls = [
   `https://${DOMAIN}/`,
   `https://${DOMAIN}/about`,
+  `https://${DOMAIN}/case-studies`,
   `https://${DOMAIN}/contact`,
   `https://${DOMAIN}/privacy-policy`,
   `https://${DOMAIN}/terms-of-service`,
