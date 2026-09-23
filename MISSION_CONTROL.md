@@ -3,26 +3,29 @@
 **Date:** 2026-09-22  
 **Workspace root:** `C:\Users\micha\Desktop\UDCS Website`  
 **Account:** `michael@universal-dynamic.com`  
-**Live:** hosting released 2026-09-22 (copyright ship) · Firebase `universal-dynamic-website` · `michael@universal-dynamic.com`
+**Live:** `c088071` pushed + hosting deployed 2026-09-22 · Firebase `universal-dynamic-website` · `michael@universal-dynamic.com`
 
-## Research — Google Workspace referral content idea — 2026-09-22
+## Ship — Google Workspace guide pillar — 2026-09-22
 
-**Status:** Pillar **outline drafted** (no UI build). Skills: `ultimate_web_architect` · `a-plus-build-gate` · `claude_design_10x` · `ai-search-2026` · referral SoT `UDCS_GOOGLE_WORKSPACE_REFERRAL.md`. Canvas: `google-workspace-pillar-outline`.
+**URL:** https://universal-dynamic.com/guides/google-workspace-for-startups  
+**Commit:** `c088071` · **Project:** `universal-dynamic-website`
 
-### Guardrails (must-keep)
-- Disclose Referral Program participation (Google + FTC clear/conspicuous)
-- Logos/creative **only** from Resource Portal / approved buttons — never invent Partner badges
-- **Never** publicly post promo codes (1:1 only; codes stay in agent SoT, not `src/`)
-- Do not frame Google pages; do not claim Google endorsement/partnership unless Partner Advantage
-- Eligible referrals only (net-new; not reseller customers; Territory Americas)
+### Gates
+| Check | Result |
+| :--- | :--- |
+| Identity | `michael@universal-dynamic.com` · Firebase `universal-dynamic-website` |
+| `npm run build` | PASS (FAQ parity home 8/8 + guide 6/6) |
+| Lab LH (dist) home + guide | **100/100/100/100** mobile + desktop |
+| Live HTML markers | H1 + referral URL + disclosure + FAQPage + legal © name |
+| Live LH vs production URL | **100/100/100/100** mobile + desktop |
+| Live PSI API | **429 rate-limited** (no `GOOGLE_PSI_API_KEY`) — confirm in pagespeed.web.dev when key available |
+| GSC Request indexing | **PENDING human** — `sc-domain:universal-dynamic.com` → URL Inspection on guide URL |
 
-### Outline lock
-1. [DONE lab] Route `/guides/google-workspace-for-startups` — SSG built; lab LH **100/100/100/100** mobile + desktop (local dist)
-2. Hydrate `siteConfig.referrals.googleWorkspaceUrl` → `https://referworkspace.app.goo.gl/Uc52` ✅
-3. Dual CTA: `/contact` primary · Custom URL secondary · promo via private contact ✅
-4. Cluster later: freemail vs business email · DNS auth · aliases vs seats
-5. [ ] After Michael OK → deploy `universal-dynamic-website` + Gate 100 live PSI + GSC request indexing
-6. Preview: `http://127.0.0.1:4173/guides/google-workspace-for-startups`
+### Research lock (closed)
+1. [DONE] `/guides/google-workspace-for-startups` live
+2. `siteConfig.referrals.googleWorkspaceUrl` = `https://referworkspace.app.goo.gl/Uc52`
+3. Dual CTA + disclosures; no public promo codes
+4. Cluster later (optional)
 
 ## Active — Copyright 2026 + LinkedIn connection audit — 2026-09-22
 
