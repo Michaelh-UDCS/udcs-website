@@ -3,45 +3,39 @@
 **Date:** 2026-09-23  
 **Workspace root:** `C:\Users\micha\Desktop\UDCS Website`  
 **Account:** `michael@universal-dynamic.com`  
-**Live:** Sprint 5 hosting release **2026-09-22 22:12:11** · commit **`f5c08f0`** · Firebase `universal-dynamic-website` · https://universal-dynamic.com  
-**Local (ready to ship):** Gate 100 audit remediation **2026-09-23** — lab LH **PASS** 100×4 indexables · **NOT YET DEPLOYED**
+**Live:** Audit remediation **2026-09-23** · commits **`0c533ee`** + **`a444104`** pushed `origin/master` · Firebase `universal-dynamic-website` · LM **2026-09-23 11:30:51 GMT** · IndexNow **200** · https://universal-dynamic.com
 
-## Active — Elite audit vs Gemini checklist — 2026-09-23
+## Active — Elite audit ship — 2026-09-23
 
-**Verdict:** Live production already at Gate 100 (Sprint 5). Gemini’s paste would have **regressed** SSG SEO. Applied only constitution-safe fixes; lab re-verified **100/100/100/100**.
+**Verdict: PASS** (lab + live LH mobile **100×4**; live a11y/BP/SEO/agentic **100**; HTML `Cache-Control: no-cache` confirmed)
 
-### Gemini advice — REJECT (do not ship)
-| Gemini step | Why rejected |
+### Shipped
+| Commit | What |
 | :--- | :--- |
-| SPA rewrite `"**" → /index.html` | Destroys unique SSG HTML per route → canonical collapse / deindex |
-| Street address `327 Redwood St` in JSON-LD | SAB — **no street**; inventing NAP is forbidden |
-| Google Fonts preconnect + CSP fonts.googleapis | Site is **self-hosted fonts** (zero third-party font requests) |
-| Bare `index.html` shell + noscript-only body | Breaks vite-react-ssg Head injection + critical CSS / islands |
-| Minimal `robots.txt` Allow-all only | Drops AI search allow-list + training-bot opt-out |
-| Single-URL sitemap | Would wipe 8 crawlable routes |
-| Theme `#0f172a` / slate contrast tips | Brand is charcoal `#0a0a0a` / cream / gold |
+| `0c533ee` | GA4 privacy disclosure · theme-color · heading order · cache header intent |
+| `a444104` | HTML `no-cache` on cleanUrls request paths (not `*.html` glob) |
 
-### Already PASS (pre-existing — no change needed)
-- Firebase headers: HSTS, CSP (hash-based), COOP, nosniff, frame DENY
-- Form labels `htmlFor` + ids; mobile nav `sr-only` toggle; `rel="noopener noreferrer"` on external blanks
-- Unique per-route titles/canonicals/OG; ProfessionalService JSON-LD without street
-- Multi-bot `robots.txt` + generated 8-URL sitemap; `llms.txt`; cleanUrls **no** SPA catch-all
-- Live (2026-09-22): PSI mobile+desktop **100×4** + Agentic **3/3**; Chrome DevTools LH live a11y/BP/SEO/agentic **100** (2026-09-23 recheck)
+### Live markers (post-deploy)
+- `theme-color` `#0a0a0a` · privacy “Google Analytics 4” · WebSite `dateModified` 2026-09-22
+- `/` + `/about` → `Cache-Control: no-cache`
+- `/assets/*.css` → immutable 1y · `/fonts.css` → max-age=86400
+- Identity: `michael@universal-dynamic.com` · project `universal-dynamic-website`
 
-### Fixes applied (local — await deploy)
-1. Privacy policy now discloses **GA4** + analytics cookies (was contradictory)
-2. `theme-color` `#0a0a0a` in `index.html`; WebSite `dateModified` synced to 2026-09-22
-3. `firebase.json`: immutable cache only `/assets/**` + images/fonts binaries; **`/fonts.css` max-age=86400** (was wrongly immutable); **`**/*.html` no-cache**; `payment=()` in Permissions-Policy
-4. Heading hierarchy: section badges → `<p>`; real titles → `<h2>`; calculator/Solutions cards → `<h3>` (cleared heading-order a11y 98→100)
+### Gate 100 card (2026-09-23 morning)
+| Surface | Perf | A11y | BP | SEO | Agentic |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| Lab LH mobile (pre-ship) | **100** | **100** | **100** | **100** | — |
+| Live LH mobile | **100** | **100** | **100** | **100** | **100** |
+| Live mobile metrics | FCP/LCP **1.0s** · TBT **40ms** · CLS **0.007** · SI **1.0s** | | | | |
+| Field CrUX | PENDING FIELD | — | — | — | — |
+| GSC Request indexing | **Do not re-request** (quota lock) | | | | |
 
-### Lab gate (2026-09-23 post-fix)
-`npm run build` + `npm run test:lighthouse` → indexables **100/100/100/100**; thank-you/404 SEO 63 noindex-exempt
+**BLOCKERS:** none  
+**WARNINGS:** PSI API quota exhausted earlier today — scored via local LH against live origin + DevTools Agentic  
+**Next:** Apple/Bing sameAs still PENDING claim; leave GA4 ID as-is
 
-### Next actions (ordered)
-1. **Deploy** when Michael says go: `npm run deploy` as `michael@universal-dynamic.com` → `universal-dynamic-website`
-2. Post-deploy: Gate 100 live PSI + confirm HTML `Cache-Control: no-cache` + privacy GA4 copy live
-3. Do **not** re-spam GSC Request indexing (quota policy locked)
-4. Apple / Bing `sameAs` still PENDING claim — never invent
+### Gemini advice — REJECTED (do not ship)
+SPA catch-all · street NAP · Google Fonts · bare index shell · minimal robots/sitemap
 
 ---
 
