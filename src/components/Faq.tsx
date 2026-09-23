@@ -9,10 +9,10 @@ export const Faq: React.FC = () => {
     <Section id={sectionId}>
       <div className="reveal-on-scroll max-w-3xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-gold font-bold tracking-widest uppercase text-sm mb-2">{badge}</h2>
-          <h3 className="text-4xl md:text-5xl font-display font-bold text-cream">
+          <p className="text-gold font-bold tracking-widest uppercase text-sm mb-2">{badge}</p>
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-cream">
             {heading}
-          </h3>
+          </h2>
         </div>
 
         <div className="space-y-4">

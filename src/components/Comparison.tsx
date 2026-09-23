@@ -30,10 +30,10 @@ export const Comparison: React.FC = () => {
     <Section id={sectionId} background="darker" className="!pb-4 md:!pb-6">
       <div className="reveal-on-scroll">
       <div className="text-center mb-10 md:mb-16">
-        <h2 className="text-gold font-bold tracking-widest uppercase text-sm mb-2">{badge}</h2>
-        <h3 className="text-3xl md:text-5xl font-display font-bold text-cream mb-4 md:mb-6">
+        <p className="text-gold font-bold tracking-widest uppercase text-sm mb-2">{badge}</p>
+        <h2 className="text-3xl md:text-5xl font-display font-bold text-cream mb-4 md:mb-6">
           {heading}
-        </h3>
+        </h2>
 
         {/* GEO Direct Answer Snippet for AI Search */}
         <p className="text-cream/80 text-sm md:text-lg max-w-3xl mx-auto font-light leading-relaxed mb-4 md:mb-6">
@@ -77,7 +77,7 @@ export const Comparison: React.FC = () => {
                   <strong className="block text-cream/85 text-sm font-medium leading-snug mb-0.5">
                     {stripTrailingColon(them.title)}
                   </strong>
-                  <span className="block text-cream/45 text-xs font-light leading-snug">
+                  <span className="block text-cream/55 text-xs font-light leading-snug">
                     {them.mobileLine ?? them.description}
                   </span>
                 </td>
@@ -99,9 +99,9 @@ export const Comparison: React.FC = () => {
       <div className="hidden md:grid grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
         {/* Traditional Agencies Card */}
         <Card className="flex flex-col border border-red-900/30 bg-red-950/10">
-          <h4 className="text-2xl font-bold text-red-200/70 mb-8 font-display border-b border-red-900/30 pb-4">
+          <h3 className="text-2xl font-bold text-red-200/70 mb-8 font-display border-b border-red-900/30 pb-4">
             {traditionalAgencyCard.title}
-          </h4>
+          </h3>
           <ul className="space-y-6 text-cream/70">
             {traditionalAgencyCard.items.map((item, idx) => (
               <li key={idx} className="flex items-start gap-4">
@@ -118,9 +118,9 @@ export const Comparison: React.FC = () => {
         {/* Universal Dynamic Approach Card */}
         <Card className="flex flex-col border border-gold/40 bg-gold/5 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-gold/10 rounded-bl-full"></div>
-          <h4 className="text-2xl font-bold text-gold mb-8 font-display border-b border-gold/20 pb-4">
+          <h3 className="text-2xl font-bold text-gold mb-8 font-display border-b border-gold/20 pb-4">
             {universalDynamicCard.title}
-          </h4>
+          </h3>
           <ul className="space-y-6 text-cream/80">
             {universalDynamicCard.items.map((item, idx) => (
               <li key={idx} className="flex items-start gap-4">

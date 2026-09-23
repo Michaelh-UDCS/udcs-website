@@ -13,10 +13,10 @@ export const Solutions: React.FC = () => {
     <Section id={sectionId} background="darker" className="!pt-4 md:!pt-6">
       <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-6">
         <div>
-          <h2 className="text-gold font-bold tracking-widest uppercase text-sm mb-2">{badge}</h2>
-          <h3 className="text-4xl md:text-5xl font-display font-bold text-cream">
+          <p className="text-gold font-bold tracking-widest uppercase text-sm mb-2">{badge}</p>
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-cream">
             {heading}
-          </h3>
+          </h2>
         </div>
         <p className="text-cream/70 max-w-md text-right md:text-left font-light">
           {subhead}
@@ -36,7 +36,7 @@ export const Solutions: React.FC = () => {
                 <div className="w-14 h-14 bg-navy rounded-sm flex items-center justify-center mb-8 border border-gold/20 group-hover:border-gold/50 transition-all">
                   <IconComponent className="w-7 h-7 text-gold" strokeWidth={1} aria-hidden="true" />
                 </div>
-                <h4 className="text-2xl font-bold text-cream mb-4 font-display">{card.title}</h4>
+                <h3 className="text-2xl font-bold text-cream mb-4 font-display">{card.title}</h3>
                 <p className="text-cream/70 leading-relaxed mb-6 font-light text-sm">
                   {card.description}
                 </p>

@@ -77,7 +77,7 @@ If Firebase credentials expire: `firebase login:use michael@universal-dynamic.co
 | Subject | `New Universal Dynamic Client Inquiry` |
 | Captcha | Disabled (`_captcha=false`) + honeypot `_honey` |
 | CSP | `form-action` allows `https://formsubmit.co` (see `firebase.json`) |
-| Privacy disclosure | `src/pages/PrivacyPolicyPage.tsx` mentions FormSubmit |
+| Privacy disclosure | `PrivacyPolicyPage.tsx` discloses FormSubmit + **GA4** (updated 2026-09-23) |
 
 ### Delivery verification (2026-08-29)
 
@@ -147,6 +147,7 @@ Other logged-in Firebase CLIs on this machine (do not use for this repo): `micha
 - [x] Homepage meta description trimmed (149 chars)
 - [x] Placeholder Maps/Apple `sameAs` removed (social only until listings claimed)
 - [x] Privacy policy discloses search vs training crawler policy
+- [x] Privacy policy discloses GA4 + analytics cookies (2026-09-23 — was contradictory vs live island)
 
 ### P2 — Polish / off-page (open)
 

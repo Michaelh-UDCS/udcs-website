@@ -69,9 +69,9 @@ export const SaaSMetricsCalculator: React.FC = () => {
         <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 px-3 py-1.5 text-gold text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-2 md:mb-4">
           <Calculator className="w-4 h-4 text-gold" aria-hidden="true" /> {badge}
         </div>
-        <h4 className="text-xl sm:text-3xl md:text-4xl font-display font-bold text-cream mb-1.5 md:mb-3">
+        <h3 className="text-xl sm:text-3xl md:text-4xl font-display font-bold text-cream mb-1.5 md:mb-3">
           {heading}
-        </h4>
+        </h3>
         <p className="text-cream/70 text-sm md:text-base font-light max-w-2xl mx-auto mb-0 md:mb-4 line-clamp-2 md:line-clamp-none">
           {description}
         </p>

@@ -32,7 +32,7 @@ export const PrivacyPolicyPage: React.FC = () => {
             <h1 className="font-display font-medium text-4xl sm:text-5xl text-white mb-4">
               Privacy Policy
             </h1>
-            <p className="text-cream/70 text-sm font-light">Last updated: August 2026</p>
+            <p className="text-cream/70 text-sm font-light">Last updated: September 2026</p>
           </header>
 
           <div className="prose-style space-y-10 text-cream/85 font-light leading-relaxed">
@@ -41,8 +41,8 @@ export const PrivacyPolicyPage: React.FC = () => {
               <h2 className="font-display font-bold text-xl text-cream mb-3">1. Information We Collect</h2>
               <p>
                 When you submit the contact form on our website, we collect your name, email address,
-                and the content of your message. We do not collect payment information through this
-                website. We do not use tracking cookies or behavioral advertising tools.
+                phone (if provided), and the content of your message. We do not collect payment
+                information through this website. We do not use behavioral advertising or remarketing pixels.
               </p>
             </section>
 
@@ -51,7 +51,9 @@ export const PrivacyPolicyPage: React.FC = () => {
               <p>
                 Information you provide is used solely to respond to your inquiry and provide
                 the consulting services you requested. We do not sell, rent, or share your
-                personal information with third parties for marketing purposes.
+                personal information with third parties for marketing purposes. Aggregated,
+                anonymized traffic data from Google Analytics 4 helps us improve site performance
+                and content—not to sell ads against your identity.
               </p>
             </section>
 
@@ -60,18 +62,20 @@ export const PrivacyPolicyPage: React.FC = () => {
               <p>This website is built with and relies on the following third-party services:</p>
               <ul className="list-disc list-inside mt-3 space-y-2 text-cream/80 text-sm">
                 <li><strong className="text-cream">Google Firebase Hosting</strong> — serves this website. Subject to Google's Privacy Policy.</li>
-                <li><strong className="text-cream">Self-Hosted Typography</strong> — all font files are served locally from our origin server with zero third-party tracking.</li>
+                <li><strong className="text-cream">Google Analytics 4</strong> — measures page views and engagement after you interact with the site (or after a delay for non-interactive visits). Subject to <a href="https://policies.google.com/privacy" className="text-gold underline hover:text-gold/80" rel="noopener noreferrer" target="_blank">Google's Privacy Policy</a>.</li>
+                <li><strong className="text-cream">Self-Hosted Typography</strong> — all font files are served locally from our origin server with zero third-party font tracking.</li>
                 <li><strong className="text-cream">FormSubmit.co</strong> — processes contact form submissions and delivers them to our email. No data is stored by FormSubmit beyond message delivery.</li>
                 <li><strong className="text-cream">Search &amp; AI citation crawlers</strong> — our robots.txt allows search/citation bots (Googlebot, Bingbot, Claude-SearchBot, OAI-SearchBot, PerplexityBot, DuckDuckBot, Applebot, Bravebot) and disallows default training crawlers (GPTBot, ClaudeBot, Google-Extended, Applebot-Extended, meta-externalagent).</li>
               </ul>
             </section>
 
             <section>
-              <h2 className="font-display font-bold text-xl text-cream mb-3">4. Cookies</h2>
+              <h2 className="font-display font-bold text-xl text-cream mb-3">4. Cookies &amp; Similar Technologies</h2>
               <p>
-                This website does not use cookies for tracking or analytics. Google Firebase
-                Hosting may set technical cookies necessary for CDN performance and security.
-                These cookies do not contain personally identifiable information.
+                Google Analytics 4 may set first-party cookies (for example <code className="text-cream/90">_ga</code>)
+                to distinguish sessions and measure traffic. Google Firebase Hosting may set
+                technical cookies necessary for CDN performance and security. We do not run
+                third-party advertising cookies or sell audience data.
               </p>
             </section>
 

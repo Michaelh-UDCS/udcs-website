@@ -1,11 +1,51 @@
 # MISSION CONTROL — Ultra-Premium Gate 100
 
-**Date:** 2026-09-22  
+**Date:** 2026-09-23  
 **Workspace root:** `C:\Users\micha\Desktop\UDCS Website`  
 **Account:** `michael@universal-dynamic.com`  
-**Live:** Sprint 5 hosting release **2026-09-22 22:12:11** · commit **`f5c08f0`** pushed `origin/master` · Firebase `universal-dynamic-website` · `michael@universal-dynamic.com` · https://universal-dynamic.com · IndexNow **200**
+**Live:** Sprint 5 hosting release **2026-09-22 22:12:11** · commit **`f5c08f0`** · Firebase `universal-dynamic-website` · https://universal-dynamic.com  
+**Local (ready to ship):** Gate 100 audit remediation **2026-09-23** — lab LH **PASS** 100×4 indexables · **NOT YET DEPLOYED**
 
-## Active — Ultra-premium mobile delight + Case Studies route — 2026-09-22
+## Active — Elite audit vs Gemini checklist — 2026-09-23
+
+**Verdict:** Live production already at Gate 100 (Sprint 5). Gemini’s paste would have **regressed** SSG SEO. Applied only constitution-safe fixes; lab re-verified **100/100/100/100**.
+
+### Gemini advice — REJECT (do not ship)
+| Gemini step | Why rejected |
+| :--- | :--- |
+| SPA rewrite `"**" → /index.html` | Destroys unique SSG HTML per route → canonical collapse / deindex |
+| Street address `327 Redwood St` in JSON-LD | SAB — **no street**; inventing NAP is forbidden |
+| Google Fonts preconnect + CSP fonts.googleapis | Site is **self-hosted fonts** (zero third-party font requests) |
+| Bare `index.html` shell + noscript-only body | Breaks vite-react-ssg Head injection + critical CSS / islands |
+| Minimal `robots.txt` Allow-all only | Drops AI search allow-list + training-bot opt-out |
+| Single-URL sitemap | Would wipe 8 crawlable routes |
+| Theme `#0f172a` / slate contrast tips | Brand is charcoal `#0a0a0a` / cream / gold |
+
+### Already PASS (pre-existing — no change needed)
+- Firebase headers: HSTS, CSP (hash-based), COOP, nosniff, frame DENY
+- Form labels `htmlFor` + ids; mobile nav `sr-only` toggle; `rel="noopener noreferrer"` on external blanks
+- Unique per-route titles/canonicals/OG; ProfessionalService JSON-LD without street
+- Multi-bot `robots.txt` + generated 8-URL sitemap; `llms.txt`; cleanUrls **no** SPA catch-all
+- Live (2026-09-22): PSI mobile+desktop **100×4** + Agentic **3/3**; Chrome DevTools LH live a11y/BP/SEO/agentic **100** (2026-09-23 recheck)
+
+### Fixes applied (local — await deploy)
+1. Privacy policy now discloses **GA4** + analytics cookies (was contradictory)
+2. `theme-color` `#0a0a0a` in `index.html`; WebSite `dateModified` synced to 2026-09-22
+3. `firebase.json`: immutable cache only `/assets/**` + images/fonts binaries; **`/fonts.css` max-age=86400** (was wrongly immutable); **`**/*.html` no-cache**; `payment=()` in Permissions-Policy
+4. Heading hierarchy: section badges → `<p>`; real titles → `<h2>`; calculator/Solutions cards → `<h3>` (cleared heading-order a11y 98→100)
+
+### Lab gate (2026-09-23 post-fix)
+`npm run build` + `npm run test:lighthouse` → indexables **100/100/100/100**; thank-you/404 SEO 63 noindex-exempt
+
+### Next actions (ordered)
+1. **Deploy** when Michael says go: `npm run deploy` as `michael@universal-dynamic.com` → `universal-dynamic-website`
+2. Post-deploy: Gate 100 live PSI + confirm HTML `Cache-Control: no-cache` + privacy GA4 copy live
+3. Do **not** re-spam GSC Request indexing (quota policy locked)
+4. Apple / Bing `sameAs` still PENDING claim — never invent
+
+---
+
+## Prior — Ultra-premium mobile delight + Case Studies route — 2026-09-22
 
 **Standard:** UDCS site must meet or exceed client-site quality — no lesser house site.
 

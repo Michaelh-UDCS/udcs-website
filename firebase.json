@@ -17,20 +17,38 @@
           { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
           { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
           { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
-          { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), interest-cohort=()" },
+          { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), payment=(), interest-cohort=()" },
           { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'sha256-yQ+zr7xyVDCj1fSCp51D7X9oKchKd9aj2LsZToiQ54U=' 'sha256-nOHfe+QrS86Ci+MG38WTch0z7Ti6ZS1QaFSnfKs9NiQ=' 'sha256-v4SbjLYJOxbb/ejuluaA0wlrcpnXoCyGBgry/pwXUbE=' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: https://*.google-analytics.com https://*.googletagmanager.com; font-src 'self'; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src 'self' https://www.openstreetmap.org; form-action 'self' https://formsubmit.co; frame-ancestors 'none'; object-src 'none'; base-uri 'none';" }
         ]
       },
       {
-        "source": "**/*.@(js|css|svg|woff2)",
+        "source": "/assets/**",
         "headers": [
           { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
         ]
       },
       {
-        "source": "**/*.@(jpg|png|webp|avif|gif)",
+        "source": "**/*.@(woff2|svg|ico)",
         "headers": [
           { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        ]
+      },
+      {
+        "source": "**/*.@(jpg|jpeg|png|webp|avif|gif)",
+        "headers": [
+          { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        ]
+      },
+      {
+        "source": "/fonts.css",
+        "headers": [
+          { "key": "Cache-Control", "value": "public, max-age=86400" }
+        ]
+      },
+      {
+        "source": "**/*.html",
+        "headers": [
+          { "key": "Cache-Control", "value": "no-cache" }
         ]
       }
     ]
