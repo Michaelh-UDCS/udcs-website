@@ -117,6 +117,7 @@ Other logged-in Firebase CLIs on this machine (do not use for this repo): `micha
 ## Active TODO Queue (from 2026-08-29 upgraded global-skills audit)
 
 **Scorecard (2026-08-29 Gate 100 live PASS):** Live HEAD **`0548af8`**. Lab indexables **100/100/100/100**. Live PSI mobile **100/100/100/100** + Agentic **3/3** ([aysk35poz7](https://pagespeed.web.dev/analysis/https-universal-dynamic-com/aysk35poz7?form_factor=mobile)). Canvas: `canvases/udcs-premium-scorecard.canvas.tsx`. Handoff: `MISSION_CONTROL.md`.  
+**Scorecard (2026-09-23 audit ship PASS):** Live LM `2026-09-23 11:30:51 GMT` · commits `0c533ee` + `a444104` · Firebase `universal-dynamic-website`. Live LH mobile+desktop **100×4**; Agentic **100**; HTML `Cache-Control: no-cache` under cleanUrls. Details: `MISSION_CONTROL.md`.
 **Scorecard (2026-09-22 Sprint 5 Gate 100 PASS):** Live LM `2026-09-23 03:12:11 GMT` · Firebase `universal-dynamic-website`. PSI mobile+desktop **100×4** + Agentic **3/3** ([xpeuc0x136](https://pagespeed.web.dev/analysis/https-universal-dynamic-com/xpeuc0x136)); first desktop run `pxc8jjoxck` Perf **97** (TBT 140ms) cleared on retry. GSC URL Inspection **PENDING HUMAN**. Details: `MISSION_CONTROL.md` + `docs/GATE100_BROWSER_SESSION_2026-08-29.md`.
 **Perf + a11y ship:** 2-font budget, async `#app-css`, deferred `/fonts.css`, hero critical CSS, `content-visibility` below-fold; **`0548af8`** cream form text in critical CSS + native nav label (closed live A11y 97 + agentic tree fail).
 
