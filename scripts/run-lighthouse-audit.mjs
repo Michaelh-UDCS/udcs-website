@@ -76,6 +76,7 @@ async function runAudits() {
     '/about',
     '/contact',
     '/services/lake-jackson-tx',
+    '/guides/google-workspace-for-startups',
     '/privacy-policy',
     '/terms-of-service',
     '/thank-you',

@@ -1,11 +1,88 @@
 # MISSION CONTROL — Ultra-Premium Gate 100
 
-**Date:** 2026-09-05  
+**Date:** 2026-09-22  
 **Workspace root:** `C:\Users\micha\Desktop\UDCS Website`  
 **Account:** `michael@universal-dynamic.com`  
-**Live:** `ef2ee94` pushed + deployed to `universal-dynamic-website` (2026-09-05)
+**Live:** hosting released 2026-09-22 (copyright ship) · Firebase `universal-dynamic-website` · `michael@universal-dynamic.com`
 
-## Active — Real-world discoverability audit — DONE 2026-09-05
+## Research — Google Workspace referral content idea — 2026-09-22
+
+**Status:** Pillar **outline drafted** (no UI build). Skills: `ultimate_web_architect` · `a-plus-build-gate` · `claude_design_10x` · `ai-search-2026` · referral SoT `UDCS_GOOGLE_WORKSPACE_REFERRAL.md`. Canvas: `google-workspace-pillar-outline`.
+
+### Guardrails (must-keep)
+- Disclose Referral Program participation (Google + FTC clear/conspicuous)
+- Logos/creative **only** from Resource Portal / approved buttons — never invent Partner badges
+- **Never** publicly post promo codes (1:1 only; codes stay in agent SoT, not `src/`)
+- Do not frame Google pages; do not claim Google endorsement/partnership unless Partner Advantage
+- Eligible referrals only (net-new; not reseller customers; Territory Americas)
+
+### Outline lock
+1. [DONE lab] Route `/guides/google-workspace-for-startups` — SSG built; lab LH **100/100/100/100** mobile + desktop (local dist)
+2. Hydrate `siteConfig.referrals.googleWorkspaceUrl` → `https://referworkspace.app.goo.gl/Uc52` ✅
+3. Dual CTA: `/contact` primary · Custom URL secondary · promo via private contact ✅
+4. Cluster later: freemail vs business email · DNS auth · aliases vs seats
+5. [ ] After Michael OK → deploy `universal-dynamic-website` + Gate 100 live PSI + GSC request indexing
+6. Preview: `http://127.0.0.1:4173/guides/google-workspace-for-startups`
+
+## Active — Copyright 2026 + LinkedIn connection audit — 2026-09-22
+
+**Goal:** Confirm footer copyright shows **© 2026** and LinkedIn is correctly linked both ways (site → LinkedIn + LinkedIn → site).
+
+### Verdict
+| Direction | Status |
+| :--- | :--- |
+| Site → LinkedIn | **OK (confirmed by Michael 2026-09-22)** — personal profile is correct: `https://www.linkedin.com/in/michael-huerta-6240189a/` (footer / About / JSON-LD `sameAs`) |
+| LinkedIn → Site | **Still open (human)** — profile still headlines Freeport Welding; update Contact Info website + headline/experience to UDCS when ready. No company page invented. |
+| Footer copyright | **LIVE** — `© 2026 Universal Dynamic Consulting Services LLC` on https://universal-dynamic.com |
+
+### Ship close-out (2026-09-22)
+1. [x] Audit live HTML footer year + LinkedIn `href` / `sameAs`
+2. [x] Audit `siteConfig.social.linkedin` + footer/About wiring (personal profile — correct)
+3. [x] LinkedIn profile still Freeport Welding on public surface (human to update)
+4. [x] Code: `siteConfig.copyrightYear: 2026` + legal name in footer; `updatedAt` → 2026-09-22
+5. [x] Identity lock: `michael@universal-dynamic.com` · Firebase `universal-dynamic-website`
+6. [x] `npm run build` + lab mobile LH **100/100/100/100** on indexables
+7. [x] Deploy hosting (CLI after reauth) — live marker confirmed
+8. [x] Live PSI mobile **100/100/100/100** + Agentic **3/3** — [uqqxwb6og8](https://pagespeed.web.dev/analysis/https-universal-dynamic-com/uqqxwb6og8?form_factor=mobile) (first cold run 88 Perf; warm + retest = 100)
+9. [~] GSC side panel: browser session hit marketing `/about` (not signed in) — **no Request indexing needed** for footer copyright; Google will recrawl via sitemap `lastmod`
+10. [ ] **Human (LinkedIn):** headline/experience/Contact Info website → `https://universal-dynamic.com` when ready
+
+## Prior — Live traffic audit (browser-driven) — 2026-09-22
+
+**Identity lock:** `michael@universal-dynamic.com` · GA4 property **`universal-dynamic-website`** (not Iron Prairie).
+
+### Verdict
+Tracking works. Traffic is scarce because **discovery is still weak** (deep SERP + incomplete local amplification), not because GA4 is broken. Last-7d “2 users” were **India / Direct** (noise), while GSC shows real US demand with almost no clicks.
+
+### GA4 `universal-dynamic-website` (live)
+| Window | Active users / sessions | Mix |
+| :--- | :--- | :--- |
+| Last 7 days | **2 users · 16 events · 0 key events** | Direct only; countries **India 2 / US 0**; pages Home 5 views + Contact 1 |
+| Last 28 days | **36 sessions · 17 engaged · 47% eng. rate** | Direct **83%** (30) · Organic **11%** (4, 75% eng., 2m26s) · Referral **6%** (2) |
+
+- GBP → GA4 Product link: **NOT linked** (“No links yet”) — still OPEN
+- GSC ↔ GA4: linked (confirmed earlier)
+
+### GSC `sc-domain:universal-dynamic.com` (3 mo Web · updated ~5.5h ago)
+- **1 click · 153 impressions · 0.7% CTR · avg position 40.1** (impressions ↑ vs Sep 5’s 74; position improved vs 52.8)
+- Indexing: **7 indexed / 1 not indexed** (unchanged)
+- Top queries (0 clicks): `universal dynamic` (13) · `seo agency lake jackson tx` (6) · `local seo lake jackson` (5) · `lake jackson tx seo` (4) · `seo near me lake jackson tx` / `website designer lake jackson` (3)
+- Top pages: `/` **1 click / 68 imp** · `/contact` 53 · `/about` 32 · `/services/lake-jackson-tx` 28
+- Countries: **US 1 click / 104 imp** (demand is domestic)
+
+### Fixes completed this session (2026-09-22 browser)
+- [x] **GBP → GA4 linked** — `Universal Dynamic Consulting Services LLC` · linked Sep 22, 2026 by `michael@universal-dynamic.com` (Admin → Product links → Google Business Profile)
+- [x] **GBP website UTM** — pending Google review (~10 min): `https://universal-dynamic.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp`
+- [x] **GBP Services cards** — pending review (up to 1 day): Website redesign · Local SEO · Business consulting
+- [x] **GSC ↔ GA4** re-verified — Domain `universal-dynamic.com` ↔ Web stream `15675001369` (linked Sep 2)
+
+### Ordered next (human + agent)
+1. [DONE] Link GBP → GA4
+2. [DONE pending review] GBP UTM website + Services · still OPEN: photos + seed reviews + weekly Posts
+3. Apple Maps pin: **blocked** (SAB/no storefront) — Brand already Verified; no `sameAs` Maps URL. Bing Places waiting on publish → then `sameAs`
+4. Optional agent: title/meta CTR pass on Home + Lake Jackson service for queries already impressing
+
+## Prior — Real-world discoverability audit — DONE 2026-09-05
 
 ### Verdict
 **Engineering / GSC / GA4: PASS.** Real-world local findability: **GBP VERIFIED & LIVE (2026-09-11)**; Apple/Bing Places queued.
@@ -18,7 +95,7 @@
 - [x] Associations: **GA4** linked (`Universal Dynamic Website` / `universal-dynamic-website`)
 - [x] Search generative AI: **Include**
 - [x] robots.txt: All files valid · Crawl stats: 86 requests / 90d
-- Performance (3 mo Web): **1 click · 74 impressions · 1.4% CTR · avg position 52.8**
+- Performance snapshot Sep 5 (3 mo Web): **1 click · 74 impressions · 1.4% CTR · avg position 52.8** → **refreshed 2026-09-22 above**
 - Top queries (impressions, 0 clicks): seo agency lake jackson tx · universal dynamic · local seo lake jackson · lake jackson tx seo · website designer lake jackson
 
 ### Analytics
@@ -27,15 +104,36 @@
 
 ### Big 3 business profiles
 - [x] **GBP:** **VERIFIED & LIVE (2026-09-11)** — Store code `01716419578033243039`; CID `105280992748935528` (`https://www.google.com/maps?cid=105280992748935528`); website & phone connected; category Business management consultant; service areas active; hours set (opens 9 AM).
-- [ ] **Apple Business Connect:** Namecheap TXT domain verification done (2026-09-05) — finish claim in Apple Business Connect, then paste public listing URL for `sameAs`
-- [ ] **Bing Places + Bing Webmaster:** ready for 1-click import from verified GBP at `bing.com/forbusiness`; IndexNow key live at `/udcs2026indexnow.txt`
-- [x] Site JSON-LD `sameAs`: updated with live Google Maps CID `https://www.google.com/maps?cid=105280992748935528` (2026-09-11)
+- [x] **Apple Business org + Brand:** Company `873181909138` · Brand **Universal Dynamic Consulting Services = Verified** (2026-09-22 confirmed)
+- [!] **Apple Maps location:** EXISTS but **Not Approved / Doesn’t Meet Requirements** — Apple only accepts storefronts customers can visit without appointment. UDCS is a SAB (no public storefront), so a Maps place pin **cannot be approved** under current Apple policy. Location ID `1554159018444849629` still shows street (home) — do not add fake `maps.apple.com` `sameAs`.
+- [ ] **Apple Branded Mail:** not set up (optional)
+- [x] **Bing Places:** **VERIFIED · Pending publish** (bizid `5f68fa22-7fda-4f1a-ac6a-549467afef2e`) — ETA 7–12 days. Fixed 2026-09-22: SAB hide-street · service areas Lake Jackson/Freeport/Clute/Angleton/Richwood · email · Bing UTM. Public `sameAs` URL after publish.
+- [ ] **Bing Webmaster:** still OPEN — Microsoft account → import from GSC or add sitemap + IndexNow
+- [x] Site JSON-LD `sameAs`: Google Maps CID live; Apple Maps URL N/A (policy); Bing public URL after publish
 
 ### Ordered next actions (human)
 1. [DONE] GBP verification complete and canonical Maps CID wired into site schema & sitemap
 2. Claim Bing Places via 1-click import from verified GBP ([bing.com/forbusiness](https://bing.com/forbusiness))
 3. Claim Apple Business Connect ([businessconnect.apple.com](https://businessconnect.apple.com))
 4. Sign into Bing Webmaster with Microsoft account → import from GSC or add sitemap + IndexNow
+
+### GBP / local amplification upgrades (2026-09-12)
+**Goal:** Convert verified GBP → measurable, durable local discovery (not just a one-week traffic spike).
+
+| Priority | Upgrade | Owner | Status |
+| :--- | :--- | :--- | :--- |
+| P0 | Tag GBP website URL with UTMs: `https://universal-dynamic.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp` | Agent (browser) | DONE 2026-09-22 (pending Google ~10 min review) |
+| P0 | Link GBP → GA4 (Admin → Product links → Google Business Profile) | Agent (browser) | DONE 2026-09-22 |
+| P0 | Add GBP Services cards aligned to site offers (web redesign, local SEO/entity, consulting/PM advisory) | Agent (browser) | DONE 2026-09-22 (pending review up to 1 day): Website redesign · Local SEO · Business consulting |
+| P0 | Request 3–5 genuine seed reviews (real clients/colleagues; local phrases OK if true) | Human | OPEN |
+| P1 | Apple Business Brand Profile | Agent | DONE — Brand Verified (company 873181909138) |
+| P1 | Apple Maps location pin | Agent | BLOCKED by Apple — SAB/no storefront (“Doesn’t Meet Requirements”). No `sameAs` URL. |
+| P1 | Bing Places | Agent | DONE verified · Pending publish (7–12d). SAB hide-street + areas + UTM saved 2026-09-22. `sameAs` after public URL |
+| P1 | Bing Webmaster: add property + sitemap + IndexNow | Human | OPEN |
+| P2 | GBP photos (logo, work samples, Lake Jackson area context) + weekly Google Post | Human | OPEN |
+| P2 | Nextdoor + Foursquare claims (Tier 2 citations) | Human | OPEN |
+| P2 | Optional: deploy parked PageSpeed self-audit CTA after Big 3 `sameAs` complete | Agent | PARKED |
+| Ops | Confirm FormSubmit inbox delivery; CI `FIREBASE_SERVICE_ACCOUNT` | Human | OPEN |
 
 ## Live PageSpeed Insights — VERIFIED (2026-09-05 re-audit)
 https://pagespeed.web.dev/analysis/https-universal-dynamic-com/hf9sn6ts4u

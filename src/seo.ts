@@ -48,6 +48,12 @@ export const routeMeta: Record<string, RouteMeta> = {
     canonical: 'https://universal-dynamic.com/services/lake-jackson-tx',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
   },
+  '/guides/google-workspace-for-startups': {
+    title: 'Google Workspace for Startups | Universal Dynamic',
+    description: 'How Texas startups use Google Workspace for professional email, Drive, and Meet—plus when to self-serve vs get done-for-you setup from Universal Dynamic.',
+    canonical: 'https://universal-dynamic.com/guides/google-workspace-for-startups',
+    robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+  },
   '/thank-you': {
     title: 'Inquiry Received | Universal Dynamic Consulting Services LLC',
     description: 'Thank you for contacting Universal Dynamic Consulting Services LLC. We received your inquiry and will review your project details shortly.',

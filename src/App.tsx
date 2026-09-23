@@ -9,6 +9,7 @@ import { ContactPage } from './pages/ContactPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { TermsOfServicePage } from './pages/TermsOfServicePage';
 import { LakeJacksonPage } from './pages/LakeJacksonPage';
+import { GoogleWorkspaceStartupsPage } from './pages/GoogleWorkspaceStartupsPage';
 import { ThankYouPage } from './pages/ThankYouPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { Footer } from './components/Footer';
@@ -58,6 +59,10 @@ export const routes: RouteRecord[] = [
       {
         path: 'services/lake-jackson-tx',
         element: <LakeJacksonPage />,
+      },
+      {
+        path: 'guides/google-workspace-for-startups',
+        element: <GoogleWorkspaceStartupsPage />,
       },
       {
         path: 'thank-you',

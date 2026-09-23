@@ -14,6 +14,7 @@ export const Footer: React.FC = () => {
     emailHref,
     serviceAreaNote,
     copyrightText,
+    copyrightYear,
     updatedLabel,
     updatedAtIso,
     socialLinks,
@@ -44,7 +45,7 @@ export const Footer: React.FC = () => {
               <time dateTime={updatedAtIso}>{updatedLabel}</time>
             </p>
             <p className="text-cream/70 text-[10px] mt-3 font-sans uppercase tracking-[0.2em]">
-              © {new Date().getFullYear()} // {copyrightText}
+              © {copyrightYear} {copyrightText}
             </p>
           </div>
 

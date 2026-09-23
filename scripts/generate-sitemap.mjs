@@ -5,6 +5,7 @@ const routes = [
   { loc: 'https://universal-dynamic.com/about', priority: '0.8', changefreq: 'monthly' },
   { loc: 'https://universal-dynamic.com/contact', priority: '0.8', changefreq: 'monthly' },
   { loc: 'https://universal-dynamic.com/services/lake-jackson-tx', priority: '0.9', changefreq: 'weekly' },
+  { loc: 'https://universal-dynamic.com/guides/google-workspace-for-startups', priority: '0.8', changefreq: 'monthly' },
   { loc: 'https://universal-dynamic.com/privacy-policy', priority: '0.8', changefreq: 'monthly' },
   { loc: 'https://universal-dynamic.com/terms-of-service', priority: '0.8', changefreq: 'monthly' },
 ];

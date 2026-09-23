@@ -30,6 +30,12 @@ export interface SiteAnalytics {
   ga4MeasurementId: string;
 }
 
+/** Public referral destinations — promo codes stay off-site (1:1 handout only). */
+export interface SiteReferrals {
+  /** Google Workspace Referral Program Custom URL (UDCS SoT). */
+  googleWorkspaceUrl: string;
+}
+
 export interface SiteSocial {
   linkedin: string;
   twitter: string;
@@ -55,9 +61,12 @@ export interface SiteConfig {
   sameAs: readonly string[];
   ogImage: string;
   analytics: SiteAnalytics;
+  referrals: SiteReferrals;
   /** FormSubmit contact endpoint (derived from email). */
   formSubmitEndpoint: string;
   colors: SiteColors;
+  /** Footer / legal copyright calendar year (explicit for SSG builds). */
+  copyrightYear: number;
   /** ISO date (YYYY-MM-DD) — first public ship / repo initial commit. */
   publishedAt: string;
   /** ISO date (YYYY-MM-DD) — last meaningful content/schema refresh (Gate 100). */
@@ -126,6 +135,10 @@ export const siteConfig: SiteConfig = {
     ga4MeasurementId: "G-DNXEY3KTKZ",
   },
 
+  referrals: {
+    googleWorkspaceUrl: "https://referworkspace.app.goo.gl/Uc52",
+  },
+
   formSubmitEndpoint: "https://formsubmit.co/michael@universal-dynamic.com",
 
   colors: {
@@ -136,8 +149,9 @@ export const siteConfig: SiteConfig = {
   },
 
   // Freshness SoT — mirror in index.html JSON-LD + sitemap lastmod.
+  copyrightYear: 2026,
   publishedAt: "2026-08-05",
-  updatedAt: "2026-09-11",
+  updatedAt: "2026-09-22",
 };
 
 /** Human-readable "Updated …" for crawlable footer copy (UTC calendar date). */

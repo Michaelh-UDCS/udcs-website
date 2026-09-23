@@ -27,6 +27,7 @@ export interface FooterContent {
   emailHref: string;
   serviceAreaNote: string;
   copyrightText: string;
+  copyrightYear: number;
   /** Crawlable freshness line — mirrors siteConfig.updatedAt / JSON-LD dateModified. */
   updatedLabel: string;
   updatedAtIso: string;
@@ -48,7 +49,8 @@ export const footerContent: FooterContent = {
   email: siteConfig.email,
   emailHref,
   serviceAreaNote: "Serving Brazoria County & Greater Houston",
-  copyrightText: "Established for Excellence",
+  copyrightText: "Universal Dynamic Consulting Services LLC",
+  copyrightYear: siteConfig.copyrightYear,
   updatedLabel: `Updated ${formatUpdatedDisplay(siteConfig.updatedAt)}`,
   updatedAtIso: siteConfig.updatedAt,
   socialLinks: {
